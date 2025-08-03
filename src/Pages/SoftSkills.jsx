@@ -4,6 +4,8 @@ import CourseCard from "../Components/CourseCard/CourseCard";
 import courseImg from "../assets/skill.jpg";
 import Benefits from "../Components/Benefits/Benefits";
 import { Radio, School } from "lucide-react";
+import Pricing from "../Components/Pricing/Pricing";
+import Footer from "../Components/Footer.jsx/Footer";
 
 function SoftSkills() {
   const featureData = [
@@ -44,12 +46,14 @@ function SoftSkills() {
         language="English"
       />
 
-      <div className="bg-gray-50 min-h-screen">
+      {/* <div className="min-h-screen bg-white"> */}
         <Benefits
           title="Unlock Your Potential: Exclusive Course Offerings"
           features={featureData}
         />
-      </div>
+      {/* </div> */}
+      <Pricing/>
+      <Footer/>
     </>
   );
 }

@@ -13,13 +13,13 @@
 //   language,
 // }) => {
 //   return (
-//     <div className="w-full bg-gradient-to-br from-black via-gray-900 to-gray-800 text-white p-6 rounded-xl shadow-lg">
-//       <div className="flex flex-col md:flex-row justify-between items-center gap-6">
+//     <div className="w-full p-6 text-white shadow-lg bg-gradient-to-br from-black via-gray-900 to-gray-800 rounded-xl">
+//       <div className="flex flex-col items-center justify-between gap-6 md:flex-row">
 //         <div className="flex-1">
-//           <p className="text-sm font-semibold text-red-400 mb-2">{badge}</p>
-//           <h2 className="text-3xl md:text-4xl font-bold mb-4">{title}</h2>
-//           <p className="text-gray-300 mb-6">{description}</p>
-//           <button className="bg-red-500 text-white px-5 py-2 rounded hover:bg-red-600 transition">
+//           <p className="mb-2 text-sm font-semibold text-red-400">{badge}</p>
+//           <h2 className="mb-4 text-3xl font-bold md:text-4xl">{title}</h2>
+//           <p className="mb-6 text-gray-300">{description}</p>
+//           <button className="px-5 py-2 text-white transition bg-red-500 rounded hover:bg-red-600">
 //             Buy now
 //           </button>
 //         </div>
@@ -27,11 +27,11 @@
 //           <img
 //             src={image}
 //             alt="Course Visual"
-//             className="rounded-lg shadow-lg w-full object-cover"
+//             className="object-cover w-full rounded-lg shadow-lg"
 //           />
 //         </div>
 //       </div>
-//       <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center mt-8 border-t border-gray-700 pt-6 text-sm md:text-base">
+//       <div className="grid grid-cols-2 gap-4 pt-6 mt-8 text-sm text-center border-t border-gray-700 md:grid-cols-5 md:text-base">
 //         <div>
 //           <p className="font-semibold">Job Assistance</p>
 //           <p className="text-gray-400">{jobAssistance}</p>
@@ -75,14 +75,14 @@ const CourseCard = ({
   language,
 }) => {
   return (
-    <div className="w-full text-black p-6 mt-9 px-12">
-      <div className="flex flex-col md:flex-row items-center md:items-start gap-6">
+    <div className="w-full p-6 px-12 text-black mt-9">
+      <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
         {/* Text Section */}
         <div className="w-full md:w-1/2 lg:pt-20">
-          <p className="text-sm font-semibold text-brand-primary mb-2">{badge}</p>
-          <h2 className="text-3xl md:text-6xl font-bold mb-4 font-oswald">{title}</h2>
-          <p className="text-slate-800 mb-6">{description}</p>
-          <button className="bg-brand-primary text-white px-5 py-2 rounded hover:bg-orange-500 transition">
+          <p className="mb-2 text-sm font-semibold text-brand-primary">{badge}</p>
+          <h2 className="mb-4 text-3xl font-bold md:text-6xl font-oswald">{title}</h2>
+          <p className="mb-6 text-slate-800">{description}</p>
+          <button className="px-5 py-2 text-white transition rounded bg-brand-primary hover:bg-orange-500">
             Buy now
           </button>
         </div>
@@ -98,7 +98,7 @@ const CourseCard = ({
       </div>
 
       {/* Info Grid */}
-      <div className="grid grid-cols-2 md:grid-cols-5 gap-4 text-center mt-8 border-t border-gray-700 pt-6 text-sm md:text-base">
+      <div className="grid grid-cols-2 gap-4 pt-6 mt-10 text-sm text-center border-t border-gray-700 md:grid-cols-5 md:text-base">
         <div className="border-r border-gray-200">
           <p className="font-semibold">Job Assistance</p>
           <p className="text-gray-400">{jobAssistance}</p>

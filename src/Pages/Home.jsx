@@ -1,6 +1,6 @@
 import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
-import girlImage from "../assets/hero.png";
+import hero from "../assets/hero.png";
 import { motion } from "framer-motion";
 import {
   ArrowUpRight,
@@ -17,7 +17,7 @@ import {
 import student from "../assets/student.webp";
 import StatsSection from "../Components/State/State";
 import { Link } from "react-router-dom";
-import teamImage from "../assets/team.jpg";
+import we from "../assets/we.png";
 import Testimonial from "../Components/Testimonial/Testimonial";
 import Blog from "../Components/Blog/Blog";
 import FAQs from "../Components/Faq/Faq";
@@ -30,35 +30,35 @@ function Home() {
   const boxes = [
     {
       icon: (
-        <Paperclip className="w-12 h-12 text-white bg-gradient-to-tr to-brand-primary from-amber-400 p-1 rounded-full" />
+        <Paperclip className="w-12 h-12 p-1 text-white rounded-full bg-gradient-to-tr to-brand-primary from-amber-400" />
       ),
       title: "Assesment",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam quibusdam nemo possimus",
+        "Understanding your unique strengths and areas to unlock true potential.",
     },
     {
       icon: (
-        <Settings className="w-12 h-12 text-white bg-gradient-to-tr to-brand-primary from-amber-400 p-1 rounded-full" />
+        <Settings className="w-12 h-12 p-1 text-white rounded-full bg-gradient-to-tr to-brand-primary from-amber-400" />
       ),
       title: "Goal Setting",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam quibusdam nemo possimus",
+        "Defining clear, meaningful objectives that guide your career and personal growth.",
     },
     {
       icon: (
-        <ShieldCheck className="w-12 h-12 text-white bg-gradient-to-tr to-brand-primary from-amber-400 p-1 rounded-full" />
+        <ShieldCheck className="w-12 h-12 p-1 text-white rounded-full bg-gradient-to-tr to-brand-primary from-amber-400" />
       ),
       title: "Coaching Session",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam quibusdam nemo possimus",
+        "Personalized guidance to develop skills, boost confidence, and overcome challenges.",
     },
     {
       icon: (
-        <TrendingUp className="w-12 h-12 text-white bg-gradient-to-tr to-brand-primary from-amber-400 p-1 rounded-full" />
+        <TrendingUp className="w-12 h-12 p-1 text-white rounded-full bg-gradient-to-tr to-brand-primary from-amber-400" />
       ),
       title: "Ongoing Support",
       description:
-        "Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quam quibusdam nemo possimus",
+        "Continuous mentorship to keep you motivated and on track toward success.",
     },
   ];
   const fadeUp = {
@@ -74,63 +74,62 @@ function Home() {
       <title>Welcom College Skill</title>
       <Navbar />
       {/* Hero section  */}
-      <section className="bg-brand-background lg:px-16 px-10 py-10 grid md:grid-cols-2 items-center">
+      <section className="grid items-center px-10 py-10 bg-brand-background lg:px-16 md:grid-cols-2">
         <div className="space-y-6">
-          <h1 className="text-4xl md:text-6xl font-bold text-brand-text font-oswald">
-            <span className="text-brand-primary">Studying</span> Online Is Now{" "}
-            <br />
-            Much Easier
+          <h1 className="text-4xl font-semibold md:text-6xl text-brand-text font-oswald">
+            <span className="pb-10 text-brand-primary">
+              Transform Your College Journey
+            </span>{" "}
+            Build Real World Skills Today{" "}
           </h1>
           <p className="text-brand-text font-barlow ">
-            Skilline is an interesting platform that will teach you in a more
-            interactive way
+            Interactive soft skills training to boost confidence and career
+            readiness for real-world success.
           </p>
           <div className="flex items-center gap-4">
             <button className="bg-[#FF9E0D] text-white px-6 py-3 rounded-full font-semibold">
               Join For Free
             </button>
-            {/* <Play size={50} className='flex bg-white p-2 text-brand-primary rounded-full' /> */}
+            {/* <Play size={50} className='flex p-2 bg-white rounded-full text-brand-primary' /> */}
             <VideoPopup />
           </div>
         </div>
 
         <div className="relative mt-12 md:mt-0">
-          <img
-            src={girlImage}
-            alt="student"
-            className="w-full max-w-sm mx-auto"
-          />
+          <img src={hero} alt="student" className="" />
 
-          <div className="absolute top-6 left-2 bg-gradient-to-tr to-white/10 from-white rounded-xl shadow-lg px-4 py-3 lg:flex gap-2 hidden">
+          <div className="absolute hidden gap-2 px-4 py-3 shadow-lg top-24 left-24 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
             <CalendarRange
               size={30}
-              className="bg-blue-400 text-white p-1 rounded-lg"
+              className="p-1 text-white bg-blue-400 rounded-lg"
             />
             <div>
-              <h4 className="text-[16px] font-semibold">250k</h4>
-              <p className="text-[16px] text-gray-500">Assisted Student</p>
+              <h4 className="text-[16px] font-semibold">5000+</h4>
+              <p className="text-[16px] text-gray-500"> Youth Transformed</p>
             </div>
           </div>
 
-          <div className="absolute bottom-16 left-0 bg-gradient-to-tr to-white/10 from-white rounded-xl shadow-lg px-4 py-4 lg:flex hidden gap-2 items-center">
+          <div className="absolute items-center hidden gap-2 px-4 py-4 shadow-lg -left-10 bottom-36 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
             <img src={student} alt="" className="w-8 h-8 rounded-full" />
             <div>
-              <p className="text-sm font-medium">User Experience Class</p>
-              <p className="text-xs text-gray-500">Today at 12.00 PM</p>
+              <p className="text-sm font-medium">Don’t Just Watch, Grow </p>
+              <p className="text-xs text-gray-500">
+                Free Live Class Every Tuesday
+              </p>
             </div>
             <button className="ml-4 bg-[#FF9E0D] text-white px-3 py-1 rounded-full text-sm">
               Join Now
             </button>
           </div>
 
-          <div className="absolute bottom-6 right-0 bg-gradient-to-tr to-white/10 from-white rounded-xl shadow-lg px-4 py-4 lg:flex hidden gap-2 items-center">
+          <div className="absolute right-0 items-center hidden gap-2 px-4 py-4 shadow-lg bottom-6 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
             <Mail
               size={30}
-              className="bg-orange-400 text-white p-1 rounded-lg"
+              className="p-1 text-white bg-orange-400 rounded-lg"
             />
             <div>
               <p className="text-sm font-medium">Congratulations</p>
-              <p className="text-xs text-gray-500">Your admission completed</p>
+              <p className="text-xs text-gray-500">Future Starts Now</p>
             </div>
           </div>
         </div>
@@ -140,8 +139,8 @@ function Home() {
       {/* Partners */}
       <Partners />
       {/* Who we Are */}
-      <section className="py-16 px-6 md:px-12 pb-20 lg:px-20">
-        <div className="flex flex-col lg:flex-row items-center gap-12">
+      <section className="px-6 py-16 pb-20 md:px-12 lg:px-20">
+        <div className="flex flex-col items-center gap-12 lg:flex-row">
           {/* Left Side */}
           <motion.div
             initial={{ opacity: 0, x: -50 }}
@@ -152,32 +151,33 @@ function Home() {
             <p className="text-sm font-semibold text-brand-primary">
               // WHO WE ARE
             </p>
-            <h2 className="text-4xl md:text-6xl font-medium mt-4 leading-tight text-gray-800 font-oswald">
-              Unlock your potential{" "}
-              <span className="text-brand-primary">with our expertise</span>
+            <h2 className="mt-4 text-4xl font-medium leading-tight text-gray-800 md:text-5xl font-oswald">
+              Empowering India’s youth through expert{" "}
+              <span className="text-brand-primary">soft skills training</span>
             </h2>
-            <p className="text-gray-600 mt-6">
-              Choosing us means partnering with experienced coaches who are
-              dedicated to unlocking your potential. We offer personalized
-              strategies, proven methods, and unwavering support to help you
-              navigate challenges.
+            <p className="mt-6 text-gray-600">
+              At College Skills, we partner with passionate educators dedicated
+              to unlocking the true potential of college students. Our
+              customized programs blend practical strategies, proven
+              experiential methods, and continuous mentoring to overcome
+              challenges and build career-ready professionals.
             </p>
 
             {/* Stats */}
             <div className="flex gap-8 mt-10">
               <div className="text-center">
-                <div className="w-24 h-24 rounded-full border-2 border-brand-primary flex items-center justify-center text-2xl font-bold">
+                <div className="flex items-center justify-center w-24 h-24 text-2xl font-bold border-2 rounded-full border-brand-primary">
                   98%
                 </div>
-                <p className="mt-2 text-gray-700 font-medium">
-                  Satisfied Customers
+                <p className="mt-2 font-medium text-gray-700">
+                  Student Satisfaction
                 </p>
               </div>
               <div className="text-center">
-                <div className="w-24 h-24 rounded-full border-2 border-brand-primary flex items-center justify-center text-2xl font-bold">
+                <div className="flex items-center justify-center w-24 h-24 text-2xl font-bold border-2 rounded-full border-brand-primary">
                   20K
                 </div>
-                <p className="mt-2 text-gray-700 font-medium">
+                <p className="mt-2 font-medium text-gray-700">
                   Projects Completed
                 </p>
               </div>
@@ -187,21 +187,21 @@ function Home() {
 
             {/* Bottom Info */}
             <div>
-              <h4 className="text-lg font-bold text-gray-800 mb-4">
-                Certified And Experienced Coaching Professionals
+              <h4 className="mb-4 text-lg font-bold text-gray-800">
+                Certified Trainers & Domain Experts
               </h4>
-              <p className="text-gray-600 mb-2">
-                Our team consists of highly trained and certified coaches who
-                stay up-to-date with the latest coaching practices.
+              <p className="mb-2 text-gray-600">
+                We bring in certified professionals with real industry exposure
+                to ensure every learner gains practical, applicable knowledge.
               </p>
-              <ul className="space-y-2 mt-4 text-gray-700">
+              <ul className="mt-4 space-y-2 text-gray-700">
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="text-brand-primary w-5 h-5 mt-1" />
-                  Continuous Support and Accountability
+                  <CheckCircle2 className="w-5 h-5 mt-1 text-brand-primary" />
+                  Personalized Support & Guided Learning
                 </li>
                 <li className="flex items-start gap-2">
-                  <CheckCircle2 className="text-brand-primary w-5 h-5 mt-1" />
-                  Results-Driven Methods That Deliver Lasting Change
+                  <CheckCircle2 className="w-5 h-5 mt-1 text-brand-primary" />
+                  Outcome-Focused Programs
                 </li>
               </ul>
             </div>
@@ -215,35 +215,35 @@ function Home() {
             className="flex-1"
           >
             <img
-              src={teamImage}
+              src={we}
               alt="Team working"
-              className="rounded-2xl shadow-md w-full object-cover"
+              className="object-cover w-full rounded-2xl"
             />
           </motion.div>
         </div>
       </section>
       {/* How We Work */}
-      <section className="max-w-full px-10 lg:px-16 mt-10">
+      <section className="max-w-full px-10 mt-10 lg:px-16">
         <h4 className="text-brand-primary">// How We Work</h4>
-        <div className="w-full flex flex-col md:flex-row py-6 md:py-10 justify-between items-center gap-4">
-          <h2 className="text-4xl md:text-6xl text-brand-text font-oswald font-medium">
+        <div className="flex flex-col items-center justify-between w-full gap-4 py-6 md:flex-row md:py-10">
+          <h2 className="text-4xl font-medium md:text-6xl text-brand-text font-oswald">
             Step by step process for <br />
-            <span className="text-brand-primary block mt-2">
+            <span className="block mt-2 text-brand-primary">
               achieving success
             </span>
           </h2>
           <Link
             to="/contact"
-            className="flex justify-center items-center font-medium text-brand-background border bg-brand-primary border-brand-primary px-4 py-2 rounded-md mt-4 md:mt-0"
+            className="flex items-center justify-center px-4 py-2 mt-4 font-medium border rounded-md text-brand-background bg-brand-primary border-brand-primary md:mt-0"
           >
             Contact Us <ArrowUpRight className="ml-2" />
           </Link>
         </div>
       </section>
       {/* How We Work cards */}
-      <section className="py-7 px-4 md:px-8">
+      <section className="px-4 py-7 md:px-8">
         <div className="max-w-full text-center">
-          <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {boxes.map((box, index) => (
               <motion.div
                 key={index}
@@ -252,12 +252,12 @@ function Home() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={index}
-                className="bg-white p-6 rounded-2xl text-left"
+                className="p-6 text-left bg-white rounded-2xl"
               >
-                <div className="mb-4 flex">{box.icon}</div>
-                <p className="border-t border-gray-400 pb-3"></p>
-                <h3 className="text-xl font-semibold mb-2">{box.title}</h3>
-                <p className="text-gray-600 text-sm">{box.description}</p>
+                <div className="flex mb-4">{box.icon}</div>
+                <p className="pb-3 border-t border-gray-400"></p>
+                <h3 className="mb-2 text-xl font-semibold">{box.title}</h3>
+                <p className="text-sm text-gray-600">{box.description}</p>
               </motion.div>
             ))}
           </div>

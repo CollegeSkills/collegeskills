@@ -26,9 +26,9 @@ const Partners = () => {
   }, []);
 
   return (
-    <div className="overflow-hidden py-8">
-      <h2 className="text-center text-brand-primary text-5xl font-oswald font-semibold mb-4">
-        Trusted By Leading Companies
+    <div className="py-8 overflow-hidden">
+      <h2 className="mb-4 text-5xl font-semibold text-center text-brand-primary font-oswald">
+       Trusted By Leading Companies & College
       </h2>
 
       <motion.div
@@ -46,7 +46,7 @@ const Partners = () => {
             <img
               src={logo}
               alt={`logo-${index}`}
-              className="h-16 w-auto object-contain cursor-pointer"
+              className="object-contain w-auto h-16 cursor-pointer"
             />
           </motion.div>
         ))}

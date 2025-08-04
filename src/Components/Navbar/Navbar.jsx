@@ -9,15 +9,15 @@ const Navbar = () => {
     const [isCoursesOpen, setIsCoursesOpen] = useState(false);
 
     return (
-        <nav className="bg-brand-background px-6 py-4 shadow-md">
-            <div className=" mx-auto flex justify-between items-center">
+        <nav className="px-6 py-4 bg-brand-background">
+            <div className="flex items-center justify-between mx-auto ">
                 {/* Logo */}
                 <div className="w-40">
-                    <img src={logo} alt="college skills" className="w-full h-12 object-cover" />
+                    <img src={logo} alt="college skills" className="object-cover w-full h-12" />
                 </div>
 
                 {/* Desktop Menu */}
-                <ul className="hidden md:flex gap-6 text-gray-800 font-medium">
+                <ul className="hidden gap-6 font-medium text-gray-800 md:flex">
                     <li><Link to="/" className="hover:text-[#FF9E0D]">Home</Link></li>
                     <li><Link to="/about" className="hover:text-[#FF9E0D]">About Us</Link></li>
                     <li className="relative">
@@ -34,7 +34,7 @@ const Navbar = () => {
 
                         {/* Dropdown List */}
                         {isServicesOpen && (
-                            <ul className="absolute left-0 mt-2 w-52 bg-white border border-gray-200 shadow-lg rounded-md z-10">
+                            <ul className="absolute left-0 z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-52">
                                 <li>
                                     <Link
                                         to="/services/soft-skills"
@@ -78,7 +78,7 @@ const Navbar = () => {
 
                         {/* Dropdown List */}
                         {isCoursesOpen && (
-                            <ul className="absolute left-0 mt-2 w-52 bg-white border border-gray-200 shadow-lg rounded-md z-10">
+                            <ul className="absolute left-0 z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-52">
                                 <li>
                                     <Link
                                         to="/courses/for-colleges"
@@ -92,7 +92,7 @@ const Navbar = () => {
                                         to="/courses/for-corporate"
                                         className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
                                     >
-                                        For Corporates/B2B
+                                        For Schools
                                     </Link>
                                 </li>
                             </ul>
@@ -117,7 +117,7 @@ const Navbar = () => {
 
             {/* Mobile Menu */}
             {isOpen && (
-                <div className="md:hidden mt-4 rounded-md px-4 py-4 space-y-5 text-gray-800 font-medium">
+                <div className="px-4 py-4 mt-4 space-y-5 font-medium text-gray-800 rounded-md md:hidden">
                     <ul>
                         <li><Link to="/" className="hover:text-[#FF9E0D]">Home</Link></li>
                         <li><Link to="/about" className="hover:text-[#FF9E0D]">About Us</Link></li>
@@ -135,7 +135,7 @@ const Navbar = () => {
 
                             {/* Dropdown List */}
                             {isServicesOpen && (
-                                <ul className="absolute left-0 mt-2 w-52 bg-white border border-gray-200 shadow-lg rounded-md z-10">
+                                <ul className="absolute left-0 z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-52">
                                     <li>
                                         <Link
                                             to="/services/soft-skills"
@@ -179,7 +179,7 @@ const Navbar = () => {
 
                             {/* Dropdown List */}
                             {isCoursesOpen && (
-                                <ul className="absolute left-0 mt-2 w-52 bg-white border border-gray-200 shadow-lg rounded-md z-10">
+                                <ul className="absolute left-0 z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-52">
                                     <li>
                                         <Link
                                             to="/courses/for-colleges"

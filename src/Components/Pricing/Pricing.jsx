@@ -45,26 +45,29 @@ const packages = [
 
 const Pricing = () => {
   return (
-    <section className="bg-white py-16 px-4 md:px-10">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-10 items-start">
+    <section className="px-4 py-16 bg-white md:px-10">
+      <div className="w-full px-8 mx-auto">
         {/* Left Section */}
-        <div className="space-y-6 font-oswald font-semibold">
-          <p className="text-brand-primary font-semibold text-sm">// PRICING</p>
-          <h2 className="text-5xl font-bold text-gray-900">
-            Coaching <span className="text-brand-primary">packages that fit</span>
+        <div className="space-y-6 font-semibold font-oswald">
+          <p className="text-sm font-semibold text-brand-primary">// PRICING</p>
+          <h2 className="text-5xl font-semibold text-gray-900">
+            Coaching Packages That{" "}
+            <span className="text-brand-primary">Fit Every Ambition</span>
           </h2>
-          <p className="text-gray-600 font-sans">
-            Our coaching packages are designed to meet diverse needs and
-            budgets, providing flexibility for every individual and
-            organization. Whether you're seeking personal.
+          <p className="font-sans text-gray-600">
+            Our coaching programs are crafted to suit diverse learning needs and
+            goals—from curious beginners to focused achievers. Whether you're
+            just exploring, ready to invest in your growth, or seeking a fully
+            personalized path, we’ve got a plan for you. Learning is not a
+            cost—it’s your most powerful investment.
           </p>
-          <button className="bg-gradient-to-r from-brand-primary to-brand-primary font-sans text-white px-6 py-3 rounded-full font-semibold hover:scale-105 transition">
+          <button className="px-6 py-3 font-sans font-semibold text-white transition rounded-full bg-gradient-to-r from-brand-primary to-brand-primary hover:scale-105">
             Get All Touch →
           </button>
         </div>
 
         {/* Right Section - Pricing Cards */}
-        <div className="space-y-6">
+        <div className="grid items-start gap-10 mt-6 md:grid-cols-3">
           {packages.map((pkg, i) => (
             <div
               key={i}
@@ -74,29 +77,33 @@ const Pricing = () => {
                   : "bg-white"
               }`}
             >
-              <h3 className="text-xl font-semibold mb-2">{pkg.title}</h3>
-              <p className="text-4xl font-bold mb-4">
+              <h3 className="mb-2 text-xl font-semibold">{pkg.title}</h3>
+              <p className="mb-4 text-4xl font-bold">
                 {pkg.price}
                 <span className="text-base font-medium">
-                  <span className={pkg.highlight ? "text-white" : "text-gray-500"}>
+                  <span
+                    className={pkg.highlight ? "text-white" : "text-gray-500"}
+                  >
                     /month
                   </span>
                 </span>
               </p>
               <ul
-                className={`grid grid-cols-3 gap-2 mb-6 text-sm ${
+                className={`grid grid-cols-2 gap-2 mb-6 text-sm ${
                   pkg.highlight ? "text-white" : "text-gray-700"
                 }`}
               >
                 {pkg.features.map((item, index) => (
                   <li key={index} className="flex items-center gap-2">
-                    <span><Check/></span>
+                    <span>
+                      <Check />
+                    </span>
                     <span>{item}</span>
                   </li>
                 ))}
               </ul>
               <button
-                className={`w-1/4 py-2 rounded-full font-semibold text-sm transition ${
+                className={`px-4 py-2 rounded-full font-semibold text-sm transition ${
                   pkg.highlight
                     ? "bg-white text-brand-primary"
                     : "bg-gradient-to-r from-brand-primary to-brand-primary text-white"

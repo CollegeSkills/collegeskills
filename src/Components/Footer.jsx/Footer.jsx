@@ -11,14 +11,14 @@ import { Link } from "react-router-dom";
 
 const Footer = () => {
     return (
-        <footer className="bg-black text-white pt-12 pb-6 px-4 md:px-10">
+        <footer className="px-4 pt-12 pb-6 text-white bg-black md:px-10">
             {/* Top content */}
-            <div className="max-w-7xl mx-auto">
-                <div className="grid md:grid-cols-4 gap-16">
+            <div className="mx-auto max-w-7xl">
+                <div className="grid gap-16 md:grid-cols-4">
                     {/* Left Section */}
                     <div className="space-y-5">
                         <div className="text-lg font-bold">
-                            <span className="text-brand-primary">College</span>
+                            <span className="text-brand-primary">COLLEGE</span>
                             <span className="ml-2 font-semibold">SKILLS</span>
                         </div>
                         <p className="text-sm leading-relaxed">
@@ -27,7 +27,7 @@ const Footer = () => {
 
                         <div>
                             <p className="text-sm">Contact Us: +91 7349432553</p>
-                            <p className="flex items-center gap-2 text-sm mt-2">
+                            <p className="flex items-center gap-2 mt-2 text-sm">
                                 <Mail size={20} className="text-white" />
                                 support@collegeskills.com
                             </p>
@@ -37,7 +37,7 @@ const Footer = () => {
 
                     {/* Company Links */}
                     <div>
-                        <h4 className="font-bold mb-3 border-b border-gray-400 w-fit">Company</h4>
+                        <h4 className="mb-3 font-bold border-b border-gray-400 w-fit">Company</h4>
                         <ul className="space-y-2 text-sm">
                             <li><Link to="/about" className="hover:text-[#FF9E0D] py-1">About Us</Link></li>
                             <li><Link to="/blog" className="hover:text-[#FF9E0D] py-1">Blog</Link></li>
@@ -48,7 +48,7 @@ const Footer = () => {
 
                     {/* Categories Links */}
                     <div>
-                        <h4 className="font-bold mb-3 border-b border-gray-400 w-fit">Categories</h4>
+                        <h4 className="mb-3 font-bold border-b border-gray-400 w-fit">Categories</h4>
                         <ul className="space-y-2 text-sm">
                             <li>
                                 <Link
@@ -95,7 +95,7 @@ const Footer = () => {
 
                     {/* Follow Us */}
                     <div>
-                        <h4 className="font-bold mb-3">Follow Us</h4>
+                        <h4 className="mb-3 font-bold">Follow Us</h4>
                         <ul className="space-y-4 text-sm">
                             <li className="flex items-center gap-2">
                                 <Linkedin /> Linkedin
@@ -114,10 +114,10 @@ const Footer = () => {
                 <hr className="my-8 border-white" />
 
                 {/* Bottom Strip */}
-                <div className="flex flex-col md:flex-row items-center justify-between text-sm text-gray-300">
+                <div className="flex flex-col items-center justify-between text-sm text-gray-300 md:flex-row">
                     <p>© 2025 CollegeSkills. All rights reserved.</p>
                     {/* <div className="flex gap-6 mt-2 md:mt-0"> */}
-                        <ul className="text-sm flex gap-6 mt-2 md:mt-0">
+                        <ul className="flex gap-6 mt-2 text-sm md:mt-0">
                             <li><Link to="/privacy-policy" className="hover:text-[#FF9E0D]">Privacy policy</Link></li>
                             <li><Link to="/terms-conditions" className="hover:text-[#FF9E0D]">Terms and Conditions</Link></li>
                             </ul>

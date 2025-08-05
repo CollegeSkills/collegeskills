@@ -1,30 +1,44 @@
-import React, { useState } from 'react';
+import React, { useState } from "react";
 
 const faqs = [
   {
-    question: 'What is a Life & Business Coach?',
+    question: "What are soft skills, and why are they important for students?",
     answer:
-      'A Life & Business Coach helps individuals and professionals achieve their personal and professional goals through guidance and support.',
+      "Soft skills include communication, teamwork, problem-solving, emotional intelligence, and professionalism. These skills are critical because employers now look for graduates who can work well with others, adapt quickly, and lead effectively—not just those with good academic results.",
   },
   {
-    question: 'How does coaching differ from therapy?',
+    question:
+      "Can soft skills really be learned through online or blended courses?",
     answer:
-      'Coaching focuses on present and future goals, while therapy often deals with healing past emotional issues.',
+      "Absolutely! Our programs use interactive activities, real-life scenarios, and group discussions so students experience and practice soft skills, whether they learn online, offline, or in hybrid formats. Practical learning helps students apply these skills in the real world, making them natural and lasting.",
   },
   {
-    question: 'Who can benefit from life and business coaching?',
+    question: "Which soft skills are most in demand by employers today?",
     answer:
-      'Entrepreneurs, professionals, and anyone seeking clarity, growth, or balance in their life or career can benefit from coaching.',
+      "Employers highly value communication, teamwork, adaptability, critical thinking, and leadership. Industry surveys consistently show these are the top traits that set job candidates apart and help them grow in their careers.",
   },
   {
-    question: 'How long does the coaching process take?',
+    question:
+      "How are your training packages structured, and what do they cost?",
     answer:
-      'It depends on individual goals, but coaching usually spans a few weeks to several months for impactful results.',
+      "We offer three flexible options: A free foundation plan for beginners, Paid advanced modules for in-depth learning ,Custom solutions for colleges and organizations,Each plan is designed to suit different needs and budgets, making it easy for everyone to invest in their growth and employability.",
   },
+  // {
+  //   question:
+  //     "How are your training packages structured, and what do they cost?",
+  //   answer: [
+  //     "We offer three flexible options:",
+  //     "A free foundation plan for beginners",
+  //     "Paid advanced modules for in-depth learning",
+  //     "Custom solutions for colleges and organizations",
+  //     "Each plan is designed to suit different needs and budgets, making it easy for everyone to invest in their growth and employability.",
+  //   ],
+  // },
   {
-    question: 'Can coaching help my business grow?',
+    question:
+      "How do students measure progress and see real improvement from your soft skills training?",
     answer:
-      'Yes, coaching can improve strategy, leadership, team performance, and clarity which directly supports business growth.',
+      "Learners benefit from pre- and post-training assessments, ongoing feedback, and practical assignments like mock interviews or group presentations. Our structured progress tracking ensures students can clearly see their development and gain confidence for real-world challenges.",
   },
 ];
 
@@ -37,11 +51,11 @@ const FAQSection = () => {
 
   return (
     <section className="px-4 py-20 md:px-16 bg-gray-50">
-      <div className="max-w-7xl mx-auto grid md:grid-cols-2 gap-12 items-start">
+      <div className="grid items-start gap-12 mx-auto max-w-7xl md:grid-cols-2">
         {/* Left Column */}
         <div className="space-y-6">
           <p className="text-lg font-medium text-brand-primary">// FAQ</p>
-          <h2 className="text-4xl md:text-6xl font-medium font-oswald leading-tight">
+          <h2 className="text-4xl font-medium leading-tight md:text-6xl font-oswald">
             Your coaching questions <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-orange-300">
               answered simply here
@@ -49,53 +63,61 @@ const FAQSection = () => {
           </h2>
 
           {/* Contact Box */}
-          <div className="bg-white rounded-2xl shadow-sm p-6 flex flex-col gap-4 max-w-md">
+          <div className="flex flex-col max-w-md gap-4 p-6 bg-white shadow-sm rounded-2xl">
             <div className="flex -space-x-3">
               {[...Array(5)].map((_, i) => (
                 <img
                   key={i}
-                  className="w-10 h-10 rounded-full border-2 border-white object-cover"
+                  className="object-cover w-10 h-10 border-2 border-white rounded-full"
                   src={`https://randomuser.me/api/portraits/${
-                    i % 2 === 0 ? 'women' : 'men'
+                    i % 2 === 0 ? "women" : "men"
                   }/${i + 10}.jpg`}
                   alt="team"
                 />
               ))}
             </div>
             <div>
-              <p className="text-lg font-semibold mt-2">
+              <p className="mt-2 text-lg font-semibold">
                 Still have you any question?
               </p>
-              <p className="text-gray-500 text-sm">
+              <p className="text-sm text-gray-500">
                 We're ready to help you to answer any questions.
               </p>
             </div>
-            <p className="text-brand-primary font-semibold flex items-center gap-2">
+            <p className="flex items-center gap-2 font-semibold text-brand-primary">
               📞 +01 789 859 664
             </p>
           </div>
         </div>
 
         {/* Right Column - FAQs */}
-        <div className="space-y-4 w-full">
+        <div className="w-full space-y-4">
           {faqs.map((item, index) => (
             <div
               key={index}
-              className="bg-white rounded-xl shadow-sm transition hover:shadow-md"
+              className="transition bg-white shadow-sm rounded-xl hover:shadow-md"
             >
               <button
                 onClick={() => toggleFAQ(index)}
-                className="w-full flex justify-between items-center px-6 py-4 text-left"
+                className="flex items-center justify-between w-full px-6 py-4 text-left"
               >
-                <p className="font-medium text-lg">{item.question}</p>
+                <p className="text-lg font-medium">{item.question}</p>
                 <span className="text-2xl font-bold text-gray-400">
-                  {openIndex === index ? '-' : '+'}
+                  {openIndex === index ? "-" : "+"}
                 </span>
               </button>
 
               {openIndex === index && (
-                <div className="px-6 pb-4 text-gray-600 text-sm">
-                  {item.answer}
+                <div className="px-6 pb-4 text-sm text-gray-600">
+                  {Array.isArray(item.answer) ? (
+                    <ul className="space-y-1 list-disc list-inside">
+                      {item.answer.map((point, i) => (
+                        <li key={i}>{point}</li>
+                      ))}
+                    </ul>
+                  ) : (
+                    <p>{item.answer}</p>
+                  )}
                 </div>
               )}
             </div>

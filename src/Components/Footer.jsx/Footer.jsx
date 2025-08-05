@@ -46,7 +46,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     to="/services/soft-skills"
-                                    className="block py-1 text-white hover:text-[#FF9E0D] text-gray-800"
+                                    className="block py-1 text-white hover:text-[#FF9E0D]"
                                 >
                                     Soft Skills for Students
                                 </Link>
@@ -54,7 +54,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     to="/services/corporate-training"
-                                    className="block py-1 text-white hover:text-[#FF9E0D] text-gray-800"
+                                    className="block py-1 text-white hover:text-[#FF9E0D]"
                                 >
                                     Corporate Training
                                 </Link>
@@ -62,7 +62,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     to="/services/b2b"
-                                    className="block py-1 text-white hover:text-[#FF9E0D] text-gray-800"
+                                    className="block py-1 text-white hover:text-[#FF9E0D]"
                                 >
                                     B2B Outsourcing
                                 </Link>
@@ -70,7 +70,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     to="/courses/for-colleges"
-                                    className="block py-1 text-white hover:text-[#FF9E0D] text-gray-800"
+                                    className="block py-1 text-white hover:text-[#FF9E0D]"
                                 >
                                     For Colleges
                                 </Link>
@@ -78,7 +78,7 @@ const Footer = () => {
                             <li>
                                 <Link
                                     to="/courses/for-corporate"
-                                    className="block py-1 text-white hover:text-[#FF9E0D] text-gray-800"
+                                    className="block py-1 text-white hover:text-[#FF9E0D]"
                                 >
                                     For Corporates/B2B
                                 </Link>
@@ -91,13 +91,14 @@ const Footer = () => {
                         <h4 className="mb-3 font-bold">Follow Us</h4>
                         <ul className="space-y-4 text-sm">
                             <li className="flex items-center gap-2">
-                                <Linkedin /> Linkedin
+                               <Link to={`https://www.linkedin.com/company/college-skills/posts/?feedView=all`} className="flex items-center gap-2">
+                                <Linkedin /> Linkedin</Link>
                             </li>
                             <li className="flex items-center gap-2">
-                                <Youtube /> Youtube
+                               <Link to={`https://www.youtube.com/@er.khalidtalks`} className="flex items-center gap-2"><Youtube /> Youtube</Link> 
                             </li>
                             <li className="flex items-center gap-2">
-                                <Instagram /> Instagram
+                                  <Link to={`https://www.instagram.com/collegeskills.in/?hl=en`} className="flex items-center gap-2"> <Instagram /> Instagram </Link>
                             </li>
                         </ul>
                     </div>

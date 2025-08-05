@@ -26,7 +26,7 @@ const SoftSkillsAbout = ({ title, description, features, image }) => {
           <img
             src={image}
             alt="About course"
-            className="object-cover w-full h-auto rounded-2xl"
+            className="object-cover w-full h-auto rounded-lg"
           />
         </div>
       </div>

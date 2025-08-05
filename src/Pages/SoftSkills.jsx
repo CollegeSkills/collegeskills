@@ -1,13 +1,13 @@
 import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import CourseCard from "../Components/CourseCard/CourseCard";
-import courseImg from "../assets/skill.jpg";
+import courseImg from "../assets/12.png";
 import Benefits from "../Components/Benefits/Benefits";
 import { Radio, School } from "lucide-react";
 import Pricing from "../Components/Pricing/Pricing";
 import Footer from "../Components/Footer.jsx/Footer";
 import SoftSkillsAbout from "../Components/SoftSkillAbout/SoftSkillAbout";
-import CourseImage from "../assets/soft.jpg";
+import CourseImage from "../assets/10.png";
 import CertificateViewer from "../Components/CertificateView/CertificateView";
 import TeamCard from "../Components/Team/Team";
 import Testimonial from "../Components/Testimonial/Testimonial";

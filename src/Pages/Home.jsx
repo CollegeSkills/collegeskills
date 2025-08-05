@@ -235,7 +235,7 @@ function Home() {
         </div>
       </section>
       {/* How We Work */}
-      <section className="max-w-full px-10 lg:mt-10 lg:px-16">
+      <section className="max-w-full px-10 lg:mt-20 lg:px-16">
         <h4 className="text-brand-primary">// How We Work</h4>
         <div className="flex flex-col items-center justify-between w-full gap-4 py-6 md:flex-row md:py-10">
           <h2 className="text-4xl font-medium md:text-6xl text-brand-text font-oswald">
@@ -253,7 +253,7 @@ function Home() {
         </div>
       </section>
       {/* How We Work cards */}
-      <section className="px-4 py-7 md:px-8">
+      <section className="px-4 py-7 md:px-14">
         <div className="max-w-full text-center">
           <div className="grid grid-cols-1 gap-8 sm:grid-cols-2 lg:grid-cols-4">
             {boxes.map((box, index) => (

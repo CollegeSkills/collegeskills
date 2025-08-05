@@ -13,12 +13,12 @@ const VideoPopup = () => {
   };
 
   return (
-    <div className="relative">
+    <div className="relative mt-2">
       {/* Play Button */}
-      <button onClick={handlePlayClick} className="z-10 relative">
+      <button onClick={handlePlayClick} className="relative z-10">
         <Play
           size={45}
-          className="bg-brand-primary p-2 text-white rounded-full"
+          className="p-2 text-white rounded-full bg-brand-primary"
         />
       </button>
 
@@ -29,7 +29,7 @@ const VideoPopup = () => {
             {/* Close Button */}
             <button
               onClick={handleClose}
-              className="absolute top-2 right-2 text-white text-xl bg-black bg-opacity-50 rounded-full px-3 py-1"
+              className="absolute px-3 py-1 text-xl text-white bg-black bg-opacity-50 rounded-full top-2 right-2"
             >
               ✕
             </button>

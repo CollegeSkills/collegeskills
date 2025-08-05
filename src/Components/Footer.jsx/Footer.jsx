@@ -104,7 +104,7 @@ const Footer = () => {
                                 <Youtube /> Youtube
                             </li>
                             <li className="flex items-center gap-2">
-                                <Instagram /> Telegram
+                                <Instagram /> Instagram
                             </li>
                         </ul>
                     </div>

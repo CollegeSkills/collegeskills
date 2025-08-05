@@ -95,10 +95,10 @@ function Home() {
           </div>
         </div>
 
-        <div className="relative mt-12 md:mt-0">
-          <img src={hero} alt="student" className="" />
+        <div className="relative mt-12 mb-20 md:mt-0">
+          <img src={hero} alt="student" className="w-full" />
 
-          <div className="absolute hidden gap-2 px-4 py-3 shadow-lg top-24 left-24 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
+          <div className="absolute top-0 gap-2 px-4 py-3 shadow-lg lg:top-24 lg:left-24 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
             <CalendarRange
               size={30}
               className="p-1 text-white bg-blue-400 rounded-lg"
@@ -109,7 +109,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="absolute items-center hidden gap-2 px-4 py-4 shadow-lg -left-10 bottom-36 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
+          <div className="absolute items-center gap-2 p-3 py-4 mt-10 mb- shadow-lg w-[200px] lg:w-[350px] -bottom-32 lg:px-4 lg:-left-10 lg:bottom-32 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
             <img src={student} alt="" className="w-8 h-8 rounded-full" />
             <div>
               <p className="text-sm font-medium">Don’t Just Watch, Grow </p>
@@ -117,7 +117,7 @@ function Home() {
                 Free Live Class Every Tuesday
               </p>
             </div>
-            <button className="ml-4 bg-[#FF9E0D] text-white px-3 py-1 rounded-full text-sm">
+            <button className="lg:ml-4 bg-[#FF9E0D] text-white px-3 py-1 mt-2 rounded-full text-sm">
               Join Now
             </button>
           </div>
@@ -139,7 +139,7 @@ function Home() {
       {/* Partners */}
       <Partners />
       {/* Who we Are */}
-      <section className="px-6 py-16 pb-20 md:px-12 lg:px-20">
+      <section className="px-6 py-16 pb-5 md:px-12 lg:px-20">
         <div className="flex flex-col items-center gap-12 lg:flex-row">
           {/* Left Side */}
           <motion.div
@@ -175,7 +175,7 @@ function Home() {
               </div>
               <div className="text-center">
                 <div className="flex items-center justify-center w-24 h-24 text-2xl font-bold border-2 rounded-full border-brand-primary">
-                  20K
+                  100+
                 </div>
                 <p className="mt-2 font-medium text-gray-700">
                   Projects Completed
@@ -186,8 +186,20 @@ function Home() {
             <hr className="my-8 border-gray-300" />
 
             {/* Bottom Info */}
+               <motion.div
+            initial={{ opacity: 0, x: 50 }}
+            animate={{ opacity: 1, x: 0 }}
+            transition={{ duration: 0.6 }}
+            className="flex-1"
+          >
+            <img
+              src={we}
+              alt="Team working"
+              className="object-cover w-full mt-0 mb-4 lg:hidden rounded-2xl"
+            />
+          </motion.div>
             <div>
-              <h4 className="mb-4 text-lg font-bold text-gray-800">
+              <h4 className="text-lg font-bold text-gray-800 lg:mb-4">
                 Certified Trainers & Domain Experts
               </h4>
               <p className="mb-2 text-gray-600">
@@ -217,13 +229,13 @@ function Home() {
             <img
               src={we}
               alt="Team working"
-              className="object-cover w-full rounded-2xl"
+              className="hidden object-cover w-full lg:block rounded-2xl"
             />
           </motion.div>
         </div>
       </section>
       {/* How We Work */}
-      <section className="max-w-full px-10 mt-10 lg:px-16">
+      <section className="max-w-full px-10 lg:mt-10 lg:px-16">
         <h4 className="text-brand-primary">// How We Work</h4>
         <div className="flex flex-col items-center justify-between w-full gap-4 py-6 md:flex-row md:py-10">
           <h2 className="text-4xl font-medium md:text-6xl text-brand-text font-oswald">
@@ -234,7 +246,7 @@ function Home() {
           </h2>
           <Link
             to="/contact"
-            className="flex items-center justify-center px-4 py-2 mt-4 font-medium border rounded-md text-brand-background bg-brand-primary border-brand-primary md:mt-0"
+            className="flex items-center justify-start px-4 py-2 mt-4 font-medium border rounded-md lg:justify-center text-brand-background bg-brand-primary border-brand-primary md:mt-0"
           >
             Contact Us <ArrowUpRight className="ml-2" />
           </Link>
@@ -252,7 +264,7 @@ function Home() {
                 whileInView="visible"
                 viewport={{ once: true }}
                 custom={index}
-                className="p-6 text-left bg-white rounded-2xl"
+                className="p-3 text-left bg-white rounded-2xl"
               >
                 <div className="flex mb-4">{box.icon}</div>
                 <p className="pb-3 border-t border-gray-400"></p>

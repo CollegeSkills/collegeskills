@@ -1,72 +1,72 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
-import image from '../../assets/testimonial.jpg';
+import image from '../../assets/atul.jpeg';
 import image2 from '../../assets/p2.jpg';
 import image3 from '../../assets/p3.jpg';
 import image4 from '../../assets/p4.jpg';
 
 const testimonials = [
   {
-    name: 'Rahul Sharma',
+    name: 'Atul',
     // role: 'Content Writer',
     image: image,
-    company: 'KDK College of Engineering',
+    company: 'Gov politechnic ayodhya',
     review:
       '"The training boosted my confidence and communication skills immensely. I now feel ready to take on any interview. Thank you, College Skills!"',
   },
   {
-    name: 'Priya Verma',
+    name: 'Atul',
     // role: 'Matoshree Institute of Technology',
-    image: image2,
+    image: image,
     company: 'Matoshree Institute of Technology',
     review:
       '"College Skills helped me discover my strengths and guided me to present myself professionally. The sessions were engaging and practical."',
   },
   {
-    name: 'Arjun Patel',
+     name: 'Atul',
     // role: 'UX Designer',
-    image: image3,
+    image: image,
     company: 'Fabtech Technical Campus',
     review:
       '"I never imagined soft skills could make such a difference. After the workshops, my presentation and teamwork skills have grown tremendously."',
   },
   {
-    name: 'Sneha Gupta',
+     name: 'Atul',
     // role: 'Product Owner',
-    image: image4,
+    image: image,
     company: 'S.V.P.M. Baramati',
     review:
       '"The coaching sessions were eye-opening. I learned to manage time better and gained clarity on my career path. Highly recommended!"',
   },
   {
-    name: 'Ankit Joshi',
+     name: 'Atul',
     // role: 'Product Owner',
-    image: image4,
+    image: image,
     company: 'Govt. Polytechnic Ayodhya',
     review:
       '"Thanks to College Skills, I’m more confident in group discussions and interviews. The trainers were supportive and motivating throughout."',
   },
   {
-    name: 'Ayesha Khan',
+    name: 'Atul',
     // role: 'Product Owner',
-    image: image4,
+    image: image,
     company: 'Matoshree Institute of Technology',
     review:
       '"The activities made learning fun and effective. I gained leadership skills and a better understanding of professional behavior."',
   },
    {
-    name: 'Meera Singh',
+   name: 'Atul',
     // role: 'Product Owner',
-    image: image4,
+    image: image,
     company: 'Saramodhya ITI',
     review:
       '"With personalized coaching, I improved my communication and critical thinking skills. This has made a real difference in my academics and placements."',
   },
    {
-    name: 'Kabeer Malhotra',
+    name: 'Atul',
     // role: 'Product Owner',
-    image: image4,
+    image: image,
     company: 'KDK College of Engineering',
     review:
       '"College Skills transformed my approach to learning and growth. The mock interviews prepared me thoroughly for real-world challenges."',
@@ -110,9 +110,9 @@ const Testimonial = () => {
               className="object-cover w-full md:w-80 h-80 rounded-xl"
             />
             <div>
-              <h3 className="text-2xl font-bold">{testimonials[current].company}</h3>
+              <h3 className="text-2xl font-semibold font-oswald">{testimonials[current].company}</h3>
               <p className="mt-2 text-sm md:text-base">{testimonials[current].review}</p>
-              <p className="mt-4 font-semibold">{testimonials[current].name}</p>
+              <p className="mt-4 text-3xl font-semibold font-oswald">{testimonials[current].name}</p>
               <p className="text-sm">{testimonials[current].role}</p>
             </div>
           </motion.div>

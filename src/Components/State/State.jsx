@@ -4,13 +4,13 @@ import { motion } from "framer-motion";
 const stats = [
     { value: "10+", label: "Courses on the Platform" },
     { value: "20+", label: "Mentors from the Industry" },
-    { value: "100+", label: "Youth Transformed" },
+    { value: "5k+", label: "Youth Transformed" },
     { value: "55%", label: "Average Salary Hike" },
 ];
 
 const StatsSection = () => {
     return (
-        <div className="px-6 py-10 bg-brand-background lg:py-20 md:px-16">
+        <div className="px-6 py-10 mt-10 bg-brand-background lg:py-20 md:px-16">
             <div className="grid grid-cols-1 gap-6 mx-auto sm:grid-cols-2 lg:grid-cols-4 max-w-7xl">
                 {stats.map((stat, index) => (
                     <motion.div

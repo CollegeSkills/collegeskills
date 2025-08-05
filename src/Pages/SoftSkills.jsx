@@ -11,6 +11,7 @@ import CourseImage from "../assets/soft.jpg";
 import CertificateViewer from "../Components/CertificateView/CertificateView";
 import TeamCard from "../Components/Team/Team";
 import Testimonial from "../Components/Testimonial/Testimonial";
+import FAQSection from "../Components/Faq/Faq";
 
 function SoftSkills() {
   const featureData = [
@@ -54,7 +55,6 @@ function SoftSkills() {
   return (
     <>
       <Navbar />
-      {/* <div className="w-full"> */}
 
       <CourseCard
         badge="#Bestseller"
@@ -74,17 +74,15 @@ function SoftSkills() {
         features={features}
         image={CourseImage}
       />
-      {/* <div className="min-h-screen bg-white"> */}
       <Benefits
         title="Unlock Your Potential: Exclusive Course Offerings"
         features={featureData}
       />
       <CertificateViewer/>
       <TeamCard/>
-      {/* </div> */}
       <Pricing />
       <Testimonial/>
-      {/* </div> */}
+      <FAQSection/>
       <Footer />
     </>
   );

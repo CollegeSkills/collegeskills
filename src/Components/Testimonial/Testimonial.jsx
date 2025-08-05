@@ -8,36 +8,68 @@ import image4 from '../../assets/p4.jpg';
 
 const testimonials = [
   {
-    name: 'Claire Peterson',
-    role: 'Content Writer',
+    name: 'Rahul Sharma',
+    // role: 'Content Writer',
     image: image,
-    company: 'Google',
+    company: 'KDK College of Engineering',
     review:
-      'Our backyard has been completely transformed! The team was professional, attentive, and delivered beyond our expectations. The quality of work is outstanding.',
+      '"The training boosted my confidence and communication skills immensely. I now feel ready to take on any interview. Thank you, College Skills!"',
   },
   {
-    name: 'John Malik',
-    role: 'Marketing Manager',
+    name: 'Priya Verma',
+    // role: 'Matoshree Institute of Technology',
     image: image2,
-    company: 'Amazon',
+    company: 'Matoshree Institute of Technology',
     review:
-      'This service was amazing! Their strategy helped increase our conversions by 30% in just two months.',
+      '"College Skills helped me discover my strengths and guided me to present myself professionally. The sessions were engaging and practical."',
+  },
+  {
+    name: 'Arjun Patel',
+    // role: 'UX Designer',
+    image: image3,
+    company: 'Fabtech Technical Campus',
+    review:
+      '"I never imagined soft skills could make such a difference. After the workshops, my presentation and teamwork skills have grown tremendously."',
+  },
+  {
+    name: 'Sneha Gupta',
+    // role: 'Product Owner',
+    image: image4,
+    company: 'S.V.P.M. Baramati',
+    review:
+      '"The coaching sessions were eye-opening. I learned to manage time better and gained clarity on my career path. Highly recommended!"',
+  },
+  {
+    name: 'Ankit Joshi',
+    // role: 'Product Owner',
+    image: image4,
+    company: 'Govt. Polytechnic Ayodhya',
+    review:
+      '"Thanks to College Skills, I’m more confident in group discussions and interviews. The trainers were supportive and motivating throughout."',
   },
   {
     name: 'Ayesha Khan',
-    role: 'UX Designer',
-    image: image3,
-    company: 'Meta',
-    review:
-      'Beautiful work and great support. The design exceeded my expectations and the communication was fantastic throughout.',
-  },
-  {
-    name: 'Alina',
-    role: 'Product Owner',
+    // role: 'Product Owner',
     image: image4,
-    company: 'Microsoft',
+    company: 'Matoshree Institute of Technology',
     review:
-      'Highly recommend! A creative and efficient team that brings vision to life with impressive speed.',
+      '"The activities made learning fun and effective. I gained leadership skills and a better understanding of professional behavior."',
+  },
+   {
+    name: 'Meera Singh',
+    // role: 'Product Owner',
+    image: image4,
+    company: 'Saramodhya ITI',
+    review:
+      '"With personalized coaching, I improved my communication and critical thinking skills. This has made a real difference in my academics and placements."',
+  },
+   {
+    name: 'Kabeer Malhotra',
+    // role: 'Product Owner',
+    image: image4,
+    company: 'KDK College of Engineering',
+    review:
+      '"College Skills transformed my approach to learning and growth. The mock interviews prepared me thoroughly for real-world challenges."',
   },
 ];
 
@@ -53,16 +85,16 @@ const Testimonial = () => {
   }, []);
 
   return (
-    <div className="text-brand-text lg:py-32 px-4 md:px-16 flex flex-col lg:flex-row items-center gap-8">
+    <div className="flex flex-col items-center gap-8 px-4 text-brand-text lg:py-32 md:px-16 lg:flex-row">
       <div className="lg:w-1/2">
-        <p className="text-brand-primary font-semibold">// TESTIMONIAL</p>
-        <h2 className="text-3xl md:text-5xl font-medium font-oswald mt-2">
+        <p className="font-semibold text-brand-primary">// TESTIMONIAL</p>
+        <h2 className="mt-2 text-3xl font-medium md:text-5xl font-oswald">
           Real success stories from our <br />
           <span className="text-brand-primary">coaching clients</span>
         </h2>
       </div>
 
-      <div className="lg:w-1/2 relative">
+      <div className="relative lg:w-1/2">
         <AnimatePresence mode="wait">
           <motion.div
             key={current}
@@ -70,12 +102,12 @@ const Testimonial = () => {
             animate={{ opacity: 1, x: 0 }}
             exit={{ opacity: 0, x: -100 }}
             transition={{ duration: 0.5 }}
-            className="bg-gradient-to-r to-brand-primary from-orange-300 text-white p-9 md:p-10 rounded-2xl flex flex-col md:flex-row gap-6"
+            className="flex flex-col gap-6 text-white bg-gradient-to-r to-brand-primary from-orange-300 p-9 md:p-10 rounded-2xl md:flex-row"
           >
             <img
               src={testimonials[current].image}
               alt={testimonials[current].name}
-              className="w-full md:w-80 h-80 object-cover rounded-xl"
+              className="object-cover w-full md:w-80 h-80 rounded-xl"
             />
             <div>
               <h3 className="text-2xl font-bold">{testimonials[current].company}</h3>
@@ -87,16 +119,16 @@ const Testimonial = () => {
         </AnimatePresence>
 
         {/* Arrows */}
-        <div className="absolute -bottom-6 right-4 flex gap-4">
+        <div className="absolute flex gap-4 -bottom-6 right-4">
           <button
             onClick={prevSlide}
-            className="bg-gradient-to-r from-orange-300 to-brand-primary p-3 rounded-full hover:scale-110 transition"
+            className="p-3 transition rounded-full bg-gradient-to-r from-orange-300 to-brand-primary hover:scale-110"
           >
             <ArrowLeft className="text-white" />
           </button>
           <button
             onClick={nextSlide}
-            className="bg-gradient-to-r from-orange-300 to-brand-primary p-3 rounded-full hover:scale-110 transition"
+            className="p-3 transition rounded-full bg-gradient-to-r from-orange-300 to-brand-primary hover:scale-110"
           >
             <ArrowRight className="text-white" />
           </button>

@@ -1,13 +1,6 @@
 import { Instagram, Linkedin, Mail, Map, MapPin, Youtube } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
-// import {
-//   FaLinkedin,
-//   FaYoutube,
-//   FaTelegram,
-//   FaMapMarkerAlt,
-//   FaEnvelope,
-// } from "react-icons/fa";
 
 const Footer = () => {
     return (

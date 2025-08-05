@@ -1,8 +1,14 @@
 import React from 'react'
+import Navbar from '../Components/Navbar/Navbar'
+import Footer from '../Components/Footer.jsx/Footer'
 
 function About() {
   return (
-    <div>About Page</div>
+<>
+<Navbar/>
+<h1>About Page</h1>
+{/* <Footer/> */}
+</>
   )
 }
 

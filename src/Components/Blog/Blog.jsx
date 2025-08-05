@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 
 const Blog = () => {
   const blogs = [
@@ -18,40 +19,40 @@ const Blog = () => {
 
   return (
     <section className="px-4 py-20 md:px-16">
-      <div className="max-w-full grid md:grid-cols-2 lg:gap-2 gap-10 items-start">
+      <div className="grid items-start max-w-full gap-10 md:grid-cols-2 lg:gap-2">
         {/* Left Section */}
-        <div className="space-y-6 w-full">
-          <p className="text-sm font-medium text-brand-primary">/ POST</p>
-          <h2 className="text-4xl md:text-5xl font-medium font-oswald leading-tight">
+        <div className="w-full space-y-6">
+          <p className="text-sm font-medium text-brand-primary">// POST</p>
+          <h2 className="text-4xl font-medium leading-tight md:text-5xl font-oswald">
             Latest updates 
             and coaching <br />
             <span className="text-transparent bg-clip-text bg-brand-primary">
               industry insights
             </span>
           </h2>
-          <button className="bg-brand-primary text-white px-6 py-3 rounded-full font-medium hover:scale-105 transition-all duration-300">
-            Contact Us →
+          <button className="px-6 py-3 font-medium text-white transition-all duration-300 rounded-full bg-brand-primary hover:scale-105">
+           <Link to="/contact">Contact Us →</Link> 
           </button>
         </div>
 
         {/* Right Section - Cards */}
-        <div className="space-y-10 w-full">
+        <div className="w-full space-y-10">
           {blogs.map((blog, index) => (
             <div
               key={index}
-              className="flex flex-col md:flex-row gap-6 items-start"
+              className="flex flex-col items-start gap-6 md:flex-row"
             >
               <img
                 src={blog.image}
                 alt="Blog"
-                className="w-full md:w-52 h-52 object-cover rounded-xl"
+                className="object-cover w-full md:w-52 h-52 rounded-xl"
               />
               <div>
-                <h3 className="text-xl font-semibold text-brand-text mb-2">
+                <h3 className="mb-2 text-xl font-semibold text-brand-text">
                   {blog.title}
                 </h3>
-                <p className="text-gray-500 text-sm mb-4">{blog.desc}</p>
-                <button className="bg-gradient-to-r to-brand-primary from-orange-300 text-white px-5 py-2 rounded-full font-medium text-sm hover:scale-105 transition-all duration-300">
+                <p className="mb-4 text-sm text-gray-500">{blog.desc}</p>
+                <button className="px-5 py-2 text-sm font-medium text-white transition-all duration-300 rounded-full bg-gradient-to-r to-brand-primary from-orange-300 hover:scale-105">
                   Read More →
                 </button>
               </div>

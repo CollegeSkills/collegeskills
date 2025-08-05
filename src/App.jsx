@@ -8,6 +8,7 @@ import CourseForCorprates from './Pages/CourseForCorprates';
 import Testimonial from './Pages/Testimonial';
 import Home from './Pages/Home';
 import About from './Pages/About';
+import Blog from './Pages/Blog';
 
 function App() {
   return (
@@ -21,6 +22,7 @@ function App() {
         <Route path="/courses/for-colleges" element={<CourseForColleges />} />
         <Route path="/courses/for-corporate" element={<CourseForCorprates />} />
         <Route path="/testimonial" element={<Testimonial />} />
+        <Route path="/blog" element={<Blog />} />
         <Route path="/contact" element={<Contact />} />
       </Routes>
     </Router>

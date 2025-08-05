@@ -51,7 +51,7 @@ const Contact = () => {
       <div className="flex flex-col gap-10 md:flex-row">
         {/* Left - Form */}
         <div className="w-full p-8 bg-white shadow-md rounded-xl md:w-1/2">
-          <h2 className="mb-1 text-xl font-semibold">Send A Message</h2>
+          <h2 className="mb-1 text-2xl font-semibold font-oswald">Send A Message</h2>
           <p className="mb-6 text-sm text-gray-500">
             Unlock your potential with expert guidance! Schedule a free
             consultation toward personal and business success.
@@ -65,7 +65,7 @@ const Contact = () => {
               value={formData.firstName}
               onChange={handleChange}
               placeholder="First Name"
-              className="p-2 border-b"
+              className="p-2 border-b outline-none"
               required
             />
             <input
@@ -73,7 +73,7 @@ const Contact = () => {
               value={formData.lastName}
               onChange={handleChange}
               placeholder="Last Name"
-              className="p-2 border-b"
+              className="p-2 border-b outline-none"
               required
             />
             <input
@@ -81,7 +81,7 @@ const Contact = () => {
               value={formData.email}
               onChange={handleChange}
               placeholder="Email Address"
-              className="p-2 border-b"
+              className="p-2 border-b outline-none"
               required
               type="email"
             />
@@ -90,7 +90,7 @@ const Contact = () => {
               value={formData.phone}
               onChange={handleChange}
               placeholder="Phone Number"
-              className="p-2 border-b"
+              className="p-2 border-b outline-none"
               required
             />
             <textarea
@@ -98,7 +98,7 @@ const Contact = () => {
               value={formData.message}
               onChange={handleChange}
               placeholder="Message"
-              className="col-span-2 p-2 border-b"
+              className="col-span-2 p-2 border-b outline-none"
               rows="4"
               required
             />
@@ -114,27 +114,27 @@ const Contact = () => {
         {/* Right - Contact Info */}
         <div className="flex flex-col justify-center w-full text-gray-700 md:w-1/2">
           <div className="mb-8">
-            <h3 className="text-lg font-semibold">Call Us</h3>
+            <h3 className="text-xl font-semibold font-oswald">Call Us</h3>
             <p className="text-sm text-gray-500">
               Call us today for personalized coaching and transformative growth!
             </p>
             <p className="mt-1 font-bold text-brand-primary">+1 840 841 256</p>
           </div>
           <div className="mb-8">
-            <h3 className="text-lg font-semibold">Email Us</h3>
+            <h3 className="text-xl font-semibold font-oswald">Email Us</h3>
             <p className="text-sm text-gray-500">
               Email us now for expert coaching and tailored growth solutions!
             </p>
-            <p className="mt-1 font-bold text-brand-primary">info@domain.com</p>
+            <p className="mt-1 font-bold text-brand-primary">collegeskills@gmail.com</p>
           </div>
           <div>
-            <h3 className="text-lg font-semibold">Visit Us</h3>
+            <h3 className="text-xl font-semibold font-oswald">Visit Us</h3>
             <p className="text-sm text-gray-500">
               Visit us for personalized coaching and guidance toward lasting
               success!
             </p>
             <p className="mt-1 font-bold text-brand-primary">
-              785 15th Street, Office 478 Berlin, De 81566
+              New Delhi , India 
             </p>
           </div>
         </div>

@@ -45,7 +45,7 @@ const EnquiryForm = () => {
       </div>
 
       {/* Right Side Form */}
-      <div className="w-full max-w-xl p-8 mx-auto mt-32 bg-white shadow-xl rounded-xl">
+      <div className="w-full max-w-xl p-8 mx-auto mt-32 bg-white rounded-xl">
 
         {/* Steps */}
         <div className="flex items-center mb-6">

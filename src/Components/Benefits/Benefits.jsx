@@ -2,7 +2,7 @@ import React from "react";
 
 const Benefits = ({ title, features = [] }) => {
   return (
-    <section className="px-4 py-10 lg:py-24 md:px-10 lg:px-20">
+    <section className="px-4 py-5 lg:py-0 md:px-10 lg:px-20">
       {/* Heading */}
       <h2 className="text-[17px] md:text-3xl md:font-bold text-gray-900 mb-8 flex items-center">
         <span className="inline-block w-1 h-6 mr-3 bg-brand-primary"></span>

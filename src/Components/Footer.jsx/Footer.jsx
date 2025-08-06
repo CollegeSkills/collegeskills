@@ -1,9 +1,12 @@
 import { Instagram, Linkedin, Mail, Map, MapPin, Youtube } from "lucide-react";
 import React from "react";
 import { Link } from "react-router-dom";
+import EnquiryForm from "../EnquiryForm/EnquiryForm";
 
 const Footer = () => {
     return (
+   <>
+   <EnquiryForm/>
         <footer className="px-4 pt-12 pb-6 text-white bg-black md:px-10">
             {/* Top content */}
             <div className="mx-auto max-w-7xl">
@@ -119,6 +122,7 @@ const Footer = () => {
                 </div>
             </div>
         </footer>
+   </>
     );
 };
 

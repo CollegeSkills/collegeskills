@@ -22,7 +22,7 @@ const SoftSkillsAbout = ({ title, description, features, image }) => {
         </div>
 
         {/* Right Column */}
-        <div className="w-full">
+        <div className="relative w-full lg:-top-10">
           <img
             src={image}
             alt="About course"

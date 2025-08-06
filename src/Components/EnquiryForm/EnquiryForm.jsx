@@ -41,12 +41,19 @@ const EnquiryForm = () => {
             Connect with us & know what's best for you.
           </p>
         </div>
-        <img src={image} alt="help" className="mx-10" />
+        <img src={image} alt="help" className="mx-14" />
       </div>
 
       {/* Right Side Form */}
-      <div className="w-full max-w-xl p-8 mx-auto mt-32 bg-white rounded-xl">
-
+         <div className="block w-full max-w-md px-10 mx-auto mt-9 md:hidden">
+          <h2 className="mb-1 text-3xl font-medium text-white lg:text-6xl font-oswald">
+            Need Help?
+          </h2>
+          <p className="pt-2 text-lg text-white">
+            Connect with us & know what's best for you.
+          </p>
+        </div>
+      <div className="w-full max-w-xl p-8 mx-auto bg-white lg:mt-32 rounded-xl mb-9 lg:mb-0">
         {/* Steps */}
         <div className="flex items-center mb-6">
           <div

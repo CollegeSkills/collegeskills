@@ -6,8 +6,6 @@ import {
   ArrowUpRight,
   CalendarRange,
   Mail,
-  Play,
-  Code,
   CheckCircle2,
   ShieldCheck,
   TrendingUp,
@@ -109,7 +107,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="absolute items-center gap-2 p-3 py-4 mt-10 mb- shadow-lg w-[200px] lg:w-[350px] -bottom-32 lg:px-4 lg:-left-10 lg:bottom-32 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
+          <div className="absolute items-center gap-2 p-3 py-4 mt-10 mb- shadow-lg w-[200px] lg:w-[350px] -bottom-32 lg:px-4 left-40 lg:-left-10 lg:bottom-32 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
             <img src={student} alt="" className="w-8 h-8 rounded-full" />
             <div>
               <p className="text-sm font-medium">Don’t Just Watch, Grow </p>
@@ -237,7 +235,7 @@ function Home() {
       {/* How We Work */}
       <section className="max-w-full px-10 lg:mt-20 lg:px-16">
         <h4 className="text-brand-primary">// How We Work</h4>
-        <div className="flex flex-col items-center justify-between w-full gap-4 py-6 md:flex-row md:py-10">
+        <div className="flex flex-col items-start justify-between w-full gap-4 py-6 lg:items-center md:flex-row md:py-10">
           <h2 className="text-4xl font-medium md:text-6xl text-brand-text font-oswald">
             Step by step process for <br />
             <span className="block mt-2 text-brand-primary">
@@ -246,8 +244,7 @@ function Home() {
           </h2>
           <Link
             to="/contact"
-            className="flex items-center justify-start px-4 py-2 mt-4 font-medium border rounded-md lg:justify-center text-brand-background bg-brand-primary border-brand-primary md:mt-0"
-          >
+            className="flex px-4 py-2 mt-4 font-medium border rounded-md lg:items-center lg:justify-center text-brand-background bg-brand-primary border-brand-primary md:mt-0">
             Contact Us <ArrowUpRight className="ml-2" />
           </Link>
         </div>

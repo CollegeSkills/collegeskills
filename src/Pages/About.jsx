@@ -7,8 +7,6 @@ function About() {
   return (
 <>
 <Navbar/>
-<h1>About Page</h1>
-<EnquiryForm/>
 {/* <Footer/> */}
 </>
   )

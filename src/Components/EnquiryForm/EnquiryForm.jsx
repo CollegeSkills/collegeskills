@@ -29,7 +29,7 @@ const EnquiryForm = () => {
   };
 
   return (
-    <div className="grid items-center grid-cols-1 gap-6 px-4 bg-orange-400 md:grid-cols-2">
+    <div className="grid items-center grid-cols-1 gap-6 px-4 bg-orange-400 md:grid-cols-2 h-[450px]">
       {/* Left Side Image */}
       
       <div className="hidden md:block">
@@ -41,7 +41,7 @@ const EnquiryForm = () => {
             Connect with us & know what's best for you.
           </p>
         </div>
-        <img src={image} alt="help" className="mx-14" />
+        <img src={image} alt="help" className="relative w-5/12 -mt-1 left-20" />
       </div>
 
       {/* Right Side Form */}
@@ -53,7 +53,7 @@ const EnquiryForm = () => {
             Connect with us & know what's best for you.
           </p>
         </div>
-      <div className="w-full max-w-xl p-8 mx-auto bg-white lg:mt-32 rounded-xl mb-9 lg:mb-0">
+      <div className="w-full max-w-xl p-8 mx-auto bg-white rounded-xl mb-9 lg:mb-0">
         {/* Steps */}
         <div className="flex items-center mb-6">
           <div

@@ -1,19 +1,14 @@
 // LogoCarousel.jsx
 import { motion } from "framer-motion";
 import { useEffect, useRef, useState } from "react";
+import p1 from '/p1.jpg';
+import p2 from '/p2.jpeg';
+import p3 from '/p3.jpg';
+import p4 from '/p4.png';
+import p5 from '/p5.png';
 
 // Replace these with your actual image URLs or imports
-const logos = [
-  "logo.jpg",
-  "logo.jpg",
-  "logo.jpg",
-  "logo.jpg",
-  "logo.jpg",
-  "logo.jpg",
-  "logo.jpg",
-
-  
-];
+const logos = [p1, p2, p3, p4, p5];
 
 const Partners = () => {
   const [width, setWidth] = useState(0);
@@ -39,9 +34,9 @@ const Partners = () => {
       >
         {[...logos, ...logos].map((logo, index) => (
           <motion.div
-            whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
+            // whileHover={{ scale: 1.1, filter: "grayscale(0%)" }}
             key={index}
-            className="min-w-[150px] pt-9 mx-6 flex items-center justify-center grayscale hover:grayscale-0 transition duration-300"
+            className="min-w-[150px] pt-9 mx-6 flex items-center justify-center transition duration-300"
           >
             <img
               src={logo}

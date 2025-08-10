@@ -23,6 +23,8 @@ import Footer from "../Components/Footer.jsx/Footer";
 import Pricing from "../Components/Pricing/Pricing";
 import VideoPopup from "../Components/VideoPopup/VideoPopup";
 import Partners from "../Components/Partners/Partners";
+import EnquiryForm from "../Components/EnquiryForm/EnquiryForm";
+import JoinFree from "../Components/JoinFree/JoinFree";
 
 function Home() {
   const boxes = [
@@ -74,20 +76,22 @@ function Home() {
       {/* Hero section  */}
       <section className="grid items-center px-10 py-10 bg-brand-background lg:px-16 md:grid-cols-2">
         <div className="space-y-6">
-          <h1 className="text-4xl font-semibold md:text-6xl text-brand-text font-oswald">
+          <h1 className="text-4xl font-semibold lg:leading-[4.2rem] md:text-6xl text-brand-text font-oswald">
             <span className="pb-10 text-brand-primary">
               Transform Your College Journey
             </span>{" "}
-            Build Real World Skills Today{" "}
+            Build Real World Skills Today
           </h1>
+
           <p className="text-brand-text font-barlow ">
             Interactive soft skills training to boost confidence and career
             readiness for real-world success.
           </p>
           <div className="flex items-center gap-4">
-            <button className="bg-[#FF9E0D] text-white px-6 py-3 rounded-full font-semibold">
+            {/* <button className="bg-[#FF9E0D] text-white px-6 py-3 rounded-full font-semibold">
               Join For Free
-            </button>
+            </button> */}
+            <JoinFree/>
             {/* <Play size={50} className='flex p-2 bg-white rounded-full text-brand-primary' /> */}
             <VideoPopup />
           </div>
@@ -116,7 +120,7 @@ function Home() {
               </p>
             </div>
             <button className="lg:ml-4 bg-[#FF9E0D] text-white px-3 py-1 mt-2 rounded-full text-sm">
-              Join Now
+              <Link to="/join-now"> Join Now</Link>
             </button>
           </div>
 
@@ -184,18 +188,18 @@ function Home() {
             <hr className="my-8 border-gray-300" />
 
             {/* Bottom Info */}
-               <motion.div
-            initial={{ opacity: 0, x: 50 }}
-            animate={{ opacity: 1, x: 0 }}
-            transition={{ duration: 0.6 }}
-            className="flex-1"
-          >
-            <img
-              src={we}
-              alt="Team working"
-              className="object-cover w-full mt-0 mb-4 lg:hidden rounded-2xl"
-            />
-          </motion.div>
+            <motion.div
+              initial={{ opacity: 0, x: 50 }}
+              animate={{ opacity: 1, x: 0 }}
+              transition={{ duration: 0.6 }}
+              className="flex-1"
+            >
+              <img
+                src={we}
+                alt="Team working"
+                className="object-cover w-full mt-0 mb-4 lg:hidden rounded-2xl"
+              />
+            </motion.div>
             <div>
               <h4 className="text-lg font-bold text-gray-800 lg:mb-4">
                 Certified Trainers & Domain Experts
@@ -244,7 +248,8 @@ function Home() {
           </h2>
           <Link
             to="/contact"
-            className="flex px-4 py-2 mt-4 font-medium border rounded-md lg:items-center lg:justify-center text-brand-background bg-brand-primary border-brand-primary md:mt-0">
+            className="flex px-4 py-2 mt-4 font-medium border rounded-md lg:items-center lg:justify-center text-brand-background bg-brand-primary border-brand-primary md:mt-0"
+          >
             Contact Us <ArrowUpRight className="ml-2" />
           </Link>
         </div>
@@ -278,6 +283,7 @@ function Home() {
       {/* Blog */}
       <Blog />
       <FAQs />
+      <EnquiryForm />
       <Footer />
     </>
   );

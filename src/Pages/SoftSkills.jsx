@@ -12,20 +12,20 @@ import CertificateViewer from "../Components/CertificateView/CertificateView";
 import TeamCard from "../Components/Team/Team";
 import Testimonial from "../Components/Testimonial/Testimonial";
 import FAQSection from "../Components/Faq/Faq";
+import EnquiryForm from "../Components/EnquiryForm/EnquiryForm";
 
 function SoftSkills() {
   const featureData = [
-    { icon: <School size={24} />, text: "Industry-Oriented Curriculum" },
+    { icon: <School size={24} />, text: "Effective Communication Skills" },
     {
       icon: <Radio size={24} />,
-      text: "Weekend Live Sessions",
+      text: "Confidence & Public Speaking",
     },
-    { icon: <Radio size={24} />, text: "Practice Exercises" },
-    { icon: <Radio size={24} />, text: "Certification of Completion" },
-    { icon: <Radio size={24} />, text: "Email Support" },
-    { icon: <Radio size={24} />, text: "SME Support Session" },
-    { icon: <Radio size={24} />, text: "Comprehensive Learning Content" },
-    { icon: <Radio size={24} />, text: "Capstone Project" },
+    { icon: <Radio size={24} />, text: "Professional Etiquette" },
+    { icon: <Radio size={24} />, text: "Teamwork & Leadership" },
+    { icon: <Radio size={24} />, text: "Career Readiness Training" },
+    { icon: <Radio size={24} />, text: "Body Language Mastery" },
+    { icon: <Radio size={24} />, text: "Corporate Culture Awareness" },
     {
       icon: <Radio size={24} />,
       text: "Assignments and Projects",
@@ -39,17 +39,15 @@ function SoftSkills() {
 
   const features = [
     {
-      title: "Professional Led Sessions",
-      description: "Get guidance from experts.",
+      title: "Expert-Led Interactive Sessions"
     },
-    { title: "Project Portfolio", description: "Build job-ready projects." },
-    { title: "Career Assistance", description: "Get interview help." },
-    { title: "Dedicated Peer Network", description: "Collaborate with peers." },
+    { title: "Real-World Practice Projects" },
+    { title: "Career-Boosting Support"},
+    { title: "Collaborative Peer Learning" },
     {
-      title: "Learn Industry Skills",
-      description: "Upskill with hands-on learning.",
+      title: "Practical & Industry-Relevant Skills"
     },
-    { title: "Certification", description: "Earn a recognized certificate." },
+    { title: " Recognized Certification"},
   ];
 
   return (
@@ -59,18 +57,18 @@ function SoftSkills() {
       <CourseCard
         badge="#Bestseller"
         title="Soft Skill For Students"
-        description="Become a Certified Soft Skill with College Skills and harness the power of Machine learning, NLP and Generative AI. Learn industry-relevant skills."
+        description="Get Certified in Soft Skills with College Skills Learn Communication, Leadership & Career-Ready Tools with AI-powered Techniques!"
         image={courseImg}
         startPrice="₹6,999"
         jobAssistance="For Pro Plan"
-        startDate="25th august 2025"
-        duration="6 Months"
+        startDate="Upcoming"
+        duration="1 Months"
         mode="Live + Recorded"
-        language="English"
+        language="Hindi + English"
       />
       <SoftSkillsAbout
-        title="About Soft Skill Course"
-        description="Discover your potential by learning the latest skills using powerful tools."
+        title="About Our Soft Skills Training"
+        description="Empower your communication. Sharpen your presence. Build a future-ready personality."
         features={features}
         image={CourseImage}
       />
@@ -83,6 +81,7 @@ function SoftSkills() {
       <Pricing />
       <Testimonial/>
       <FAQSection/>
+      <EnquiryForm/>
       <Footer />
     </>
   );

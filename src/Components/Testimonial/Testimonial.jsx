@@ -2,9 +2,11 @@ import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
 import image from '../../assets/atul.jpeg';
-import image2 from '../../assets/p2.jpg';
-import image3 from '../../assets/p3.jpg';
-import image4 from '../../assets/p4.jpg';
+import image2 from '../../assets/indr.jpeg';
+import image3 from '../../assets/ditya.jpeg';
+import image4 from '../../assets/kartik.jpeg';
+// import image5 from '../../assets/test.jpeg';
+
 
 const testimonials = [
   {
@@ -16,61 +18,61 @@ const testimonials = [
       '"The training boosted my confidence and communication skills immensely. I now feel ready to take on any interview. Thank you, College Skills!"',
   },
   {
-    name: 'Atul',
+    name: 'Indr',
     // role: 'Matoshree Institute of Technology',
-    image: image,
-    company: 'Matoshree Institute of Technology',
+    image: image2,
+    company: 'Gov. Poly Ayodhya',
     review:
       '"College Skills helped me discover my strengths and guided me to present myself professionally. The sessions were engaging and practical."',
   },
   {
-     name: 'Atul',
+     name: 'Ditya',
     // role: 'UX Designer',
-    image: image,
-    company: 'Fabtech Technical Campus',
+    image: image3,
+    company: 'Little Flower Polytechnic Gorakhpur',
     review:
       '"I never imagined soft skills could make such a difference. After the workshops, my presentation and teamwork skills have grown tremendously."',
   },
   {
-     name: 'Atul',
+     name: 'Kartik Singh',
     // role: 'Product Owner',
-    image: image,
-    company: 'S.V.P.M. Baramati',
+    image: image4,
+    company: 'Shramodaya ITI Bhopal',
     review:
       '"The coaching sessions were eye-opening. I learned to manage time better and gained clarity on my career path. Highly recommended!"',
   },
-  {
-     name: 'Atul',
-    // role: 'Product Owner',
-    image: image,
-    company: 'Govt. Polytechnic Ayodhya',
-    review:
-      '"Thanks to College Skills, I’m more confident in group discussions and interviews. The trainers were supportive and motivating throughout."',
-  },
-  {
-    name: 'Atul',
-    // role: 'Product Owner',
-    image: image,
-    company: 'Matoshree Institute of Technology',
-    review:
-      '"The activities made learning fun and effective. I gained leadership skills and a better understanding of professional behavior."',
-  },
-   {
-   name: 'Atul',
-    // role: 'Product Owner',
-    image: image,
-    company: 'Saramodhya ITI',
-    review:
-      '"With personalized coaching, I improved my communication and critical thinking skills. This has made a real difference in my academics and placements."',
-  },
-   {
-    name: 'Atul',
-    // role: 'Product Owner',
-    image: image,
-    company: 'KDK College of Engineering',
-    review:
-      '"College Skills transformed my approach to learning and growth. The mock interviews prepared me thoroughly for real-world challenges."',
-  },
+  // {
+  //    name: 'Ditya-2',
+  //   // role: 'Product Owner',
+  //   image: image5,
+  //   company: 'Govt. Polytechnic Ayodhya',
+  //   review:
+  //     '"Thanks to College Skills, I’m more confident in group discussions and interviews. The trainers were supportive and motivating throughout."',
+  // }
+  // {
+  //   name: 'Atul',
+  //   // role: 'Product Owner',
+  //   image: image,
+  //   company: 'Matoshree Institute of Technology',
+  //   review:
+  //     '"The activities made learning fun and effective. I gained leadership skills and a better understanding of professional behavior."',
+  // },
+  //  {
+  //  name: 'Atul',
+  //   // role: 'Product Owner',
+  //   image: image,
+  //   company: 'Saramodhya ITI',
+  //   review:
+  //     '"With personalized coaching, I improved my communication and critical thinking skills. This has made a real difference in my academics and placements."',
+  // },
+  //  {
+  //   name: 'Atul',
+  //   // role: 'Product Owner',
+  //   image: image,
+  //   company: 'KDK College of Engineering',
+  //   review:
+  //     '"College Skills transformed my approach to learning and growth. The mock interviews prepared me thoroughly for real-world challenges."',
+  // },
 ];
 
 const Testimonial = () => {

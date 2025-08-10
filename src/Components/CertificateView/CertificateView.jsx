@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { X } from "lucide-react";
-import certificate from "../../assets/certificate.jpg"
+import certificate from "../../assets/certificate.png"
 
 const CertificateSection = () => {
   const [isZoomed, setIsZoomed] = useState(false);
@@ -11,7 +11,7 @@ const CertificateSection = () => {
   return (
     <>
       {/* Main Section */}
-      <div className="flex flex-col items-center justify-between w-full gap-10 px-6 py-12 bg-white md:flex-row md:py-10">
+      <div className="flex flex-col items-center justify-between w-full gap-10 px-6 py-12 mt-20 bg-white mb-14 md:flex-row md:py-10">
         {/* Left Text */}
         <div className="w-full space-y-4 px-9">
           <div className="border-l-4 border-[#F2635C] pl-3">
@@ -34,7 +34,7 @@ const CertificateSection = () => {
               <li>After completing 60% in Quiz & Assignment</li>
               <li>
                 The above criteria is only for getting the course completion certificate.
-                For details regarding Job Assistance criteria, please refer to the FAQs.
+                For details regarding Job Assistance criteria, <span className="px-6">please refer to the FAQs.</span> 
               </li>
             </ul>
           </div>

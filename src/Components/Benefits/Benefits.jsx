@@ -10,7 +10,7 @@ const Benefits = ({ title, features = [] }) => {
       </h2>
 
       {/* Grid */}
-      <div className="grid grid-cols-1 gap-6 md:grid-cols-2">
+      <div className="grid max-w-5xl grid-cols-1 gap-6 md:grid-cols-2">
         {features.map((feature, index) => (
           <div
             key={index}

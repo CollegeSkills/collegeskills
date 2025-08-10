@@ -1,52 +1,7 @@
 import { Check, CircleCheckBig } from "lucide-react";
 import React from "react";
+import { Link } from "react-router-dom";
 
-// const packages = [
-//   {
-//     title: "Ignite",
-//     price: "₹0",
-//     features: [
-//       "Basic communication for beginners",
-//       "Main causes of rejection in interviews",
-//       "Essential soft skills for personal growth",
-//       "Perfect for kick-starting your soft skill journey",
-//       "Start with a quick assessment to know your skill gaps",
-//       "Free resources and guidance to get started",
-//     ],
-//     highlight: false,
-//   },
-//   {
-//     title: "Elevate",
-//     price: "₹2,500",
-//     features: [
-//       "Advanced communication techniques",
-//       "Master effective body language",
-//       "Learn ethics and professional etiquettes",
-//       "Write professional emails and boost digital presence",
-//       "Full range of soft skills for personal and career growth",
-//       "Includes interactive modules and real-world exercises",
-//       "Access to webinars, mock interviews, and group discussions",
-//       "Ongoing support and feedback from experienced trainers",
-//       "Personalized assessment to identify your needs"
-//     ],
-//     highlight: true,
-//   },
-//   {
-//     title: "Elite",
-//     price: "Starting at ₹7,500",
-//     features: [
-//       "Begin with a detailed personal assessment",
-//       "100% customized skill training based on your needs",
-//       "Handpicked modules designed for your unique journey",
-//       "Dedicated mentor and premium instructor access",
-//       "Flexible timelines and tailored content",
-//       "Regular progress tracking and feedback sessions",
-//       "Ideal for individuals or campus groups seeking personalized growth",
-//       "Exclusive support throughout your learning experience"
-//     ],
-//     highlight: false,
-//   },
-// ];
 const packages = [
   {
     title: "Ignite",
@@ -55,12 +10,12 @@ const packages = [
     buttonClass: "bg-blue-400 text-white hover:bg-blue-700",
     featuresColor: "text-blue-500",
     features: [
-      "Basic communication for beginners",
-      "Main causes of rejection in interviews",
-      "Essential soft skills for personal growth",
-      "Perfect for kick-starting your soft skill journey",
-      "Start with a quick assessment to know your skill gaps",
-      "Free resources and guidance to get started",
+      "Basic communication",
+      "Interview rejection reasons",
+      "Key soft skills for growth",
+      "Kick-start your journey",
+      "Quick skill gap check",
+      "Free tools & guidance",
     ],
     highlight: false,
   },
@@ -71,33 +26,33 @@ const packages = [
     buttonClass: "bg-white text-brand-primary hover:opacity-90",
     featuresColor: "text-white",
     features: [
-      "Advanced communication techniques",
-      "Master effective body language",
-      "Learn ethics and professional etiquettes",
-      "Write professional emails and boost digital presence",
-      "Full range of soft skills for personal and career growth",
-      "Includes interactive modules and real-world exercises",
-      "Access to webinars, mock interviews, and group discussions",
-      "Ongoing support and feedback from experienced trainers",
-      "Personalized assessment to identify your needs",
+      "Advanced communication",
+      "Body language mastery",
+      "Ethics & etiquettes",
+      "Email writing & presence",
+      "Complete soft skill pack",
+      "Practical modules",
+      "Webinars, mocks, GDs",
+      "Trainer feedback & support",
+      "Personalized assessment",
     ],
     highlight: true,
   },
   {
     title: "Elite",
-    price: "Starting at ₹7,500",
+    price: "From ₹7,500",
     colorClass: "bg-purple-100 text-purple-900", // light purple
     buttonClass: "bg-purple-700 text-white hover:bg-purple-800",
     featuresColor: "text-purple-900",
     features: [
-      "Begin with a detailed personal assessment",
-      "100% customized skill training based on your needs",
-      "Handpicked modules designed for your unique journey",
-      "Dedicated mentor and premium instructor access",
-      "Flexible timelines and tailored content",
-      "Regular progress tracking and feedback sessions",
-      "Ideal for individuals or campus groups seeking personalized growth",
-      "Exclusive support throughout your learning experience",
+      "In-depth assessment",
+      "Fully customized training",
+      "Tailored modules",
+      "Mentor & premium trainer",
+      "Flexible schedule",
+      "Regular feedback",
+      "For individuals & campuses",
+      "Full learning support",
     ],
     highlight: false,
   },
@@ -124,7 +79,7 @@ const Pricing = () => {
             it’s your most powerful investment.
           </p>
           <button className="px-6 py-3 font-sans font-semibold text-white transition rounded-full bg-gradient-to-r from-brand-primary to-brand-primary hover:scale-105">
-            Get All Touch →
+          <Link to='/contact'>Get All Touch → </Link>
           </button>
         </div>
 

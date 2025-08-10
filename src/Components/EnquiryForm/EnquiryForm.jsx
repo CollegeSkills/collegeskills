@@ -1,5 +1,7 @@
 import React, { useState } from "react";
-import image from "../../assets/student.webp";
+import axios from "axios";
+import { toast } from "react-toastify";
+import image from "../../assets/need-help.png";
 const EnquiryForm = () => {
   const [step, setStep] = useState(1);
   const [formData, setFormData] = useState({
@@ -20,20 +22,38 @@ const EnquiryForm = () => {
     }
   };
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     console.log("Submitting:", formData);
-    
-    // You can replace this with your API call
-    alert("Form submitted successfully!");
+
+    try {
+      const response = await axios.post(
+        "http://localhost:4000/api/v1/form/submit",
+        formData
+      );
+
+      // Show success message
+      toast.success("Form submitted successfully!");
+
+      // Reset form
+      setFormData({
+        name: "",
+        email: "",
+        phone: "",
+        message: "", // include all your form fields here
+      });
+    } catch (error) {
+      console.error("Error submitting form:", error);
+      toast.error("Something went wrong. Please try again.");
+    }
   };
 
   return (
-    <div className="grid items-center grid-cols-1 gap-6 px-4 bg-orange-400 md:grid-cols-2 h-[450px]">
+    <div className="grid items-center grid-cols-1 gap-6 px-4 bg-orange-400 md:grid-cols-2 lg:h-[450px]">
       {/* Left Side Image */}
-      
+
       <div className="hidden md:block">
-           <div className="w-full max-w-md px-10 mx-auto mb-6 mt-9">
+        <div className="w-full max-w-md px-10 mx-auto mb-6 mt-9">
           <h2 className="mb-1 text-3xl font-medium text-white lg:text-6xl font-oswald">
             Need Help?
           </h2>
@@ -41,19 +61,19 @@ const EnquiryForm = () => {
             Connect with us & know what's best for you.
           </p>
         </div>
-        <img src={image} alt="help" className="relative w-5/12 -mt-1 left-20" />
+        <img src={image} alt="help" className="relative w-6/12 -mt-9 left-28" />
       </div>
 
       {/* Right Side Form */}
-         <div className="block w-full max-w-md px-10 mx-auto mt-9 md:hidden">
-          <h2 className="mb-1 text-3xl font-medium text-white lg:text-6xl font-oswald">
-            Need Help?
-          </h2>
-          <p className="pt-2 text-lg text-white">
-            Connect with us & know what's best for you.
-          </p>
-        </div>
-      <div className="w-full max-w-xl p-8 mx-auto bg-white rounded-xl mb-9 lg:mb-0">
+      <div className="block w-full max-w-md px-10 mx-auto mt-9 md:hidden">
+        <h2 className="mb-1 text-3xl font-medium text-white lg:text-6xl font-oswald">
+          Need Help?
+        </h2>
+        <p className="pt-2 text-lg text-white">
+          Connect with us & know what's best for you.
+        </p>
+      </div>
+      <div className="w-full max-w-xl p-8 mx-auto bg-white lg:-mx-8 lg:max-w-7xl rounded-xl mb-9 lg:mb-0">
         {/* Steps */}
         <div className="flex items-center mb-6">
           <div

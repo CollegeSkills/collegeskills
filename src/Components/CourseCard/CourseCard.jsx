@@ -1,5 +1,4 @@
 import React from "react";
-
 const CourseCard = ({
   badge,
   title,
@@ -10,14 +9,19 @@ const CourseCard = ({
   duration,
   mode,
   language,
+  showInfoGrid = true, // ← default true
 }) => {
   return (
     <div className="w-full p-6 px-12 text-black mt-9">
       <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
         {/* Text Section */}
-        <div className="w-full md:w-1/2 lg:pt-20">
-          <p className="mb-2 text-sm font-semibold text-brand-primary">{badge}</p>
-          <h2 className="mb-4 text-3xl font-bold md:text-6xl font-oswald">{title}</h2>
+        <div className="w-full md:w-1/2">
+          <p className="mb-2 text-sm font-semibold text-brand-primary">
+            {badge}
+          </p>
+          <h2 className="mb-4 text-3xl font-bold md:text-5xl font-oswald">
+            {title}
+          </h2>
           <p className="mb-6 text-slate-800">{description}</p>
           <button className="px-5 py-2 text-white transition rounded bg-brand-primary hover:bg-orange-500">
             Buy now
@@ -34,29 +38,31 @@ const CourseCard = ({
         </div>
       </div>
 
-      {/* Info Grid */}
-      <div className="grid grid-cols-2 gap-4 pt-6 mt-10 text-sm text-center border-t border-gray-200 md:grid-cols-5 md:text-base">
-        <div className="border-r border-gray-200">
-          <p className="font-semibold">Job Assistance</p>
-          <p className="text-gray-400">{jobAssistance}</p>
+      {/* ✅ Info Grid (conditionally rendered) */}
+      {showInfoGrid && (
+        <div className="grid grid-cols-2 gap-4 pt-6 mt-10 text-sm text-center border-t border-gray-200 md:grid-cols-5 md:text-base">
+          <div className="border-r border-gray-200">
+            <p className="font-semibold">Job Assistance</p>
+            <p className="text-gray-400">{jobAssistance}</p>
+          </div>
+          <div className="lg:border-r lg:border-gray-200">
+            <p className="font-semibold">Date of Commencement</p>
+            <p className="text-gray-400">{startDate}</p>
+          </div>
+          <div className="border-r border-gray-200">
+            <p className="font-semibold">Duration</p>
+            <p className="text-gray-400">{duration}</p>
+          </div>
+          <div className="lg:border-r lg:border-gray-200">
+            <p className="font-semibold">Delivery Mode</p>
+            <p className="text-gray-400">{mode}</p>
+          </div>
+          <div>
+            <p className="font-semibold">Language</p>
+            <p className="text-gray-400">{language}</p>
+          </div>
         </div>
-        <div className="lg:border-r lg:border-gray-200">
-          <p className="font-semibold">Date of Commencement</p>
-          <p className="text-gray-400">{startDate}</p>
-        </div>
-        <div className="border-r border-gray-200">
-          <p className="font-semibold">Duration</p>
-          <p className="text-gray-400">{duration}</p>
-        </div>
-        <div className="lg:border-r lg:border-gray-200">
-          <p className="font-semibold">Delivery Mode</p>
-          <p className="text-gray-400">{mode}</p>
-        </div>
-        <div className="">
-          <p className="font-semibold">Language</p>
-          <p className="text-gray-400">{language}</p>
-        </div>
-      </div>
+      )}
     </div>
   );
 };

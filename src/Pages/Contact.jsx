@@ -3,6 +3,7 @@ import axios from "axios";
 import { useState } from "react";
 import Footer from "../Components/Footer.jsx/Footer";
 import Navbar from "../Components/Navbar/Navbar";
+import { toast } from "react-toastify";
 
 const Contact = () => {
   const [formData, setFormData] = useState({
@@ -20,8 +21,8 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/contact", formData);
-      alert("Message sent successfully!");
+      await axios.post("http://localhost:4000/api/v1/contact", formData);
+      toast.success("Message sent successfully!");
       setFormData({
         firstName: "",
         lastName: "",
@@ -30,7 +31,7 @@ const Contact = () => {
         message: "",
       });
     } catch (error) {
-      alert("Error sending message.");
+      toast.error("Error sending message.");
     }
   };
 

@@ -2,8 +2,9 @@ import React, { useState } from "react";
 import axios from "axios";
 import { useNavigate } from "react-router-dom"; // 🔁 For redirect
 import Navbar from "../Components/Navbar/Navbar";
-import Footer from "../Components/Footer.jsx/Footer";
+import Footer from "../Components/Footer/Footer";
 import { Eye, EyeOff } from "lucide-react";
+import { toast } from "react-toastify";
 
 const JoinNow = () => {
   const [showPassword, setShowPassword] = useState(false);
@@ -32,7 +33,7 @@ const JoinNow = () => {
         "http://localhost:4000/api/v1/now/join-now",
         formData
       );
-      setMessage("🎉 Registration successful!");
+      toast.success("🎉 Registration successful!");
 
       // ✅ Reset form
       setFormData({ name: "", phone: "", email: "", password: "" });
@@ -42,7 +43,7 @@ const JoinNow = () => {
         navigate("/");
       }, 1500);
     } catch (err) {
-      setMessage(err.response?.data?.message || "Something went wrong");
+      toast.error(err.response?.data?.message || "Something went wrong");
     } finally {
       setLoading(false); // 🛑 stop loading
     }
@@ -66,7 +67,7 @@ const JoinNow = () => {
           <form onSubmit={handleSubmit} className="space-y-4">
             <div>
               <label className="block mb-1 text-sm font-medium">
-                Full Name
+                Full Name*
               </label>
               <input
                 type="text"
@@ -81,7 +82,7 @@ const JoinNow = () => {
 
             <div>
               <label className="block mb-1 text-sm font-medium">
-                Phone Number
+                Whatsapp Number*
               </label>
               <input
                 type="tel"
@@ -89,13 +90,15 @@ const JoinNow = () => {
                 required
                 value={formData.phone}
                 onChange={handleChange}
-                placeholder="Your Phone Number"
+                pattern="\d{10}" // exactly 10 digits
+                title="Please enter a valid 10-digit number"
+                placeholder="Your Whatsapp Number"
                 className="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-brand"
               />
             </div>
 
             <div>
-              <label className="block mb-1 text-sm font-medium">Email</label>
+              <label className="block mb-1 text-sm font-medium">Email*</label>
               <input
                 type="email"
                 name="email"
@@ -107,7 +110,7 @@ const JoinNow = () => {
               />
             </div>
             <div>
-              <label className="block mb-1 text-sm font-medium">Password</label>
+              <label className="block mb-1 text-sm font-medium">Password*</label>
               <div className="relative">
                 <input
                   name="password"

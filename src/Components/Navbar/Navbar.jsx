@@ -13,11 +13,11 @@ const Navbar = () => {
       <div className="flex items-center justify-between mx-auto ">
         {/* Logo */}
         <div className="w-40">
-          <img
+        <Link to='/'>  <img
             src={logo}
             alt="college skills"
             className="object-cover w-full h-12"
-          />
+          /></Link>
         </div>
 
         {/* Desktop Menu */}

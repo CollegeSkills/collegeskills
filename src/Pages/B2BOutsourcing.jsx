@@ -1,13 +1,14 @@
 import React from "react";
 import Navbar from "../Components/Navbar/Navbar";
 import CourseCard from "../Components/CourseCard/CourseCard";
-import courseImg from "../assets/12.png";
+// import courseImg from "../assets/service/s6.png";
+import courseImg from "../assets/service/s9.png";
 import { RiGraduationCapFill } from "react-icons/ri";
 import { GoOrganization } from "react-icons/go";
 import { CheckCircle, Download, Radio, School } from "lucide-react";
 import Pricing from "../Components/Pricing/Pricing";
-import Footer from "../Components/Footer.jsx/Footer";
-import CourseImage from "../assets/10.png";
+import Footer from "../Components/Footer/Footer";
+import CourseImage from "../assets/service/s7.png";
 import CertificateViewer from "../Components/CertificateView/CertificateView";
 import TeamCard from "../Components/Team/Team";
 import Testimonial from "../Components/Testimonial/Testimonial";
@@ -15,7 +16,8 @@ import FAQSection from "../Components/Faq/Faq";
 import BenefitsCard from "../Components/BenefitCard/BenefitCard";
 import Partners from "../Components/Partners/Partners";
 import OurTraining from "../Components/OurTraining/OurTraining";
-import training from '../assets/training.png'
+import training from "../assets/B2BApproach.png";
+import certificate from "../assets/certificate.png";
 
 function B2BOutSourcing() {
   const featureData = [
@@ -56,6 +58,36 @@ function B2BOutSourcing() {
     "Better performance in appraisals and long-term career growth.",
   ];
 
+  const B2BFaqs = [
+    {
+      question: " What does soft skills B2B outsourcing mean?",
+      answer:
+        "It means we take over your organization’s soft skills training needs, delivering end-to-end solutions without burdening your internal team.",
+    },
+    {
+      question: " Which industries benefit most from outsourcing?",
+      answer:
+        " IT, BFSI, retail, manufacturing, and education are among the sectors that see significant results.",
+    },
+    {
+      question:
+        "Can you handle large-scale training across multiple locations?",
+      answer:
+        "Absolutely. We have a network of experienced trainers and scalable delivery models for pan-India coverage.",
+    },
+    {
+      question: "How do you ensure quality across outsourced training?",
+      answer:
+        "We use standardized training frameworks, continuous trainer evaluations, and client-approved content to maintain quality.",
+    },
+  ];
+
+  const criteriaList = [
+    "Complete at least 60% of the project-specific training sessions.",
+    "Score 60% or more in evaluations, skill demonstrations, or project deliverables.",
+    "Note: This certificate is for training completion. For performance-based rewards or extended workforce programs, check the B2B Outsourcing FAQs.",
+  ];
+
   return (
     <>
       <Navbar />
@@ -79,32 +111,46 @@ function B2BOutSourcing() {
         </div>
         {/* Text Section */}
         <div className="w-full px-3 md:w-1/2">
-          <h2 className="mb-4 text-5xl font-bold text-gray-900 font-oswald">
-          Why It Matters
+          <h2 className="mb-6 text-5xl font-bold text-gray-900 font-oswald">
+            Why It Matters
           </h2>
-          <p className="mb-6 text-slate-800">
-            {" "}
-         Outsourcing soft skills training can reduce in-house training costs by 30-40%.
+          <p className="mb-3 text-brand-text">
+            Outsourcing soft skills training can reduce in-house training costs
+            by 30-40%.
           </p>
-          <p className="mb-6 text-slate-800">
-            {" "}
-            71% of our B2B clients report a visible boost in employee engagement within two weeks of our sessions.
+          <p className="mb-3 text-brand-text">
+            71% of our B2B clients report a visible boost in employee engagement
+            within two weeks of our sessions.
+          </p>
+          <p className="mb-3 text-brand-text">
+            Outsourced teams with strong interpersonal and process skills
+            deliver higher quality output.
+          </p>
+          <p className="mb-3 text-brand-text">
+            Clients experience smoother communication, faster turnaround times,
+            and fewer escalations.
+          </p>
+          <p className="mb-3 text-brand-text">
+            Training boosts client satisfaction and long-term business
+            relationships.
           </p>
 
-          <button className="flex justify-between gap-2 px-6 py-3 mt-12 text-lg font-semibold text-white uppercase rounded-lg bg-brand-primary font-barlow">
+          <button className="flex justify-between gap-2 px-6 py-3 mt-8 text-lg font-semibold text-white uppercase rounded-lg bg-brand-primary font-barlow">
             Download Pdf <Download />
           </button>
         </div>
       </div>
-      <Partners/>
+      <Partners />
       {/* Benefits */}
       <div className="px-4 mt-20 md:px-1">
-        <h2 className="text-6xl font-bold text-center pb-9 font-oswald text-brand-text">Your Benefits</h2>
+        <h2 className="text-6xl font-bold text-center pb-9 font-oswald text-brand-text">
+          Your Benefits
+        </h2>
         <div className="grid grid-cols-1 gap-5 mx-auto max-w-7xl md:grid-cols-2">
           {/* Left Column */}
           <BenefitsCard
             title="Benefits to Partnering Organizations"
-            icon={GoOrganization }
+            icon={GoOrganization}
             color="text-orange-400"
             items={orgBenefits}
             gradientFrom="from-orange-100"
@@ -114,7 +160,7 @@ function B2BOutSourcing() {
           {/* Right Column */}
           <BenefitsCard
             title="Benefits to Your Clients/Employees"
-            icon={RiGraduationCapFill }
+            icon={RiGraduationCapFill}
             color="text-orange-400"
             items={fresherBenefits}
             gradientFrom="from-orange-100"
@@ -123,26 +169,31 @@ function B2BOutSourcing() {
         </div>
       </div>
       <div className="p-8">
-      <OurTraining
-        
-        heading="Our Training Approach"
-        paragraphs={[
-          " Understand the requirements and business outcomes on one-on-one call.",
-          " Customize the curriculum, methodology, and tools accordingly.",
-          " Trainer evaluation by the client.",
-          " Deliver the training.",
-          " Evaluate learners’ performance and follow a closed-loop feedback mechanism.",
-          " Conduct post-training periodic assessments to assess the progress.",
-          " Provide reinforcement sessions if required."
-        ]}
-        imageSrc={training}
+        <OurTraining
+          heading="Our Training Approach"
+          paragraphs={[
+            "Understand client business objectives and skill gaps in outsourced teams.",
+            " Tailor training modules to client workflows and industry standards.",
+            " Provide client managers with trainer credentials for approval.",
+            " Deliver training aligned with project deadlines and deliverables.",
+            " Track skill application in day-to-day operations.",
+            " Conduct post-training quality audits.",
+            " Provide refresher modules for performance optimization.",
+          ]}
+          imageSrc={training}
+        />
+      </div>
+      <CertificateViewer
+        title="Validating Your Success: About Your Certificate"
+        subtitle="B2B Outsourcing"
+        description="Our certification is a mark of skill mastery for your workforce.
+The B2B Project Training Completion Certificate will be awarded when participants:"
+        criteria={criteriaList}
+        imageSrc={certificate}
       />
-    </div>
-      <CertificateViewer />
-      <TeamCard />
       <Pricing />
       <Testimonial />
-      <FAQSection />
+      <FAQSection faqs={B2BFaqs} />
       <Footer />
     </>
   );

@@ -1,34 +1,35 @@
 {
   "slider": [
-    {
+        {
       "id": 1,
+      "title": "The Rise of Emotional Intelligence: EQ Is the New IQ",
+      "description": "Superpower Your Career with Emotional Intelligence | College Skills",
+      "image": "https://images.pexels.com/photos/9572672/pexels-photo-9572672.jpeg",
+      "link": "the-Rise-of-emotional-intelligence",
+      "metaTitle": "Emotional Intelligence Training for Workplaces – College Skills",
+      "metaDescription ": "Discover how EQ sets you apart for 2025–2026. College Skills’ workshops help you lead and collaborate with impact",
+      "Keywords": "emotional intelligence, EQ training, soft skills, leadership, career success, College Skills"
+    },
+    {
+      "id": 2,
       "title": "Top Soft Skills Employers Will Demand in 2025 and 2026",
-      "description": "Are you prepared for the workplace of tomorrow? In 2025 and 2026....",
+      "description": "Skills That Get You Hired Fast | College Skills",
       "image": "https://images.pexels.com/photos/8093032/pexels-photo-8093032.jpeg",
       "link": "top-soft-skills-2025–2026",
       "metaTitle": "Top Soft Skills 2025–2026 | Get Hired Fast – College Skills",
       "metaDescription ": "Unlock the most-wanted soft skills for 2025–2026. Discover what employers seek and how to future-proof your career with College Skills.",
       "Keywords": "soft skills training 2025, skills employers want 2026, adaptability, emotional intelligence, communication, workplace skills, professional growth, College Skills"
     },
-    {
-      "id": 2,
-      "title": "The Rise of Emotional Intelligence: EQ Is the New IQ",
-      "description": "Imagine a skill so powerful it transforms both your career and your relationships.",
-      "image": "https://images.pexels.com/photos/9572672/pexels-photo-9572672.jpeg",
-      "link": "/blog/collaboration",
-      "metaTitle": "Emotional Intelligence Training for Workplaces – College Skills",
-      "metaDescription ": "Discover how EQ sets you apart for 2025–2026. College Skills’ workshops help you lead and collaborate with impact",
-      "Keywords": "emotional intelligence, EQ training, soft skills, leadership, career success, College Skills"
-    },
+
     {
       "id": 3,
-      "title": "Building Your API Stack",
-      "description": "The rise of RESTful APIs has made backend integration easier than ever.",
+      "title": "Adaptability: Flex Your Future—Adapt to Win!",
+      "description": "Change Is the Only Constant – Own It | College Skills",
       "image": "https://images.pexels.com/photos/5185082/pexels-photo-5185082.jpeg",
-      "link": "/blog/api-stack",
-      "metaTitle": "Top Soft Skills 2025–2026 | Get Hired Fast – College Skills",
-      "metaDescription ": "Unlock the most-wanted soft skills for 2025–2026. Discover what employers seek and how to future-proof your career with College Skills.",
-      "Keywords": "soft skills training 2025, skills employers want 2026, adaptability, emotional intelligence, communication, workplace skills, professional growth, College Skills"
+      "link": "flex-your-future—adapt-to-win",
+       "metaTitle": "Adaptability Skills 2025 – College Skills Training",
+      "metaDescription ": "Build resilience and thrive through change. Our adaptability workshops future-proof your career for 2025 and beyond.",
+      "Keywords": "adaptability, resilience, change management, future skills, agility, College Skills"
     }
   ],
   "blogs": [
@@ -68,7 +69,7 @@
         },
         {
           "heading": "The Top Soft Skills for 2025–2026",
-          "image": "/blog.png"
+          "subImage": "/blog.png"
         },
         {
           "heading": "1. Adaptability",

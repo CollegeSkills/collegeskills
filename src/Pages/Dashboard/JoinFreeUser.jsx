@@ -54,7 +54,7 @@ const JoinFreeUser = () => {
                       <th className="p-4 text-left border-b">S.No.</th>
                       <th className="p-4 text-left border-b">Name</th>
                       <th className="p-4 text-left border-b">Email</th>
-                      <th className="p-4 text-left border-b">Phone</th>
+                      <th className="p-4 text-left border-b">Phone No.</th>
                       <th className="p-4 text-left border-b">Joined At</th>
                     </tr>
                   </thead>

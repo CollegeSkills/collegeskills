@@ -14,6 +14,7 @@ export default {
           light: '#F2F2F2',         // Light section backgrounds
         }
       },
+      
       fontFamily: {
         barlow: ["Barlow Condensed", 'sans-serif'],
         oswald: ['Oswald', 'sans-serif'],

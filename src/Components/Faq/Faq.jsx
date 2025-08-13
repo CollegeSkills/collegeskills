@@ -1,48 +1,6 @@
 import React, { useState } from "react";
 
-const faqs = [
-  {
-    question: "What are soft skills, and why are they important for students?",
-    answer:
-      "Soft skills include communication, teamwork, problem-solving, emotional intelligence, and professionalism. These skills are critical because employers now look for graduates who can work well with others, adapt quickly, and lead effectively—not just those with good academic results.",
-  },
-  {
-    question:
-      "Can soft skills really be learned through online or blended courses?",
-    answer:
-      "Absolutely! Our programs use interactive activities, real-life scenarios, and group discussions so students experience and practice soft skills, whether they learn online, offline, or in hybrid formats. Practical learning helps students apply these skills in the real world, making them natural and lasting.",
-  },
-  {
-    question: "Which soft skills are most in demand by employers today?",
-    answer:
-      "Employers highly value communication, teamwork, adaptability, critical thinking, and leadership. Industry surveys consistently show these are the top traits that set job candidates apart and help them grow in their careers.",
-  },
-  {
-    question:
-      "How are your training packages structured, and what do they cost?",
-    answer:
-      "We offer three flexible options: A free foundation plan for beginners, Paid advanced modules for in-depth learning ,Custom solutions for colleges and organizations,Each plan is designed to suit different needs and budgets, making it easy for everyone to invest in their growth and employability.",
-  },
-  // {
-  //   question:
-  //     "How are your training packages structured, and what do they cost?",
-  //   answer: [
-  //     "We offer three flexible options:",
-  //     "A free foundation plan for beginners",
-  //     "Paid advanced modules for in-depth learning",
-  //     "Custom solutions for colleges and organizations",
-  //     "Each plan is designed to suit different needs and budgets, making it easy for everyone to invest in their growth and employability.",
-  //   ],
-  // },
-  {
-    question:
-      "How do students measure progress and see real improvement from your soft skills training?",
-    answer:
-      "Learners benefit from pre- and post-training assessments, ongoing feedback, and practical assignments like mock interviews or group presentations. Our structured progress tracking ensures students can clearly see their development and gain confidence for real-world challenges.",
-  },
-];
-
-const FAQSection = () => {
+const FAQSection = ({ faqs }) => {
   const [openIndex, setOpenIndex] = useState(null);
 
   const toggleFAQ = (index) => {
@@ -50,9 +8,9 @@ const FAQSection = () => {
   };
 
   return (
-    <section className="px-4 py-20 md:px-16 bg-gray-50">
+    <section className="px-4 py-10 md:px-16 bg-gray-50">
       <div className="grid items-start gap-12 mx-auto max-w-7xl md:grid-cols-2">
-        {/* Left Column */}
+        {/* Left Column (Fixed) */}
         <div className="space-y-6">
           <p className="text-lg font-medium text-brand-primary">// FAQ</p>
           <h2 className="text-4xl font-medium leading-tight md:text-6xl font-oswald">
@@ -90,9 +48,9 @@ const FAQSection = () => {
           </div>
         </div>
 
-        {/* Right Column - FAQs */}
-        <div className="w-full space-y-4">
-          {faqs.map((item, index) => (
+        {/* Right Column (Dynamic) */}
+        <div className="w-full mt-16 space-y-4">
+          {faqs?.map((item, index) => (
             <div
               key={index}
               className="transition bg-white shadow-sm rounded-xl hover:shadow-md"

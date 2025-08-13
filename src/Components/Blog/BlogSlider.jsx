@@ -1,7 +1,7 @@
 // components/BlogSlider.jsx
 import React, { useState, useEffect } from "react";
 import { slider } from "../../blog.json"; // tera JSON data import
-
+import { ChevronLeft, ChevronRight } from "lucide-react";
 const BlogSlider = () => {
   const [current, setCurrent] = useState(0);
 
@@ -36,9 +36,13 @@ const BlogSlider = () => {
               alt={item.title}
               className="object-cover object-top w-full h-full rounded-lg"
             />
-            <div className="absolute inset-0 flex flex-col justify-center px-6 text-white bg-black bg-opacity-40 sm:px-12">
-              <h2 className="mb-2 text-2xl font-semibold sm:text-5xl font-oswald">{item.title}</h2>
-              <p className="max-w-2xl mb-4 font-sans text-lg">{item.description}</p>
+            <div className="absolute inset-0 flex flex-col justify-center px-6 text-white bg-black bg-opacity-40 sm:px-20">
+              <h2 className="mb-2 text-2xl font-bold sm:text-5xl">
+                {item.title}
+              </h2>
+              <p className="max-w-2xl pt-2 mb-4 font-sans text-lg">
+                {item.description}
+              </p>
               <a
                 href={item.link}
                 className="px-4 py-2 font-semibold text-white transition rounded-lg bg-brand-primary w-36 hover:bg-slate-800"
@@ -53,15 +57,15 @@ const BlogSlider = () => {
       {/* Arrows */}
       <button
         onClick={prevSlide}
-        className="absolute px-3 py-1 text-white -translate-y-1/2 bg-black bg-opacity-50 rounded-full left-4 top-1/2 hover:bg-opacity-80"
+        className="absolute px-2 py-1 text-white -translate-y-1/2 bg-opacity-50 rounded-full bg-brand-primary left-4 top-1/2 hover:bg-opacity-80"
       >
-        ‹
+        <ChevronLeft size={40}/>
       </button>
       <button
         onClick={nextSlide}
-        className="absolute px-3 py-1 text-white -translate-y-1/2 bg-black bg-opacity-50 rounded-full right-4 top-1/2 hover:bg-opacity-80"
+        className="absolute px-2 py-1 text-white -translate-y-1/2 bg-opacity-50 rounded-full bg-brand-primary right-4 top-1/2 hover:bg-opacity-80"
       >
-        ›
+        <ChevronRight size={40}/>
       </button>
 
       {/* Dots */}

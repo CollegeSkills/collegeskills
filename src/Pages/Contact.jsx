@@ -1,7 +1,7 @@
 
 import axios from "axios";
 import { useState } from "react";
-import Footer from "../Components/Footer.jsx/Footer";
+import Footer from "../Components/Footer/Footer";
 import Navbar from "../Components/Navbar/Navbar";
 import { toast } from "react-toastify";
 

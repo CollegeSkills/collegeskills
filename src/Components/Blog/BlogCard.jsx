@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import data from "../../blog.json"; // Your JSON file
 import BlogSlider from "./BlogSlider";
 import Navbar from "../Navbar/Navbar";
-import Footer from "../Footer.jsx/Footer";
+import Footer from "../Footer/Footer";
 import { ArrowUpDown, ArrowUpRight } from "lucide-react";
 
 const BlogPage = () => {

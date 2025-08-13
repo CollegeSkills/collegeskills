@@ -19,12 +19,13 @@ import we from "../assets/we.png";
 import Testimonial from "../Components/Testimonial/Testimonial";
 import Blog from "../Components/Blog/Blog";
 import FAQs from "../Components/Faq/Faq";
-import Footer from "../Components/Footer.jsx/Footer";
+import Footer from "../Components/Footer/Footer";
 import Pricing from "../Components/Pricing/Pricing";
 import VideoPopup from "../Components/VideoPopup/VideoPopup";
 import Partners from "../Components/Partners/Partners";
 import EnquiryForm from "../Components/EnquiryForm/EnquiryForm";
 import JoinFree from "../Components/JoinFree/JoinFree";
+import FAQSection from "../Components/Faq/Faq";
 
 function Home() {
   const boxes = [
@@ -69,6 +70,39 @@ function Home() {
       transition: { delay: i * 0.2, duration: 0.6 },
     }),
   };
+
+  const homeFaqs = [
+    {
+      question:
+        "What are soft skills, and why are they important for students?",
+      answer:
+        "Soft skills include communication, teamwork, problem-solving, emotional intelligence, and professionalism. These skills are critical because employers now look for graduates who can work well with others, adapt quickly, and lead effectively—not just those with good academic results.",
+    },
+    {
+      question:
+        "Can soft skills really be learned through online or blended courses?",
+      answer:
+        "Absolutely! Our programs use interactive activities, real-life scenarios, and group discussions so students experience and practice soft skills, whether they learn online, offline, or in hybrid formats. Practical learning helps students apply these skills in the real world, making them natural and lasting.",
+    },
+    {
+      question: "Which soft skills are most in demand by employers today?",
+      answer:
+        "Employers highly value communication, teamwork, adaptability, critical thinking, and leadership. Industry surveys consistently show these are the top traits that set job candidates apart and help them grow in their careers.",
+    },
+    {
+      question:
+        "How are your training packages structured, and what do they cost?",
+      answer:
+        "We offer three flexible options: A free foundation plan for beginners, Paid advanced modules for in-depth learning ,Custom solutions for colleges and organizations,Each plan is designed to suit different needs and budgets, making it easy for everyone to invest in their growth and employability.",
+    },
+    {
+      question:
+        "How do students measure progress and see real improvement from your soft skills training?",
+      answer:
+        "Learners benefit from pre- and post-training assessments, ongoing feedback, and practical assignments like mock interviews or group presentations. Our structured progress tracking ensures students can clearly see their development and gain confidence for real-world challenges.",
+    },
+  ];
+
   return (
     <>
       <title>Welcom College Skill</title>
@@ -91,7 +125,7 @@ function Home() {
             {/* <button className="bg-[#FF9E0D] text-white px-6 py-3 rounded-full font-semibold">
               Join For Free
             </button> */}
-            <JoinFree/>
+            <JoinFree />
             {/* <Play size={50} className='flex p-2 bg-white rounded-full text-brand-primary' /> */}
             <VideoPopup />
           </div>
@@ -282,7 +316,7 @@ function Home() {
       <Testimonial />
       {/* Blog */}
       <Blog />
-      <FAQs />
+      <FAQSection faqs={homeFaqs} />
       <EnquiryForm />
       <Footer />
     </>

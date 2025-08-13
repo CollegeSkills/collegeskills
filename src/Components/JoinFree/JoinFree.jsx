@@ -67,7 +67,7 @@ const JoinFree = () => {
 
             <form onSubmit={handleSubmit} className="space-y-4">
               <div>
-                <label className="block text-sm font-medium">Name</label>
+                <label className="block text-sm font-medium">Name*</label>
                 <input
                   type="text"
                   required
@@ -76,20 +76,21 @@ const JoinFree = () => {
                   className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
                 />
               </div>
+              <label className="block text-sm font-medium">
+                Whatsapp Number*
+              </label>
+              <input
+                type="tel"
+                required
+                value={phone}
+                onChange={(e) => setPhone(e.target.value)}
+                pattern="\d{10}"
+                title="Please enter a valid 10-digit number"
+                className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
+              />
+
               <div>
-                <label className="block text-sm font-medium">
-                  Phone Number
-                </label>
-                <input
-                  type="tel"
-                  required
-                  value={phone}
-                  onChange={(e) => setPhone(e.target.value)}
-                  className="w-full px-4 py-2 mt-1 border rounded-md focus:outline-none focus:ring-2 focus:ring-yellow-400"
-                />
-              </div>
-              <div>
-                <label className="block text-sm font-medium">Email</label>
+                <label className="block text-sm font-medium">Email*</label>
                 <input
                   type="email"
                   required

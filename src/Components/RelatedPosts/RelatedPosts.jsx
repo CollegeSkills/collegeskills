@@ -1,33 +1,43 @@
 // src/components/RelatedPosts.jsx
 
-import React from "react";
+import React, { useMemo } from "react";
 import { Link } from "react-router-dom";
-import blogPosts from "../../BlogData";
+import blogPosts from "../../blog.json";
 
 const RelatedPosts = () => {
+
+  const randomPosts = useMemo(() => {
+    if (!Array.isArray(blogPosts.blogs)) return [];
+
+    const shuffled = [...blogPosts.blogs].sort(() => 0.5 - Math.random());
+
+    return shuffled.slice(0, 4);
+  }, []);
+
   return (
     <div className="py-6">
-      <div className="px-4 mx-auto max-w-7xl">
+      <div className="px-4 mx-auto max-w-[95%]">
         <h4 className="mb-4 text-lg font-bold">Related Posts</h4>
         <div className="grid grid-cols-1 gap-6 md:grid-cols-2 lg:grid-cols-4">
-          {blogPosts.map((post) => (
-            <div key={post.id} className="p-4 border rounded-lg shadow-sm">
+          {randomPosts.map((blogPost) => (
+            <div
+              key={blogPost.id}
+              className="p-4 border rounded-lg shadow-sm"
+            >
               <img
-                src={post.image}
-                alt={post.title}
+                src={blogPost.image}
+                alt={blogPost.title}
                 className="object-cover w-full mb-3 rounded-md h-36"
               />
-              <h5 className="mb-2 font-semibold text-md">{post.title}</h5>
-              <p className="mb-4 text-sm text-gray-600">{post.excerpt}</p>
+              <h5 className="mb-2 font-semibold text-md">{blogPost.title}</h5>
               <Link
-                to={post.link}
-                className="inline-block px-4 py-1 text-sm font-medium text-white rounded bg-brand-primary hover:bg-orange-500"
+                to={`/blog/${blogPost.id}`}
+                className="px-4 py-2 flex w-[115px] gap-1 rounded-lg mt-4 font-medium text-white bg-brand-primary"
               >
                 Read More
               </Link>
             </div>
           ))}
-         
         </div>
       </div>
     </div>
@@ -35,4 +45,3 @@ const RelatedPosts = () => {
 };
 
 export default RelatedPosts;
-

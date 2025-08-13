@@ -2,10 +2,10 @@ import { Download } from "lucide-react";
 import FeatureItem from "./FeatureItem";
 const SoftSkillsAbout = ({ title, description, features, image }) => {
   return (
-    <section className="px-4 py-20 bg-white pb-7 md:px-12 ">
+    <section className="px-4 py-10 bg-white pb-7 md:px-12 ">
       <div className="grid w-full gap-12 md:grid-cols-2">
         {/* Left Column */}
-        <div>
+        <div className="pt-32 ">
           <h2 className="mb-4 text-5xl font-bold text-gray-900 font-oswald">
             {title}
           </h2>
@@ -26,7 +26,7 @@ const SoftSkillsAbout = ({ title, description, features, image }) => {
         </div>
 
         {/* Right Column */}
-        <div className="relative w-full lg:-top-10">
+        <div className="relative w-full">
           <img
             src={image}
             alt="About course"

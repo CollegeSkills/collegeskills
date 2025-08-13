@@ -28,7 +28,7 @@ const OurTraining = ({ imageSrc, heading, paragraphs, reverse }) => {
         <img
           src={imageSrc}
           alt={heading}
-          className="object-contain h-auto max-w-full"
+          className="relative object-contain w-full h-auto max-w-full lg:-top-20"
         />
       </div>
     </div>

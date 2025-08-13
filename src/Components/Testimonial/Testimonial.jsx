@@ -41,38 +41,6 @@ const testimonials = [
     review:
       '"The coaching sessions were eye-opening. I learned to manage time better and gained clarity on my career path. Highly recommended!"',
   },
-  // {
-  //    name: 'Ditya-2',
-  //   // role: 'Product Owner',
-  //   image: image5,
-  //   company: 'Govt. Polytechnic Ayodhya',
-  //   review:
-  //     '"Thanks to College Skills, I’m more confident in group discussions and interviews. The trainers were supportive and motivating throughout."',
-  // }
-  // {
-  //   name: 'Atul',
-  //   // role: 'Product Owner',
-  //   image: image,
-  //   company: 'Matoshree Institute of Technology',
-  //   review:
-  //     '"The activities made learning fun and effective. I gained leadership skills and a better understanding of professional behavior."',
-  // },
-  //  {
-  //  name: 'Atul',
-  //   // role: 'Product Owner',
-  //   image: image,
-  //   company: 'Saramodhya ITI',
-  //   review:
-  //     '"With personalized coaching, I improved my communication and critical thinking skills. This has made a real difference in my academics and placements."',
-  // },
-  //  {
-  //   name: 'Atul',
-  //   // role: 'Product Owner',
-  //   image: image,
-  //   company: 'KDK College of Engineering',
-  //   review:
-  //     '"College Skills transformed my approach to learning and growth. The mock interviews prepared me thoroughly for real-world challenges."',
-  // },
 ];
 
 const Testimonial = () => {
@@ -89,7 +57,7 @@ const Testimonial = () => {
   return (
     <div className="flex flex-col items-center gap-8 px-4 text-brand-text lg:py-32 md:px-16 lg:flex-row">
       <div className="lg:w-1/2">
-        <p className="font-semibold text-brand-primary">// TESTIMONIAL</p>
+        <p className="font-semibold text-brand-primary">TESTIMONIAL</p>
         <h2 className="mt-2 text-3xl font-medium md:text-5xl font-oswald">
           Real success stories from our <br />
           <span className="text-brand-primary">coaching clients</span>

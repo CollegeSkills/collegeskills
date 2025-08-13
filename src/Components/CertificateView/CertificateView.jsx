@@ -1,11 +1,19 @@
 import { useState } from "react";
 import { X } from "lucide-react";
 import certificate from "../../assets/certificate.png"
-
-const CertificateSection = () => {
+const CertificateSection = ({
+  title = "Validating Your Success: About Your Certificate",
+  subtitle = "Soft Skills",
+  description = "You will be able to generate the certificate for course of completion:",
+  criteria = [
+    "After watching 60% of videos",
+    "After completing 60% in Quiz & Assignment",
+    "The above criteria is only for getting the course completion certificate. For details regarding Job Assistance criteria, please refer to the FAQs.",
+  ],
+}) => {
   const [isZoomed, setIsZoomed] = useState(false);
 
-//   const handleZoom = () => setIsZoomed(true);
+  const handleZoom = () => setIsZoomed(true);
   const handleClose = () => setIsZoomed(false);
 
   return (
@@ -16,26 +24,21 @@ const CertificateSection = () => {
         <div className="w-full space-y-4 px-9">
           <div className="border-l-4 border-[#F2635C] pl-3">
             <h2 className="text-2xl font-semibold text-gray-900 font-oswald md:text-4xl">
-              Validating Your Success: About Your Certificate
+              {title}
             </h2>
           </div>
 
           <div className="pt-2 space-y-4">
             <h3 className="text-lg font-semibold text-gray-800 underline md:text-xl">
-       Soft Skills
+              {subtitle}
             </h3>
 
-            <p className="font-semibold text-gray-700">
-              You will be able to generate the certificate for course of completion:
-            </p>
+            <p className="font-semibold text-gray-700">{description}</p>
 
             <ul className="space-y-2 text-gray-600 list-disc list-inside">
-              <li>After watching 60% of videos</li>
-              <li>After completing 60% in Quiz & Assignment</li>
-              <li>
-                The above criteria is only for getting the course completion certificate.
-                For details regarding Job Assistance criteria, <span className="px-6">please refer to the FAQs.</span> 
-              </li>
+              {criteria.map((item, i) => (
+                <li key={i}>{item}</li>
+              ))}
             </ul>
           </div>
         </div>
@@ -43,9 +46,10 @@ const CertificateSection = () => {
         {/* Right Certificate */}
         <div className="relative flex justify-center w-full md:w-1/2">
           <img
-               src={certificate}// replace with actual path or imported image
+            src={certificate}
             alt="Certificate"
-            className="max-w-xs rounded-md shadow-md md:max-w-sm"
+            className="max-w-xs rounded-md shadow-md cursor-pointer md:max-w-sm"
+            onClick={handleZoom}
           />
           {/* <button
             onClick={handleZoom}
@@ -67,7 +71,7 @@ const CertificateSection = () => {
               <X className="w-6 h-6 text-black" />
             </button>
             <img
-                src={certificate}
+              src={certificate}
               alt="Zoomed Certificate"
               className="w-full max-h-[90vh] object-contain rounded"
             />
@@ -79,3 +83,4 @@ const CertificateSection = () => {
 };
 
 export default CertificateSection;
+

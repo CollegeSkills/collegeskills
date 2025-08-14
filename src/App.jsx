@@ -24,6 +24,7 @@ import RefundPolicy from "./Pages/RefundPolicy";
 import TermsAndConditions from "./Pages/TermsAndConditions";
 import ProtectedRoute from "./Pages/Private";
 import JoinNowUser from "./Pages/Dashboard/JoinNowUser";
+import ResetPassword from "./Components/Admin/ResetPassword";
 
 function App() {
   return (
@@ -79,6 +80,7 @@ function App() {
           <Route path="/contact" element={<Contact />} />
           <Route path="/join-now" element={<JoinNow />} />
           <Route path="/admin-login" element={<AdminLogin />} />
+               <Route path="/reset-password/:token" element={<ResetPassword />} />
 
           {/* Protected admin routes */}
           <Route

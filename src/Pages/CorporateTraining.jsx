@@ -165,54 +165,46 @@ function CorporateTraining() {
           />
         </div>
       </div>
-      {/* <div className="p-8">
-        <OurTraining
-          heading="Our Training Approach"
-          paragraphs={[
-           
-            " Measure progress through performance metrics and employee feedback.",
-            "Conduct follow-up assessments for sustained growth.",
-            " Offer reinforcement sessions for continuous improvement.",
-          ]}
-          imageSrc={training}
-        />
-      </div> */}
-    <div className="flex flex-col-reverse items-center gap-10 px-4 md:px-8 lg:px-12 md:flex-row">
-  {/* Text */}
-  <div className="w-full md:w-1/2 md:pr-6">
-    <h2 className="text-3xl font-bold text-center text-gray-800 sm:text-3xl md:text-left md:text-5xl font-oswald">
-      Our Training Approach
-    </h2>
 
-    <div className="mt-6 space-y-4 sm:mt-8 md:mt-10">
-      <ul className="space-y-4 sm:space-y-6">
-        {[
-          "Understand company goals, workforce challenges, and role-specific skill needs.",
-          "Customize training to match company culture and objectives.",
-          "Provide client HR/management with trainer profiles for review.",
-          "Deliver results-driven, interactive sessions.",
-          "Measure progress through performance metrics and employee feedback.",
-          "Conduct follow-up assessments for sustained growth.",
-          "Offer reinforcement sessions for continuous improvement."
-        ].map((item, idx) => (
-          <li key={idx} className="flex items-start gap-2 text-sm sm:text-base">
-            <Check className="flex-shrink-0 mt-1 text-orange-400" />
-            <span>{item}</span>
-          </li>
-        ))}
-      </ul>
-    </div>
-  </div>
+      <div className="flex flex-col-reverse items-center gap-10 px-4 md:px-8 lg:px-12 md:flex-row">
+        {/* Text */}
+        <div className="w-full md:w-1/2 md:pr-6">
+          <h2 className="text-3xl font-bold text-center text-gray-800 sm:text-3xl md:text-left md:text-5xl font-oswald">
+            Our Training Approach
+          </h2>
 
-  {/* Image */}
-  <div className="flex justify-center w-full md:w-1/2">
-    <img
-      src={training}
-      alt="training-approach"
-      className="object-contain w-full max-w-sm sm:max-w-md md:max-w-full"
-    />
-  </div>
-</div>
+          <div className="mt-6 space-y-4 sm:mt-8 md:mt-10">
+            <ul className="space-y-4 sm:space-y-6">
+              {[
+                "Understand company goals, workforce challenges, and role-specific skill needs.",
+                "Customize training to match company culture and objectives.",
+                "Provide client HR/management with trainer profiles for review.",
+                "Deliver results-driven, interactive sessions.",
+                "Measure progress through performance metrics and employee feedback.",
+                "Conduct follow-up assessments for sustained growth.",
+                "Offer reinforcement sessions for continuous improvement.",
+              ].map((item, idx) => (
+                <li
+                  key={idx}
+                  className="flex items-start gap-2 text-sm sm:text-base"
+                >
+                  <Check className="flex-shrink-0 mt-1 text-orange-400" />
+                  <span>{item}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        </div>
+
+        {/* Image */}
+        <div className="flex justify-center w-full md:w-1/2">
+          <img
+            src={training}
+            alt="training-approach"
+            className="object-contain w-full max-w-sm sm:max-w-md md:max-w-full"
+          />
+        </div>
+      </div>
 
       <CertificateViewer
         title="Validating Your Success: About Your Certificate"

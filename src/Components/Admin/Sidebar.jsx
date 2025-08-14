@@ -16,8 +16,6 @@ const Sidebar = () => {
   };
 
   const navItems = [
-    
-    { label: 'Dashboard', icon: <User />, path: '/admin/dashboard' },
     { label: 'Sign Up Users', icon: <UserPlus />, path: '/admin/join-now' },
     { label: 'Join Free Users', icon: <Users />, path: '/admin/join-free' },
     { label: 'Contact Users', icon: <Contact />, path: '/admin/contact' },

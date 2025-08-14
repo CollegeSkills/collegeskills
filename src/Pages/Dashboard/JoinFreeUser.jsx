@@ -14,7 +14,7 @@ const JoinFreeUser = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("http://localhost:4000/api/v1/free/all", {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/free/all`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

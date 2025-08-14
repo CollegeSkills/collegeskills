@@ -28,7 +28,7 @@ const EnquiryForm = () => {
 
     try {
       const response = await axios.post(
-        "http://localhost:4000/api/v1/form/submit",
+        "${import.meta.env.VITE_API_URL}/api/v1/form/submit",
         formData
       );
 

@@ -11,7 +11,7 @@ const GetContact = () => {
   const fetchContacts = async () => {
     try {
       const token = localStorage.getItem("token");
-      const res = await axios.get("http://localhost:4000/api/v1/get-contact", {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/get-contact`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },

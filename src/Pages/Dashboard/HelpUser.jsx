@@ -14,21 +14,20 @@ const HelpUser = () => {
     try {
       const token = localStorage.getItem("token");
 
-      const res = await axios.get("http://localhost:4000/api/v1/form/submissions", {
+      const res = await axios.get(`${import.meta.env.VITE_API_URL}/api/v1/form/submissions`, {
         headers: {
           Authorization: `Bearer ${token}`,
         },
       });
 
-      console.log("Form submission API response:", res.data); // 👈 Check response structure
+      // console.log("Form submission API response:", res.data); 
 
-      // If API returns an object like { data: [...] }, adjust accordingly
       const data = Array.isArray(res.data) ? res.data : res.data?.data || [];
 
       setSubmissions(data);
     } catch (err) {
       console.error("Error fetching submissions:", err);
-      setSubmissions([]); // fallback to empty array
+      setSubmissions([]); 
     }
   };
 

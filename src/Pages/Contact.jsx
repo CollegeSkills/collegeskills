@@ -21,7 +21,7 @@ const Contact = () => {
   const handleSubmit = async (e) => {
     e.preventDefault();
     try {
-      await axios.post("http://localhost:4000/api/v1/contact", formData);
+      await axios.post("${import.meta.env.VITE_API_URL}/api/v1/contact", formData);
       toast.success("Message sent successfully!");
       setFormData({
         firstName: "",

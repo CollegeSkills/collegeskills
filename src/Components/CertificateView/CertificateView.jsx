@@ -19,7 +19,7 @@ const CertificateSection = ({
   return (
     <>
       {/* Main Section */}
-      <div className="flex flex-col items-center justify-between w-full gap-10 px-6 py-12 mt-20 bg-white mb-14 md:flex-row md:py-10">
+      <div className="flex flex-col items-center justify-between w-full gap-10 py-8 mt-10 bg-white lg:px-6 lg:mb-14 md:flex-row md:py-10 lg:mt-20">
         {/* Left Text */}
         <div className="w-full space-y-4 px-9">
           <div className="border-l-4 border-[#F2635C] pl-3">

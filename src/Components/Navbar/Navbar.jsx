@@ -1,23 +1,45 @@
-import React, { useState } from "react";
+import React, { useState, useEffect, useRef } from "react";
 import logo from "../../assets/logo.png";
-import { Link } from "react-router-dom"; // Link yahan se
-import { ArrowBigDown, ChevronDown, Menu, X } from "lucide-react"; // Icons yahan se
+import { Link } from "react-router-dom";
+import { ChevronDown, Menu, X } from "lucide-react";
 
 const Navbar = () => {
-  const [isOpen, setIsOpen] = useState(false);
-  const [isServicesOpen, setIsServicesOpen] = useState(false);
-  const [isCoursesOpen, setIsCoursesOpen] = useState(false);
+  const [isOpen, setIsOpen] = useState(false); // mobile menu toggle
+  const [activeDropdown, setActiveDropdown] = useState(null); // desktop dropdown
+  const [mobileDropdown, setMobileDropdown] = useState(null); // mobile dropdown
+  const dropdownRef = useRef(null);
+
+  // Click outside to close dropdown (desktop)
+  useEffect(() => {
+    const handleClickOutside = (e) => {
+      if (dropdownRef.current && !dropdownRef.current.contains(e.target)) {
+        setActiveDropdown(null);
+      }
+    };
+    document.addEventListener("mousedown", handleClickOutside);
+    return () => document.removeEventListener("mousedown", handleClickOutside);
+  }, []);
+
+  const toggleDropdown = (name) => {
+    setActiveDropdown((prev) => (prev === name ? null : name));
+  };
+
+  const toggleMobileDropdown = (name) => {
+    setMobileDropdown((prev) => (prev === name ? null : name));
+  };
 
   return (
-    <nav className="px-6 py-4 bg-brand-background">
-      <div className="flex items-center justify-between mx-auto ">
+    <nav className="px-3 py-4 lg:px-6 bg-brand-background" ref={dropdownRef}>
+      <div className="flex items-center justify-between mx-auto">
         {/* Logo */}
         <div className="w-40">
-        <Link to='/'>  <img
-            src={logo}
-            alt="college skills"
-            className="object-cover w-full h-12"
-          /></Link>
+          <Link to="/">
+            <img
+              src={logo}
+              alt="college skills"
+              className="object-cover w-full h-12"
+            />
+          </Link>
         </div>
 
         {/* Desktop Menu */}
@@ -32,38 +54,26 @@ const Navbar = () => {
               About Us
             </Link>
           </li>
-            <li>
+          <li>
             <Link to="/gallery" className="hover:text-[#FF9E0D]">
               Gallery
             </Link>
           </li>
+
+          {/* Services */}
           <li className="relative">
-            {/* Main Clickable Menu */}
             <button
-              onClick={() => {
-                setIsServicesOpen(!isServicesOpen);
-                setIsCoursesOpen(false);
-              }}
-              className="hover:text-[#FF9E0D] focus:outline-none flex justify-center items-center"
+              onClick={() => toggleDropdown("services")}
+              className="hover:text-[#FF9E0D] flex items-center"
             >
               Services <ChevronDown size={20} />
             </button>
-
-            {/* Dropdown List */}
-            {isServicesOpen && (
+            {activeDropdown === "services" && (
               <ul className="absolute left-0 z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-52">
-                {/* <li>
-                  <Link
-                    to="/services/soft-skills"
-                    className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
-                  >
-                    Soft Skills for Students
-                  </Link>
-                </li> */}
-                   <li>
+                <li>
                   <Link
                     to="/services/skill-for-colleges"
-                    className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
+                    className="block px-4 py-2 hover:bg-[#FFF5E1]"
                   >
                     Soft Skills For Colleges
                   </Link>
@@ -71,15 +81,15 @@ const Navbar = () => {
                 <li>
                   <Link
                     to="/services/skill-for-schools"
-                    className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
+                    className="block px-4 py-2 hover:bg-[#FFF5E1]"
                   >
-                   Soft Skills For Schools
+                    Soft Skills For Schools
                   </Link>
                 </li>
                 <li>
                   <Link
                     to="/services/corporate-training"
-                    className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
+                    className="block px-4 py-2 hover:bg-[#FFF5E1]"
                   >
                     Corporate Training
                   </Link>
@@ -87,7 +97,7 @@ const Navbar = () => {
                 <li>
                   <Link
                     to="/services/b2b-outsourcing"
-                    className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
+                    className="block px-4 py-2 hover:bg-[#FFF5E1]"
                   >
                     B2B Outsourcing
                   </Link>
@@ -95,30 +105,54 @@ const Navbar = () => {
               </ul>
             )}
           </li>
+
+          {/* Courses */}
           <li className="relative">
-            {/* Main Clickable Menu */}
             <button
-              onClick={() => {
-                setIsCoursesOpen(!isCoursesOpen);
-                setIsServicesOpen(false);
-              }}
-              className="hover:text-[#FF9E0D] focus:outline-none flex justify-center items-center"
+              onClick={() => toggleDropdown("courses")}
+              className="hover:text-[#FF9E0D] flex items-center"
             >
               Courses <ChevronDown size={20} />
             </button>
-
-            {/* Dropdown List */}
-            {isCoursesOpen && (
+            {activeDropdown === "courses" && (
               <ul className="absolute left-0 z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-52">
                 <li>
                   <Link
                     to="/services/soft-skills"
-                    className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
+                    className="block px-4 py-2 hover:bg-[#FFF5E1]"
                   >
                     Soft Skills for Students
                   </Link>
                 </li>
-             
+              </ul>
+            )}
+          </li>
+          {/* Personality Test */}
+          <li className="relative">
+            <button
+              onClick={() => toggleDropdown("personality")}
+              className="hover:text-[#FF9E0D] flex items-center"
+            >
+              Personality Test <ChevronDown size={20} />
+            </button>
+            {activeDropdown === "personality" && (
+              <ul className="absolute left-0 z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-52">
+                <li>
+                  <Link
+                    to="/englsih-test"
+                    className="block px-4 py-2 hover:bg-[#FFF5E1]"
+                  >
+                    English Test
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/hinglsih-test"
+                    className="block px-4 py-2 hover:bg-[#FFF5E1]"
+                  >
+                    Hinglish Test
+                  </Link>
+                </li>
               </ul>
             )}
           </li>
@@ -127,7 +161,6 @@ const Navbar = () => {
               Blog
             </Link>
           </li>
-        
           <li>
             <Link to="/contact" className="hover:text-[#FF9E0D]">
               Contact Us
@@ -137,7 +170,7 @@ const Navbar = () => {
 
         {/* Desktop Button */}
         <button className="hidden md:inline-block bg-[#FF9E0D] text-white px-5 py-2 rounded-lg font-medium">
-          <Link to="/join-now"> Join Now</Link>
+          <Link to="/join-now">Join Now</Link>
         </button>
 
         {/* Mobile Hamburger */}
@@ -150,121 +183,141 @@ const Navbar = () => {
 
       {/* Mobile Menu */}
       {isOpen && (
-        <div className="px-4 py-4 mt-4 space-y-5 font-medium text-gray-800 rounded-md md:hidden">
-          <ul>
-            <li>
-              <Link to="/" className="hover:text-[#FF9E0D]">
-                Home
-              </Link>
-            </li>
-            <li>
-              <Link to="/about" className="hover:text-[#FF9E0D]">
-                About Us
-              </Link>
-            </li>
-            <li className="relative">
-              {/* Main Clickable Menu */}
-              <button
-                onClick={() => {
-                  setIsServicesOpen(!isServicesOpen);
-                  setIsCoursesOpen(false);
-                }}
-                className="hover:text-[#FF9E0D] focus:outline-none flex justify-center items-center"
-              >
-                Services <ChevronDown size={20} />
-              </button>
+        <ul className="flex flex-col gap-4 mt-4 font-medium text-gray-800 md:hidden">
+          <li>
+            <Link to="/" className="hover:text-[#FF9E0D]">
+              Home
+            </Link>
+          </li>
+          <li>
+            <Link to="/about" className="hover:text-[#FF9E0D]">
+              About Us
+            </Link>
+          </li>
+          <li>
+            <Link to="/gallery" className="hover:text-[#FF9E0D]">
+              Gallery
+            </Link>
+          </li>
 
-              {/* Dropdown List */}
-              {isServicesOpen && (
-                <ul className="absolute left-0 z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-52">
-                  <li>
-                    <Link
-                      to="/services/soft-skills"
-                      className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
-                    >
-                      Soft Skills for Students
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/services/corporate-training"
-                      className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
-                    >
-                      Corporate Training
-                    </Link>
-                  </li>
-                  <li>
-                    <Link
-                      to="/services/b2b"
-                      className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
-                    >
-                      B2B Outsourcing
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
+          {/* Services */}
+          <li>
+            <button
+              onClick={() => toggleMobileDropdown("services")}
+              className="hover:text-[#FF9E0D] flex items-center w-full"
+            >
+              Services <ChevronDown size={20} />
+            </button>
+            {mobileDropdown === "services" && (
+              <ul className="pl-4 mt-2 space-y-2">
+                <li>
+                  <Link
+                    to="/services/skill-for-colleges"
+                    className="block hover:text-[#FF9E0D]"
+                  >
+                    Soft Skills For Colleges
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/services/skill-for-schools"
+                    className="block hover:text-[#FF9E0D]"
+                  >
+                    Soft Skills For Schools
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/services/corporate-training"
+                    className="block hover:text-[#FF9E0D]"
+                  >
+                    Corporate Training
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/services/b2b-outsourcing"
+                    className="block hover:text-[#FF9E0D]"
+                  >
+                    B2B Outsourcing
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
 
-            <li>
-              <Link to="/blog" className="hover:text-[#FF9E0D]">
-                Blog
-              </Link>
-            </li>
-            <li className="relative">
-              {/* Main Clickable Menu */}
-              <button
-                onClick={() => {
-                  setIsCoursesOpen(!isCoursesOpen);
-                  setIsServicesOpen(false);
-                }}
-                className="hover:text-[#FF9E0D] focus:outline-none flex justify-center items-center"
-              >
-                Courses <ChevronDown size={20} />
-              </button>
-
-              {/* Dropdown List */}
-              {isCoursesOpen && (
-                <ul className="absolute left-0 z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-52">
-                  <li>
-                    <Link
-                      to="/courses/for-colleges"
-                      className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
-                    >
-                      For Colleges
-                    </Link>
-                  </li>
+          {/* Courses */}
+          <li>
+            <button
+              onClick={() => toggleMobileDropdown("courses")}
+              className="hover:text-[#FF9E0D] flex items-center w-full"
+            >
+              Courses <ChevronDown size={20} />
+            </button>
+            {mobileDropdown === "courses" && (
+              <ul className="pl-4 mt-2 space-y-2">
+                <li>
                   <Link
                     to="/services/soft-skills"
-                    className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
+                    className="block hover:text-[#FF9E0D]"
                   >
                     Soft Skills for Students
                   </Link>
-                  <li>
-                    <Link
-                      to="/courses/for-corporate"
-                      className="block px-4 py-2 hover:bg-[#FFF5E1] text-gray-800"
-                    >
-                      For Corporates/B2B
-                    </Link>
-                  </li>
-                </ul>
-              )}
-            </li>
-            <li>
-              <Link to="/testimonial" className="hover:text-[#FF9E0D]">
-                Testimonial
-              </Link>
-            </li>
-            <li>
-              <Link to="/contact" className="hover:text-[#FF9E0D]">
-                Contact Us
-              </Link>
-            </li>
-          </ul>
-          <button className="w-full mt-2 bg-[#FF9E0D] text-white px-5 py-2 rounded-full font-semibold">
-            Join Now
-          </button>
-        </div>
+                </li>
+              </ul>
+            )}
+          </li>
+
+          {/* Personality Test */}
+          <li>
+            <button
+              onClick={() => toggleMobileDropdown("personality")}
+              className="hover:text-[#FF9E0D] flex items-center w-full"
+            >
+              Personality Test <ChevronDown size={20} />
+            </button>
+            {mobileDropdown === "personality" && (
+              <ul className="pl-4 mt-2 space-y-2">
+                <li>
+                  <Link
+                    to="/englsih-test"
+                    className="block hover:text-[#FF9E0D]"
+                  >
+                    English Test
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/hinglsih-test"
+                    className="block hover:text-[#FF9E0D]"
+                  >
+                    Hinglish Test
+                  </Link>
+                </li>
+              </ul>
+            )}
+          </li>
+          <li>
+            <Link to="/blog" className="hover:text-[#FF9E0D]">
+              Blog
+            </Link>
+          </li>
+          <li>
+            <Link to="/contact" className="hover:text-[#FF9E0D]">
+              Contact Us
+            </Link>
+          </li>
+
+          {/* Mobile Button */}
+          <li>
+            <Link
+              to="/join-now"
+              className="inline-block bg-[#FF9E0D] text-white px-5 py-2 rounded-lg font-medium"
+            >
+              Join Now
+            </Link>
+          </li>
+        </ul>
       )}
     </nav>
   );

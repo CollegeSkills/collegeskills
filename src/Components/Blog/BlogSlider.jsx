@@ -1,6 +1,6 @@
 // components/BlogSlider.jsx
 import React, { useState, useEffect } from "react";
-import { slider } from "../../blog.json"; // tera JSON data import
+import { slider } from "../../blog.json"; 
 import { ChevronLeft, ChevronRight } from "lucide-react";
 const BlogSlider = () => {
   const [current, setCurrent] = useState(0);
@@ -59,13 +59,13 @@ const BlogSlider = () => {
         onClick={prevSlide}
         className="absolute px-2 py-1 text-white -translate-y-1/2 bg-opacity-50 rounded-full bg-brand-primary left-4 top-1/2 hover:bg-opacity-80"
       >
-        <ChevronLeft size={40}/>
+        <ChevronLeft size={40} />
       </button>
       <button
         onClick={nextSlide}
         className="absolute px-2 py-1 text-white -translate-y-1/2 bg-opacity-50 rounded-full bg-brand-primary right-4 top-1/2 hover:bg-opacity-80"
       >
-        <ChevronRight size={40}/>
+        <ChevronRight size={40} />
       </button>
 
       {/* Dots */}

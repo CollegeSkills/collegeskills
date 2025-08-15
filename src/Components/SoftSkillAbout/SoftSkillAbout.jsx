@@ -5,8 +5,8 @@ const SoftSkillsAbout = ({ title, description, features, image }) => {
     <section className="px-4 py-10 bg-white pb-7 md:px-12 ">
       <div className="grid w-full gap-12 md:grid-cols-2">
         {/* Left Column */}
-        <div className="pt-32 ">
-          <h2 className="mb-4 text-5xl font-bold text-gray-900 font-oswald">
+        <div className="lg:pt-32">
+          <h2 className="mb-4 text-3xl font-bold text-gray-900 lg:text-5xl font-oswald">
             {title}
           </h2>
           <p className="mb-8 text-gray-600">{description}</p>

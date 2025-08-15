@@ -12,13 +12,13 @@ const BenefitsCard = ({
 }) => {
   return (
     <div
-      className={`p-8 transition-all duration-300
+      className={`p-2 transition-all duration-300
                   bg-gradient-to-br ${gradientFrom} ${gradientTo} 
                   border border-gray-100 shadow-md rounded-2xl`}
     >
       <div className="flex items-center gap-3 mb-6">
-        <Icon className={`${color} w-6 h-6`} />
-        <h2 className="text-4xl font-semibold text-brand-primary font-oswald">
+        <Icon className={`${color} w-6 h-6 hidden`} />
+        <h2 className="text-3xl font-semibold lg:4xl text-brand-primary font-oswald">
           {title}
         </h2>
       </div>

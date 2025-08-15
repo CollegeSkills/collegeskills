@@ -48,16 +48,7 @@ const BlogDetail = () => {
               {blog.title}
             </h2>
             <h3 className="mb-4 text-2xl text-gray-500 font-oswald">{blog.subtitle}</h3>
-
-            {/* Loop through content array */}
-            {/* {blog.content.map((section, idx) => (
-              <div key={idx} className="mb-4">
-                {section.heading && (
-                  <h3 className="mb-1 text-lg font-bold">{section.heading}</h3>
-                )}
-                {section.text && <p>{section.text}</p>}
-              </div>
-            ))} */}
+    
             {/* Loop through content array */}
             {blog.content.map((section, idx) => (
               <div key={idx} className="mb-6">

@@ -9,10 +9,10 @@ const CourseCard = ({
   duration,
   mode,
   language,
-  showInfoGrid = true, // ← default true
+  showInfoGrid = true,
 }) => {
   return (
-    <div className="w-full p-6 px-12 text-black mt-9">
+    <div className="w-full px-8 text-black lg:px-12 mt-9">
       <div className="flex flex-col items-center gap-6 md:flex-row md:items-start">
         {/* Text Section */}
         <div className="w-full md:w-1/2">
@@ -40,20 +40,20 @@ const CourseCard = ({
 
       {/* ✅ Info Grid (conditionally rendered) */}
       {showInfoGrid && (
-        <div className="grid grid-cols-2 gap-4 pt-6 mt-10 text-sm text-center border-t border-gray-200 md:grid-cols-5 md:text-base">
-          <div className="border-r border-gray-200">
+        <div className="grid grid-cols-1 gap-6 pt-6 mt-10 text-sm text-center border-t border-gray-200 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-5 md:text-base">
+          <div className="sm:border-r sm:border-gray-200">
             <p className="font-semibold">Job Assistance</p>
             <p className="text-gray-400">{jobAssistance}</p>
           </div>
-          <div className="lg:border-r lg:border-gray-200">
+          <div className="sm:border-r sm:border-gray-200">
             <p className="font-semibold">Date of Commencement</p>
             <p className="text-gray-400">{startDate}</p>
           </div>
-          <div className="border-r border-gray-200">
+          <div className="sm:border-r sm:border-gray-200">
             <p className="font-semibold">Duration</p>
             <p className="text-gray-400">{duration}</p>
           </div>
-          <div className="lg:border-r lg:border-gray-200">
+          <div className="sm:border-r sm:border-gray-200">
             <p className="font-semibold">Delivery Mode</p>
             <p className="text-gray-400">{mode}</p>
           </div>

@@ -24,6 +24,8 @@ import TermsAndConditions from "./Pages/TermsAndConditions";
 import ProtectedRoute from "./Pages/Private";
 import JoinNowUser from "./Pages/Dashboard/JoinNowUser";
 import ResetPassword from "./Components/Admin/ResetPassword";
+import PersonalityTest from "./Pages/EnglishTest";
+import HinglishTest from "./Pages/HinglishTest";
 
 function App() {
   return (
@@ -55,6 +57,8 @@ function App() {
           <Route path="/blog" element={<Blog />} />
           <Route path="/contact" element={<Contact />} />
           <Route path="/join-now" element={<JoinNow />} />
+          <Route path="/englsih-test" element={<PersonalityTest/>} />
+          <Route path="/hinglsih-test" element={<HinglishTest/>} />
           <Route path="/admin-login" element={<AdminLogin />} />
                <Route path="/reset-password/:token" element={<ResetPassword />} />
 

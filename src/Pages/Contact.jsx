@@ -41,8 +41,8 @@ const Contact = () => {
    <div className="min-h-screen p-6 md:p-16">
       {/* Heading */}
       <div className="mb-12">
-        <p className="text-sm font-semibold text-brand-primary">// GET IN TOUCH</p>
-        <h1 className="mt-2 text-3xl font-semibold text-gray-900 md:text-6xl font-oswald">
+        <p className="text-sm font-semibold text-brand-primary">GET IN TOUCH</p>
+        <h1 className="mt-2 text-4xl font-semibold text-gray-900 md:text-6xl font-oswald">
           Let&apos;s work together to create{" "} <br />
           <span className="text-brand-primary">the life and business</span>
         </h1>
@@ -51,7 +51,7 @@ const Contact = () => {
       {/* Content Grid */}
       <div className="flex flex-col gap-10 md:flex-row">
         {/* Left - Form */}
-        <div className="w-full p-8 border-2 rounded-lg md:w-1/2 border-brand-light">
+        <div className="w-full p-3 border-2 rounded-lg lg:p-8 md:w-1/2 border-brand-light">
           <h2 className="mb-1 text-2xl font-semibold font-oswald">Send A Message</h2>
           <p className="mb-6 text-sm text-gray-500">
             Unlock your potential with expert guidance! Schedule a free

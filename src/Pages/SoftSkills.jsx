@@ -104,12 +104,9 @@ function SoftSkills() {
         features={features}
         image={CourseImage}
       />
-      {/* <Benefits
-        title="Unlock Your Potential: Exclusive Course Offerings"
-        features={featureData}
-      /> */}
-      <div className="max-w-5xl mx-auto">
-          <h2 className="text-6xl font-bold text-center pb-9 font-oswald text-brand-text">
+
+      <div className="max-w-5xl px-4 mx-auto">
+          <h2 className="text-5xl font-bold text-center lg:text-6xl pb-9 font-oswald text-brand-text">
           Your Benefits
         </h2>
         <BenefitsCard

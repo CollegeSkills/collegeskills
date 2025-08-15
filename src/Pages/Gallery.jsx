@@ -31,6 +31,15 @@ import activity5 from "../assets/gallery/activity4.jpeg";
 import activity6 from "../assets/gallery/activity5.jpeg";
 import activity7 from "../assets/gallery/activity6.jpeg";
 import activity8 from "../assets/gallery/activity7.jpg";
+import activity9 from "../assets/gallery/activity8.jpg";
+import activity10 from "../assets/gallery/activity9.jpg";
+import activity11 from "../assets/gallery/activity10.jpg";
+import activity12 from "../assets/gallery/activity11.jpg";
+import class16 from "../assets/gallery/class15.jpg";
+import class14 from "../assets/gallery/class16.jpg";
+import class15 from "../assets/gallery/class17.jpg";
+import group6 from "../assets/gallery/group5.jpg";
+
 
 const customers = [
   {
@@ -82,6 +91,7 @@ const customers = [
       "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg",
   },
 ];
+
 
 const Gallery = () => {
   const sliderRef = useRef(null);
@@ -276,6 +286,60 @@ const Gallery = () => {
       {
         id: "img-28",
         src: class12,
+        title: "Club Meet",
+        category: "Class",
+      },
+        {
+        id: "img-29",
+        src: activity12,
+        title: "Club Meet",
+        category: "Activity",
+      },
+      {
+        id: "img-30",
+        src: class13,
+        title: "Club Meet",
+        category: "Class",
+      },
+      {
+        id: "img-31",
+        src: class14,
+        title: "Club Meet",
+        category: "Class",
+      },
+      {
+        id: "img-32",
+        src: activity9,
+        title: "Club Meet",
+        category: "Activity",
+      },
+        {
+        id: "img-33",
+        src: activity11,
+        title: "Club Meet",
+        category: "Activity",
+      },
+        {
+        id: "img-34",
+        src: activity10,
+        title: "Club Meet",
+        category: "Activity",
+      },
+           {
+        id: "img-35",
+        src: group6,
+        title: "Club Meet",
+        category: "Group",
+      },
+           {
+        id: "img-36",
+        src: class16,
+        title: "Club Meet",
+        category: "Class",
+      },
+           {
+        id: "img-37",
+        src: class15,
         title: "Club Meet",
         category: "Class",
       },

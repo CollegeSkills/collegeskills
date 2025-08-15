@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "question": "When you hear about a completely new idea in class, your first instinct is to:",
+    "options": [
+      "Imagine how it could be applied in different ways (creative spin).",
+      "Research the basics before forming an opinion.",
+      "Wait to see what others think before commenting.",
+      "Avoid it unless it directly relates to your subject."
+    ]
+  },
+  {
+    "id": 2,
+    "question": "If you have a group assignment due in 5 days, you will:",
+    "options": [
+      "Break tasks into a checklist and start immediately.",
+      "Do small parts daily but without a fixed plan.",
+      "Start the day before the deadline.",
+      "Wait for group members to take the lead."
+    ]
+  },
+  {
+    "id": 3,
+    "question": "At a networking event, you usually:",
+    "options": [
+      "Approach new people confidently and start conversations.",
+      "Talk only to those you already know.",
+      "Wait for someone to approach you first.",
+      "Avoid interactions unless necessary."
+    ]
+  },
+  {
+    "id": 4,
+    "question": "When a teammate makes a mistake in a project, you:",
+    "options": [
+      "Explain the mistake politely and help them fix it.",
+      "Correct it yourself without mentioning it.",
+      "Get frustrated but don’t say anything.",
+      "Publicly point it out to avoid repeating errors."
+    ]
+  },
+  {
+    "id": 5,
+    "question": "During an unexpected problem in your work, you usually:",
+    "options": [
+      "Stay calm, break the problem into steps, and solve it.",
+      "Ask for advice before taking action.",
+      "Feel stressed but still try to solve it.",
+      "Panic and wait for others to handle it."
+    ]
+  },
+  {
+    "id": 6,
+    "question": "When talking to someone, you:",
+    "options": [
+      "Listen carefully without interrupting, then respond.",
+      "Listen but start forming your reply midway.",
+      "Interrupt if you feel your point is more important.",
+      "Mostly wait for your turn to speak."
+    ]
+  },
+  {
+    "id": 7,
+    "question": "If you are asked to speak on stage in front of 100 students with 5 mins notice, you:",
+    "options": [
+      "Accept and speak confidently.",
+      "Accept but feel nervous inside.",
+      "Try to avoid it with an excuse.",
+      "Flatly refuse."
+    ]
+  },
+  {
+    "id": 8,
+    "question": "When meeting someone for the first time, your body language is usually:",
+    "options": [
+      "Open and friendly (eye contact, smile, relaxed posture).",
+      "Neutral but polite.",
+      "Reserved and slightly closed off.",
+      "Nervous and awkward."
+    ]
+  },
+  {
+    "id": 9,
+    "question": "In a debate, when someone strongly disagrees with you, you:",
+    "options": [
+      "Listen calmly and give logical counterpoints.",
+      "Defend your point without listening much.",
+      "Change the topic to avoid conflict.",
+      "Get upset and stop talking."
+    ]
+  },
+  {
+    "id": 10,
+    "question": "When deciding on an important step in life (e.g., career choice), you:",
+    "options": [
+      "List pros and cons before deciding.",
+      "Discuss with family and friends first.",
+      "Go with your gut feeling.",
+      "Delay the decision hoping things get clear later."
+    ]
+  },
+  {
+    "id": 11,
+    "question": "When learning a new skill, you prefer to:",
+    "options": [
+      "Practice hands-on immediately.",
+      "Read/watch tutorials first.",
+      "Observe others before trying yourself.",
+      "Only learn if it’s necessary for work."
+    ]
+  },
+  {
+    "id": 12,
+    "question": "If your team’s leader is absent, you:",
+    "options": [
+      "Step in to guide the team.",
+      "Help coordinate tasks without being the leader.",
+      "Wait for instructions from someone else.",
+      "Focus only on your own work."
+    ]
+  },
+  {
+    "id": 13,
+    "question": "When you fail at something, you:",
+    "options": [
+      "Analyze what went wrong and try again.",
+      "Seek advice before retrying.",
+      "Feel demotivated but continue slowly.",
+      "Give up completely."
+    ]
+  },
+  {
+    "id": 14,
+    "question": "When working in a group, you usually:",
+    "options": [
+      "Take initiative and delegate tasks.",
+      "Do your share and let others lead.",
+      "Work silently without much interaction.",
+      "Wait for guidance before acting."
+    ]
+  },
+  {
+    "id": 15,
+    "question": "When facing a challenge, your mindset is:",
+    "options": [
+      "Every problem has a solution.",
+      "I’ll try, but not sure if it will work.",
+      "I prefer avoiding risks.",
+      "I feel anxious and doubt myself."
+    ]
+  },
+  {
+    "id": 16,
+    "question": "When given feedback, you:",
+    "options": [
+      "Accept it positively and improve.",
+      "Accept but feel slightly hurt.",
+      "Ignore unless it’s from someone you respect.",
+      "Defend your actions immediately."
+    ]
+  },
+  {
+    "id": 17,
+    "question": "When you meet someone with a different opinion, you:",
+    "options": [
+      "Listen carefully and respect their view.",
+      "Listen but stick to your own view.",
+      "Try to convince them you are right.",
+      "Avoid such conversations."
+    ]
+  },
+  {
+    "id": 18,
+    "question": "If you’re given two tasks, one easy and one hard, you:",
+    "options": [
+      "Finish the hard one first.",
+      "Finish the easy one first.",
+      "Do whichever feels comfortable at the moment.",
+      "Delay both until necessary."
+    ]
+  },
+  {
+    "id": 19,
+    "question": "If a teammate is struggling, you:",
+    "options": [
+      "Offer help immediately.",
+      "Help if they ask.",
+      "Focus on your own work.",
+      "Avoid getting involved."
+    ]
+  },
+  {
+    "id": 20,
+    "question": "When learning from mistakes, you:",
+    "options": [
+      "Keep a record so you don’t repeat them.",
+      "Remember mentally and move on.",
+      "Forget about them after some time.",
+      "Blame external factors."
+    ]
+  },
+  {
+    "id": 21,
+    "question": "If someone compliments your work, you:",
+    "options": [
+      "Thank them genuinely.",
+      "Feel happy but shy away.",
+      "Downplay your effort.",
+      "Ignore the compliment."
+    ]
+  },
+  {
+    "id": 22,
+    "question": "When you have to explain a topic to others, you:",
+    "options": [
+      "Use examples and clear language.",
+      "Give only necessary details.",
+      "Speak quickly to finish soon.",
+      "Avoid unless forced."
+    ]
+  },
+  {
+    "id": 23,
+    "question": "If you miss an important deadline, you:",
+    "options": [
+      "Inform immediately and explain.",
+      "Apologize and move on.",
+      "Ignore unless asked.",
+      "Blame circumstances."
+    ]
+  },
+  {
+    "id": 24,
+    "question": "When solving a puzzle/problem, you:",
+    "options": [
+      "Enjoy the challenge.",
+      "Feel impatient but try.",
+      "Get frustrated easily.",
+      "Avoid it completely."
+    ]
+  },
+  {
+    "id": 25,
+    "question": "If given a choice between working alone or in a team, you:",
+    "options": [
+      "Prefer a team for better ideas.",
+      "Prefer alone for focus.",
+      "Depends on the situation.",
+      "Avoid team work."
+    ]
+  },
+  {
+    "id": 26,
+    "question": "When handling criticism, you:",
+    "options": [
+      "See it as a chance to grow.",
+      "Accept but don’t act on it.",
+      "Feel offended.",
+      "Argue back."
+    ]
+  },
+  {
+    "id": 27,
+    "question": "If you have free time at work/school, you:",
+    "options": [
+      "Use it to learn something new.",
+      "Help others.",
+      "Relax and chat.",
+      "Browse aimlessly."
+    ]
+  },
+  {
+    "id": 28,
+    "question": "When attending a workshop, you:",
+    "options": [
+      "Participate actively.",
+      "Listen but don’t interact much.",
+      "Stay quiet unless asked.",
+      "Try to leave early."
+    ]
+  },
+  {
+    "id": 29,
+    "question": "If you don’t understand something, you:",
+    "options": [
+      "Ask questions immediately.",
+      "Research on your own first.",
+      "Wait and hope it gets clear later.",
+      "Ignore it."
+    ]
+  },
+  {
+    "id": 30,
+    "question": "When you achieve something, you:",
+    "options": [
+      "Celebrate and share with others.",
+      "Feel happy but keep it to yourself.",
+      "Downplay your achievement.",
+      "Feel it’s not a big deal."
+    ]
+  }
+]

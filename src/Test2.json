@@ -1,0 +1,302 @@
+[
+  {
+    "id": 1,
+    "question": "Jab aap class me koi new idea sunte ho, aapka pehla reaction hota hai:",
+    "options": [
+      "Imagine karte ho ki isko alag-alag tareeke se kaise apply kiya jaa sakta hai.",
+      "Pehle basic research karte ho, phir opinion banate ho.",
+      "Wait karte ho ki dusre kya soch rahe hain, fir bolte ho.",
+      "Tabhi consider karte ho jab topic directly subject se related ho."
+    ]
+  },
+  {
+    "id": 2,
+    "question": "Agar aapke paas group assignment 5 din me submit karna hai, to aap:",
+    "options": [
+      "Task ko checklist me tod ke abhi start karte ho.",
+      "Roz thoda-thoda karte ho bina fixed plan ke.",
+      "Deadline ke ek din pehle start karte ho.",
+      "Group ke dusre members ka wait karte ho."
+    ]
+  },
+  {
+    "id": 3,
+    "question": "Networking event me aap usually:",
+    "options": [
+      "Naye logon se confidently milte ho aur baat start karte ho.",
+      "Sirf unse baat karte ho jinko already jaante ho.",
+      "Wait karte ho ki koi pehle aapke paas aaye.",
+      "Jab tak zarurat na ho, avoid karte ho."
+    ]
+  },
+  {
+    "id": 4,
+    "question": "Agar team mate project me galti karta hai, to aap:",
+    "options": [
+      "Politely samjhate ho aur help karte ho fix karne me.",
+      "Chupchaap khud correct kar lete ho.",
+      "Frustrate hote ho par kuch nahi bolte.",
+      "Publicly point out karte ho taaki repeat na ho."
+    ]
+  },
+  {
+    "id": 5,
+    "question": "Kaam me achanak problem aa jaaye to aap:",
+    "options": [
+      "Calm rehte ho, problem ko steps me tod ke solve karte ho.",
+      "Advice lete ho, phir action lete ho.",
+      "Stress feel karte ho but try karte ho solve karne ka.",
+      "Panic karte ho aur dusron ka wait karte ho."
+    ]
+  },
+  {
+    "id": 6,
+    "question": "Jab aap kisi se baat karte ho to aap:",
+    "options": [
+      "Dhyan se sunte ho, phir jawab dete ho.",
+      "Sunte ho par beech me apna reply sochne lagte ho.",
+      "Beech me hi interrupt kar dete ho.",
+      "Bas apni baari ka wait karte ho."
+    ]
+  },
+  {
+    "id": 7,
+    "question": "Agar aapko 5 minute notice me 100 students ke saamne bolne ko bola jaaye, to aap:",
+    "options": [
+      "Accept karke confidently bolte ho.",
+      "Accept karte ho but nervous feel karte ho.",
+      "Excuse bana ke avoid karte ho.",
+      "Seedha refuse kar dete ho."
+    ]
+  },
+  {
+    "id": 8,
+    "question": "Naye insaan se milte waqt aapka body language hota hai:",
+    "options": [
+      "Open & friendly (eye contact, smile, relaxed posture).",
+      "Neutral but polite.",
+      "Thoda reserved.",
+      "Nervous & awkward."
+    ]
+  },
+  {
+    "id": 9,
+    "question": "Debate me jab koi aapse strongly disagree karta hai to aap:",
+    "options": [
+      "Calm rehte ho aur logical counter points dete ho.",
+      "Apne point defend karte ho bina sunne ke.",
+      "Topic change kar dete ho.",
+      "Upset hoke chup ho jaate ho."
+    ]
+  },
+  {
+    "id": 10,
+    "question": "Important decision (jaise career choice) lete waqt aap:",
+    "options": [
+      "Pros & cons list banate ho.",
+      "Family & friends se discuss karte ho.",
+      "Gut feeling pe chale jaate ho.",
+      "Decision delay karte ho."
+    ]
+  },
+  {
+    "id": 11,
+    "question": "Busy din me agar aapko 3 ghante free mil jaaye to aap:",
+    "options": [
+      "Pending kaam complete karte ho.",
+      "Thoda break lete ho, phir kaam.",
+      "Pure entertainment me lagate ho.",
+      "Waste kar dete ho bina realise kiye."
+    ]
+  },
+  {
+    "id": 12,
+    "question": "Friend apni personal problem share kare to aap:",
+    "options": [
+      "Dhyan se sunke thoughtful advice dete ho.",
+      "Apna similar experience share karte ho.",
+      "Mood change karne ki koshish karte ho.",
+      "Avoid karte ho deep baatein."
+    ]
+  },
+  {
+    "id": 13,
+    "question": "College event organise karte waqt aap:",
+    "options": [
+      "Detailed plan banake tasks assign karte ho.",
+      "Rough plan banate ho aur adjust karte ho.",
+      "Dusron pe planning chhod dete ho.",
+      "Responsibility lene se bachte ho."
+    ]
+  },
+  {
+    "id": 14,
+    "question": "Naye club me join karte ho jahan sab pehle se ek dusre ko jaante hain, to aap:",
+    "options": [
+      "Introduce karke mingle karte ho.",
+      "Chup rehte ho jab tak koi baat na kare.",
+      "Sirf tab join karte ho jab friend saath ho.",
+      "Avoid karte ho."
+    ]
+  },
+  {
+    "id": 15,
+    "question": "Team member kaam nahi kar raha ho to aap:",
+    "options": [
+      "Motivate karke reason samajhte ho.",
+      "Unka kaam kisi aur ko de dete ho.",
+      "Ignore karte ho jab tak effect na ho.",
+      "Leader ko complaint kar dete ho."
+    ]
+  },
+  {
+    "id": 16,
+    "question": "Presentation ke beech laptop kaam karna band kar de to aap:",
+    "options": [
+      "Calm rehte ho aur without slides continue karte ho.",
+      "Joke maar ke time lete ho fix karne ka.",
+      "Sorry bol ke jaldi end kar dete ho.",
+      "Flustered ho jaate ho aur points bhool jaate ho."
+    ]
+  },
+  {
+    "id": 17,
+    "question": "Group discussion me aap:",
+    "options": [
+      "Pehle sunte ho, phir relevant points add karte ho.",
+      "Chance milte hi bolte ho.",
+      "Sirf tab bolte ho jab pucha jaaye.",
+      "Bilkul nahi bolte."
+    ]
+  },
+  {
+    "id": 18,
+    "question": "Manager tough deadline deta hai to aap:",
+    "options": [
+      "Task break karke important cheeze pehle karte ho.",
+      "Extra hours work karke finish karte ho.",
+      "Turant extension maang lete ho.",
+      "Stress karte ho bina action liye."
+    ]
+  },
+  {
+    "id": 19,
+    "question": "Koi aapke kaam pe criticism kare to aap:",
+    "options": [
+      "Thank karke improvement points note karte ho.",
+      "Sunte ho par defensive feel karte ho.",
+      "Strongly justify karte ho.",
+      "Ignore kar dete ho."
+    ]
+  },
+  {
+    "id": 20,
+    "question": "Classmate koi innovative idea share kare to aap:",
+    "options": [
+      "Excited hoke creative input dete ho.",
+      "Appreciate karte ho par traditional way pe stick karte ho.",
+      "Practicality doubt karte ho.",
+      "Discussion avoid karte ho."
+    ]
+  },
+  {
+    "id": 21,
+    "question": "Apna week organise karte waqt aap:",
+    "options": [
+      "Proper timetable banate ho.",
+      "Rough mental plan banate ho.",
+      "Din ke hisaab se chalate ho.",
+      "Sirf workload zyada hone pe plan banate ho."
+    ]
+  },
+  {
+    "id": 22,
+    "question": "Crisis me aap:",
+    "options": [
+      "Calm rehte ho aur logically sochte ho.",
+      "Dusron se guidance lete ho.",
+      "Bina plan ke instant action lete ho.",
+      "Wait karte ho ki koi aur lead le."
+    ]
+  },
+  {
+    "id": 23,
+    "question": "Friendly debate me achanak bulaya jaaye to aap:",
+    "options": [
+      "Confidently participate karte ho.",
+      "Nervous hoke participate karte ho.",
+      "Escape karne ki koshish karte ho.",
+      "Seedha mana kar dete ho."
+    ]
+  },
+  {
+    "id": 24,
+    "question": "Professionals se milte waqt aapka handshake hota hai:",
+    "options": [
+      "Firm & confident.",
+      "Gentle & polite.",
+      "Weak & hesitant.",
+      "Avoid karte ho."
+    ]
+  },
+  {
+    "id": 25,
+    "question": "Group project idea pe sab stuck ho jaaye to aap:",
+    "options": [
+      "Creative alternative suggest karte ho.",
+      "Original plan pe stick karte ho.",
+      "Wait karte ho ki dusre idea laayein.",
+      "Leader pe chhod dete ho."
+    ]
+  },
+  {
+    "id": 26,
+    "question": "Agar achanak free day mil jaaye to aap:",
+    "options": [
+      "Pending kaam complete karte ho.",
+      "Half work, half rest karte ho.",
+      "Entertainment pe zyada focus karte ho.",
+      "Waste kar dete ho bina realise kiye."
+    ]
+  },
+  {
+    "id": 27,
+    "question": "Kisi ko concept samjhate waqt aap:",
+    "options": [
+      "Examples aur simple language use karte ho.",
+      "Sirf definition dete ho.",
+      "Fast bolte ho bina check kiye ki samjha ya nahi.",
+      "Avoid karte ho explain karna."
+    ]
+  },
+  {
+    "id": 28,
+    "question": "Team me kaam karte waqt aap:",
+    "options": [
+      "Equal contribution prefer karte ho.",
+      "Zarurat ho to leadership lete ho.",
+      "Sirf apna part karte ho.",
+      "Dusron pe zyada kaam chhod dete ho."
+    ]
+  },
+  {
+    "id": 29,
+    "question": "Galti hone par aap:",
+    "options": [
+      "Accept karke jaldi fix karte ho.",
+      "Hide karte ho jab tak koi notice na kare.",
+      "Circumstances ko blame karte ho.",
+      "Dusron ko blame karte ho."
+    ]
+  },
+  {
+    "id": 30,
+    "question": "Exam se pehle stress ho to aap:",
+    "options": [
+      "Calm rehte ho aur step-by-step prepare karte ho.",
+      "Zyada padhte ho gap cover karne ke liye.",
+      "Overthink karke anxious ho jaate ho.",
+      "Stress ki wajah se padhna avoid karte ho."
+    ]
+  }
+]

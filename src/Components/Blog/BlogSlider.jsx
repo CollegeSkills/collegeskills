@@ -1,7 +1,8 @@
-// components/BlogSlider.jsx
 import React, { useState, useEffect } from "react";
-import { slider } from "../../blog.json"; 
+import { slider } from "../../blog.json";
 import { ChevronLeft, ChevronRight } from "lucide-react";
+import { Link } from "react-router-dom";
+
 const BlogSlider = () => {
   const [current, setCurrent] = useState(0);
 
@@ -13,7 +14,6 @@ const BlogSlider = () => {
     setCurrent((prev) => (prev === 0 ? slider.length - 1 : prev - 1));
   };
 
-  // Auto-slide every 4s
   useEffect(() => {
     const timer = setInterval(nextSlide, 4000);
     return () => clearInterval(timer);
@@ -43,12 +43,12 @@ const BlogSlider = () => {
               <p className="max-w-2xl pt-2 mb-4 font-sans text-lg">
                 {item.description}
               </p>
-              <a
-                href={item.link}
+              <Link
+                to={`/blog/${item.link}`} // React Router navigation
                 className="px-4 py-2 font-semibold text-white transition rounded-lg bg-brand-primary w-36 hover:bg-slate-800"
               >
                 Read More →
-              </a>
+              </Link>
             </div>
           </div>
         ))}

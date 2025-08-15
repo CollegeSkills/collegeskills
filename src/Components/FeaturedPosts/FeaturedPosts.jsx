@@ -3,23 +3,22 @@ import featuredPosts from "../../blog.json";
 import { Link } from "react-router-dom";
 
 const FeaturedPosts = () => {
-    const randomPosts = useMemo(() => {
+  const randomPosts = useMemo(() => {
     if (!Array.isArray(featuredPosts.blogs)) return [];
-
     const shuffled = [...featuredPosts.blogs].sort(() => 0.5 - Math.random());
-
     return shuffled.slice(2, 7);
   }, []);
+
   return (
     <div className="space-y-6">
       <div>
         <h4 className="mb-2 text-2xl font-bold">Featured Post</h4>
         <div className="space-y-3">
-            {randomPosts.map((blogs) => (
+          {randomPosts.map((blogs) => (
             <Link
-                to={`/blog/${blogs.id}`}
+              to={`/blog/${blogs.id}`} // ✅ link sahi path pe
               key={blogs.id}
-              className="flex items-center gap-2 p-1 rounded-md hover:bg-gray-100"
+              className="flex items-center gap-2 p-1 transition rounded-md hover:bg-gray-100"
             >
               <img
                 src={blogs.image}

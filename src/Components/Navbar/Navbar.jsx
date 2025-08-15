@@ -118,7 +118,7 @@ const Navbar = () => {
               <ul className="absolute left-0 z-10 mt-2 bg-white border border-gray-200 rounded-md shadow-lg w-52">
                 <li>
                   <Link
-                    to="/services/soft-skills"
+                    to="/course/soft-skills"
                     className="block px-4 py-2 hover:bg-[#FFF5E1]"
                   >
                     Soft Skills for Students
@@ -258,7 +258,7 @@ const Navbar = () => {
               <ul className="pl-4 mt-2 space-y-2">
                 <li>
                   <Link
-                    to="/services/soft-skills"
+                    to="/course/soft-skills"
                     className="block hover:text-[#FF9E0D]"
                   >
                     Soft Skills for Students

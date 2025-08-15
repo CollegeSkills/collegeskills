@@ -47,8 +47,8 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/testimonial" className="hover:text-[#FF9E0D] py-1">
-                    Testimonial
+                  <Link to="/gallery" className="hover:text-[#FF9E0D] py-1">
+               Gallery
                   </Link>
                 </li>
                 <li>
@@ -82,7 +82,7 @@ const Footer = () => {
               <ul className="space-y-2 text-sm">
                 <li>
                   <Link
-                    to="/services/soft-skills"
+                    to="/course/soft-skills"
                     className="block py-1 text-white hover:text-[#FF9E0D]"
                   >
                     Soft Skills for Students

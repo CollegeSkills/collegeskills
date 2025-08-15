@@ -3,6 +3,10 @@ import { FaPlay, FaChevronLeft, FaChevronRight } from "react-icons/fa";
 import video1 from "../assets/video/DivyaVideo.mp4";
 import video2 from "../assets/video/IndrVideo.mp4";
 import video3 from "../assets/video/SwatiVideo.mp4";
+import video4 from "../assets/video/kartikVideo.mp4";
+import video5 from "../assets/video/anshulVideo.mp4";
+import video6 from "../assets/video/anuradhaVideo.mp4";
+import video7 from "../assets/video/RusipaVideo.mp4";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, Filter, Images } from "lucide-react";
 import Footer from "../Components/Footer/Footer";
@@ -37,57 +41,72 @@ import activity9 from "../assets/gallery/activity8.jpg";
 import activity10 from "../assets/gallery/activity9.jpg";
 import activity11 from "../assets/gallery/activity10.jpg";
 import activity12 from "../assets/gallery/activity11.jpg";
+import activity13 from "../assets/gallery/activity12.jpeg";
+import activity14 from "../assets/gallery/activity13.jpeg";
+import activity15 from "../assets/gallery/activity14.jpeg";
+import activity16 from "../assets/gallery/activity15.jpeg";
 import class16 from "../assets/gallery/class15.jpg";
 import class14 from "../assets/gallery/class16.jpg";
 import class15 from "../assets/gallery/class17.jpg";
 import group6 from "../assets/gallery/group5.jpg";
+import group7 from "../assets/gallery/group6.jpg";
+import class17 from "../assets/gallery/class18.jpg";
 
 const customers = [
   {
     id: 1,
-    name: "Emily Manchaster",
-    role: "COO, Prime Inc.",
+    name: "Swati Yadaw",
+    role: "Polytechnic Ayodhya",
+    video: video3,
+    avatar:
+      "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg",
+  },
+
+  {
+    id: 2,
+    name: "Divya Nita",
+    role: "Suvidya Engineering College ",
     video: video1,
     avatar:
       "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg",
   },
-  {
-    id: 2,
-    name: "Emily Manchaster",
-    role: "COO, Prime Inc.",
+    {
+    id: 3,
+    name: "Indr Kumar",
+    role: "Polytechnic Ayodhya College",
     video: video2,
     avatar:
       "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg",
   },
   {
-    id: 3,
-    name: "Emily Manchaster",
-    role: "COO, Prime Inc.",
-    video: video3,
-    avatar:
-      "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg",
-  },
-  {
     id: 4,
-    name: "Emily Manchaster",
-    role: "COO, Prime Inc.",
-    video: video1,
+    name: "Kartik Singh",
+    role: "Bhopal Engineering College",
+    video: video4,
     avatar:
       "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg",
   },
   {
     id: 5,
-    name: "Emily Manchaster",
-    role: "COO, Prime Inc.",
-    video: video1,
+    name: "Anshul",
+    role: "Azamgarh Enginerring College",
+    video: video5,
     avatar:
       "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg",
   },
   {
     id: 6,
-    name: "Emily Manchaster",
-    role: "COO, Prime Inc.",
-    video: video1,
+    name: "Anuradha Nanda",
+    role: "Bhopal Engineering College",
+    video: video6,
+    avatar:
+      "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg",
+  },
+    {
+    id: 6,
+    name: "Rusipa Siddique",
+    role: "Suvidya Engineering College ",
+    video: video7,
     avatar:
       "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg",
   },
@@ -343,6 +362,42 @@ const Gallery = () => {
         title: "Club Meet",
         category: "Class",
       },
+       {
+        id: "img-38",
+        src: group7,
+        title: "Club Meet",
+        category: "Group",
+      },
+       {
+        id: "img-39",
+        src: activity13,
+        title: "Club Meet",
+        category: "Activity",
+      },
+       {
+        id: "img-40",
+        src: activity14,
+        title: "Club Meet",
+        category: "Activity",
+      },
+       {
+        id: "img-41",
+        src: activity15,
+        title: "Club Meet",
+        category: "Activity",
+      },
+       {
+        id: "img-42",
+        src: activity16,
+        title: "Club Meet",
+        category: "Activity",
+      },
+        {
+        id: "img-43",
+        src: class17,
+        title: "Club Meet",
+        category: "Class",
+      }
     ],
     []
   );
@@ -504,81 +559,12 @@ const Gallery = () => {
         </AnimatePresence>
       </div>
       {/* // video Section */}
-      {/* <section className="relative px-4 py-10 mx-auto max-w-7xl focus:outline-none ">
-        <h2 className="mb-1 text-lg font-medium text-brand-primary">
+
+      <section className="relative px-4 py-2 mx-auto max-w-7xl">
+        <h2 className="mb-1 text-3xl font-medium text-center text-brand-primary md:text-left">
           Curious how people are using ApertureUI?
         </h2>
-        <h1 className="mb-6 text-4xl font-bold ">
-          Hear what our customers are saying
-        </h1>
-
-   
-        <button
-          onClick={scrollLeft}
-          className="absolute left-0 z-10 hidden p-2 -translate-y-1/2 bg-white rounded-full shadow-lg top-1/2 md:block"
-        >
-          <FaChevronLeft />
-        </button>
-
-        <button
-          onClick={scrollRight}
-          className="absolute right-0 z-10 hidden p-2 -translate-y-1/2 bg-white rounded-full shadow-lg top-1/2 md:block"
-        >
-          <FaChevronRight />
-        </button>
-
-
-        <div
-          ref={sliderRef}
-          className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth focus:outline-none"
-          tabIndex={-1}
-        >
-          {customers.map((customer, index) => (
-            <div
-              key={customer.id}
-              className="flex-shrink-0 w-64 overflow-hidden bg-white shadow-md rounded-xl"
-            >
-           
-              <div className="relative w-full bg-gray-200 h-80">
-                <video
-                  ref={(el) => (videoRefs.current[index] = el)}
-                  src={customer.video}
-                  className="object-cover w-full h-full"
-                  preload="metadata"
-                />
-
-                {playingIndex !== index && (
-                  <div
-                    onClick={() => handlePlay(index)}
-                    className="absolute inset-0 flex items-center justify-center cursor-pointer bg-black/30"
-                  >
-                    <FaPlay className="text-2xl text-white" />
-                  </div>
-                )}
-              </div>
-
-         
-              <div className="flex items-center gap-3 p-4">
-                <img
-                  src={customer.avatar}
-                  alt={customer.name}
-                  className="w-10 h-10 rounded-full"
-                />
-                <div>
-                  <h3 className="text-sm font-semibold">{customer.name}</h3>
-                  <p className="text-xs text-gray-500">{customer.role}</p>
-                </div>
-              </div>
-            </div>
-          ))}
-        </div>
-      </section> */}
-
-      <section className="relative px-4 py-10 mx-auto max-w-7xl">
-        <h2 className="mb-1 text-lg font-medium text-center text-brand-primary md:text-left">
-          Curious how people are using ApertureUI?
-        </h2>
-        <h1 className="mb-8 text-3xl font-bold text-center md:text-4xl md:text-left">
+        <h1 className="mb-8 text-lg font-bold text-center md:text-left">
           Hear what our customers are saying
         </h1>
 
@@ -609,7 +595,7 @@ const Gallery = () => {
               className="flex-shrink-0 w-64 overflow-hidden bg-white shadow-md md:w-72 lg:w-80 snap-start rounded-xl"
             >
               {/* Video container */}
-              <div className="relative w-full h-64 bg-gray-200 md:h-72 lg:h-80">
+              <div className="relative w-full h-64 bg-gray-200 md:h-72 lg:h-96">
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
                   src={customer.video}
@@ -629,11 +615,11 @@ const Gallery = () => {
 
               {/* User info */}
               <div className="flex items-center gap-3 p-4">
-                <img
+                {/* <img
                   src={customer.avatar}
                   alt={customer.name}
                   className="w-10 h-10 rounded-full"
-                />
+                /> */}
                 <div>
                   <h3 className="text-sm font-semibold">{customer.name}</h3>
                   <p className="text-xs text-gray-500">{customer.role}</p>

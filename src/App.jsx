@@ -26,7 +26,7 @@ import JoinNowUser from "./Pages/Dashboard/JoinNowUser";
 import ResetPassword from "./Components/Admin/ResetPassword";
 import PersonalityTest from "./Pages/EnglishTest";
 import HinglishTest from "./Pages/HinglishTest";
-import SignUp from "./Pages/Signup";
+import SignUpForm from "./Pages/SignUpForm";
 
 function App() {
   return (
@@ -36,7 +36,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/about" element={<About />} />
-          <Route path="/services/soft-skills" element={<SoftSkills />} />
+          <Route path="/course/soft-skills" element={<SoftSkills />} />
           <Route
             path="/services/corporate-training"
             element={<CorporateTraining />}
@@ -61,7 +61,7 @@ function App() {
           <Route path="/englsih-test" element={<PersonalityTest/>} />
           <Route path="/hinglsih-test" element={<HinglishTest/>} />
           <Route path="/admin-login" element={<AdminLogin />} />
-          <Route path="/signup" element={<SignUp />} />
+          <Route path="/personality-signup-form" element={<SignUpForm />} />
                <Route path="/reset-password/:token" element={<ResetPassword />} />
 
           {/* Protected admin routes */}

@@ -17,7 +17,7 @@ const JoinFree = () => {
 
     try {
       const res = await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/v1/free/join-free",
+        `${import.meta.env.VITE_API_URL}/api/v1/free/join-free`,
         {
           name,
           phone,

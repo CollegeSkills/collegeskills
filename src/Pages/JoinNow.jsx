@@ -30,7 +30,7 @@ const JoinNow = () => {
 
     try {
       const res = await axios.post(
-        "${import.meta.env.VITE_API_URL}/api/v1/now/join-now",
+        `${import.meta.env.VITE_API_URL}/api/v1/now/join-now`,
         formData
       );
       toast.success("🎉 Registration successful!");

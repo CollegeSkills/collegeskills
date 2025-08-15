@@ -26,6 +26,7 @@ import JoinNowUser from "./Pages/Dashboard/JoinNowUser";
 import ResetPassword from "./Components/Admin/ResetPassword";
 import PersonalityTest from "./Pages/EnglishTest";
 import HinglishTest from "./Pages/HinglishTest";
+import SignUp from "./Pages/Signup";
 
 function App() {
   return (
@@ -60,6 +61,7 @@ function App() {
           <Route path="/englsih-test" element={<PersonalityTest/>} />
           <Route path="/hinglsih-test" element={<HinglishTest/>} />
           <Route path="/admin-login" element={<AdminLogin />} />
+          <Route path="/signup" element={<SignUp />} />
                <Route path="/reset-password/:token" element={<ResetPassword />} />
 
           {/* Protected admin routes */}

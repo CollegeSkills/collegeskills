@@ -34,7 +34,7 @@ export default function PersonalityTest() {
   };
 
   const onSubmit = async () => {
-    if (answers[q.id] === undefined) return; 
+    if (answers[q.id] === undefined) return;
     setSubmitting(true);
     try {
       console.log("SUBMIT PAYLOAD:", {
@@ -53,27 +53,38 @@ export default function PersonalityTest() {
   return (
     <>
       <Navbar />
-    <div className="relative min-h-[70vh] w-full flex items-center justify-center px-4 py-10 sm:py-14 overflow-hidden">
-        <div className="absolute -top-28 right-28 w-[400px] h-[300px] rounded-full bg-gradient-to-br from-pink-300 via-orange-400 to-orange-100 opacity-40 "
-        style={{ borderRadius: "30% 70% 39% 61% / 46% 20% 80% 54%"}}
+      <div className="relative min-h-[70vh] w-full flex items-center justify-center px-4 py-10 sm:py-14 overflow-hidden ">
+        {/* Background Circles */}
+        <div
+          className="absolute -top-28 right-28 w-[400px] h-[300px] rounded-full bg-gradient-to-br from-pink-300 via-orange-400 to-orange-100 opacity-40 "
+          style={{ borderRadius: "30% 70% 39% 61% / 46% 20% 80% 54%" }}
         ></div>
 
-        <div className="absolute -bottom-28 left-28 w-[350px] h-[350px] rounded-full bg-gradient-to-tr from-pink-300 via-orange-400 to-orange-100 opacity-40 "
-        style={{borderRadius:"30% 70% 74% 26% / 46% 20% 80% 54% "}}
+        <div
+          className="absolute -bottom-28 left-28 w-[350px] h-[350px] rounded-full bg-gradient-to-tr from-pink-300 via-orange-400 to-orange-100 opacity-40 "
+          style={{ borderRadius: "30% 70% 74% 26% / 46% 20% 80% 54% " }}
         ></div>
+
         <div className="w-full max-w-[760px] relative z-10">
           {/* Quiz Card */}
           <div className="overflow-hidden border border-gray-200 shadow-lg rounded-2xl">
             {/* Header */}
-            <div className="px-5 py-6 text-center bg-gray-600 sm:px-8">
-              <p className="text-white/80 text-xs sm:text-sm tracking-[.2em]">
-                COLLEGE SKILLS – PERSONALITY & SOFT SKILLS TEST
+            <div className="px-5 text-center bg-black py-7 sm:px-8">
+              <p className="text-white lg:text-2xl text-lg tracking-[.2em] font-bold">
+                <span className="text-brand-primary">COLLEGE</span> SKILLS –
+                PERSONALITY TEST
               </p>
             </div>
+               {/* <div className="px-5 text-center bg-black py-7 sm:px-8">
+              <p className="text-white lg:text-2xl text-sm tracking-[.2em] font-bold">
+                <span className="text-brand-primary">COLLEGE</span> SKILLS –
+                PERSONALITY TEST
+              </p>
+            </div> */}
 
             {/* Body */}
-            <div className="px-4 py-8 bg-brand-primary sm:px-6 md:px-8">
-              <h2 className="mb-6 text-lg font-semibold tracking-wide text-center text-white sm:text-xl md:text-2xl">
+            <div className="px-4 py-8 bg-gradient-to-tr from-orange-100 to-orange-50 sm:px-6 md:px-8">
+              <h2 className="px-2 mb-6 text-lg font-semibold tracking-wide text-brand-text sm:text-xl md:text-2xl">
                 {q.question}
               </h2>
 
@@ -89,8 +100,10 @@ export default function PersonalityTest() {
                         "w-full group flex items-center gap-4",
                         "rounded-full border-2",
                         "bg-white/5 hover:bg-white/10",
-                        selected ? "border-white shadow" : "border-white/40",
-                        "transition-all duration-200 px-4 py-3 sm:px-5 sm:py-4",
+                        selected
+                          ? "border-white shadow"
+                          : "border-white/40 text-black",
+                        "transition-all duration-200 px-4 py-3 sm:px-5 sm:py-4 text-white",
                       ].join(" ")}
                     >
                       <span
@@ -98,14 +111,14 @@ export default function PersonalityTest() {
                           "flex h-9 w-9 sm:h-10 sm:w-10 items-center justify-center rounded-full",
                           "border-2",
                           selected
-                            ? "bg-white text-brand-primary border-transparent"
+                            ? "bg-green-500 text-white border-transparent"
                             : "bg-neutral-800 text-white border-white/40",
                           "shrink-0",
                         ].join(" ")}
                       >
                         {letters[i]}
                       </span>
-                      <span className="text-sm leading-snug text-left text-white sm:text-base">
+                      <span className="text-sm leading-snug text-left text-black sm:text-base">
                         {opt}
                       </span>
                     </button>

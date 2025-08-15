@@ -1,5 +1,5 @@
 import React from 'react';
-import whatsapp from '../assets/chat.png'
+import whatsapp from '../assets/chat.webp'
 const WhatsAppIcon = () => {
   const phoneNumber = '+917352430080'; 
 
@@ -11,10 +11,10 @@ const WhatsAppIcon = () => {
     <div className="fixed bottom-0 z-50 right-4">
       <button
         onClick={handleClick}
-        className="rounded-full tra nsform p-1transition-transform hover:scale-110"
+        className="transform rounded-full"
         aria-label="Chat on WhatsApp"
       >
-       <img src={whatsapp} alt="chat" className='object-cover w-16 h-16'/>
+       <img src={whatsapp} alt="chat" className='object-cover w-20 h-20'/>
       </button>
     </div>
   );

@@ -1,6 +1,8 @@
 import React, { useRef, useState, useMemo, useEffect } from "react";
 import { FaPlay, FaChevronLeft, FaChevronRight } from "react-icons/fa";
-import video1 from "../assets/video/video.mp4";
+import video1 from "../assets/video/DivyaVideo.mp4";
+import video2 from "../assets/video/IndrVideo.mp4";
+import video3 from "../assets/video/SwatiVideo.mp4";
 import { AnimatePresence, motion } from "framer-motion";
 import { X, Filter, Images } from "lucide-react";
 import Footer from "../Components/Footer/Footer";
@@ -40,7 +42,6 @@ import class14 from "../assets/gallery/class16.jpg";
 import class15 from "../assets/gallery/class17.jpg";
 import group6 from "../assets/gallery/group5.jpg";
 
-
 const customers = [
   {
     id: 1,
@@ -54,7 +55,7 @@ const customers = [
     id: 2,
     name: "Emily Manchaster",
     role: "COO, Prime Inc.",
-    video: video1,
+    video: video2,
     avatar:
       "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg",
   },
@@ -62,7 +63,7 @@ const customers = [
     id: 3,
     name: "Emily Manchaster",
     role: "COO, Prime Inc.",
-    video: video1,
+    video: video3,
     avatar:
       "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg",
   },
@@ -91,7 +92,6 @@ const customers = [
       "https://images.pexels.com/photos/5642024/pexels-photo-5642024.jpeg",
   },
 ];
-
 
 const Gallery = () => {
   const sliderRef = useRef(null);
@@ -289,7 +289,7 @@ const Gallery = () => {
         title: "Club Meet",
         category: "Class",
       },
-        {
+      {
         id: "img-29",
         src: activity12,
         title: "Club Meet",
@@ -313,31 +313,31 @@ const Gallery = () => {
         title: "Club Meet",
         category: "Activity",
       },
-        {
+      {
         id: "img-33",
         src: activity11,
         title: "Club Meet",
         category: "Activity",
       },
-        {
+      {
         id: "img-34",
         src: activity10,
         title: "Club Meet",
         category: "Activity",
       },
-           {
+      {
         id: "img-35",
         src: group6,
         title: "Club Meet",
         category: "Group",
       },
-           {
+      {
         id: "img-36",
         src: class16,
         title: "Club Meet",
         category: "Class",
       },
-           {
+      {
         id: "img-37",
         src: class15,
         title: "Club Meet",
@@ -504,7 +504,7 @@ const Gallery = () => {
         </AnimatePresence>
       </div>
       {/* // video Section */}
-      <section className="relative px-4 py-10 mx-auto max-w-7xl focus:outline-none ">
+      {/* <section className="relative px-4 py-10 mx-auto max-w-7xl focus:outline-none ">
         <h2 className="mb-1 text-lg font-medium text-brand-primary">
           Curious how people are using ApertureUI?
         </h2>
@@ -512,7 +512,7 @@ const Gallery = () => {
           Hear what our customers are saying
         </h1>
 
-        {/* Arrows */}
+   
         <button
           onClick={scrollLeft}
           className="absolute left-0 z-10 hidden p-2 -translate-y-1/2 bg-white rounded-full shadow-lg top-1/2 md:block"
@@ -527,7 +527,7 @@ const Gallery = () => {
           <FaChevronRight />
         </button>
 
-        {/* Slider */}
+
         <div
           ref={sliderRef}
           className="flex gap-6 overflow-x-auto scrollbar-hide scroll-smooth focus:outline-none"
@@ -538,7 +538,7 @@ const Gallery = () => {
               key={customer.id}
               className="flex-shrink-0 w-64 overflow-hidden bg-white shadow-md rounded-xl"
             >
-              {/* Video container */}
+           
               <div className="relative w-full bg-gray-200 h-80">
                 <video
                   ref={(el) => (videoRefs.current[index] = el)}
@@ -553,6 +553,76 @@ const Gallery = () => {
                     className="absolute inset-0 flex items-center justify-center cursor-pointer bg-black/30"
                   >
                     <FaPlay className="text-2xl text-white" />
+                  </div>
+                )}
+              </div>
+
+         
+              <div className="flex items-center gap-3 p-4">
+                <img
+                  src={customer.avatar}
+                  alt={customer.name}
+                  className="w-10 h-10 rounded-full"
+                />
+                <div>
+                  <h3 className="text-sm font-semibold">{customer.name}</h3>
+                  <p className="text-xs text-gray-500">{customer.role}</p>
+                </div>
+              </div>
+            </div>
+          ))}
+        </div>
+      </section> */}
+
+      <section className="relative px-4 py-10 mx-auto max-w-7xl">
+        <h2 className="mb-1 text-lg font-medium text-center text-brand-primary md:text-left">
+          Curious how people are using ApertureUI?
+        </h2>
+        <h1 className="mb-8 text-3xl font-bold text-center md:text-4xl md:text-left">
+          Hear what our customers are saying
+        </h1>
+
+        {/* Arrows */}
+        <button
+          onClick={scrollLeft}
+          className="absolute z-10 items-center justify-center hidden p-2 transition -translate-y-1/2 bg-white rounded-full shadow-lg left-2 top-1/2 md:flex hover:bg-gray-100"
+        >
+          <FaChevronLeft />
+        </button>
+
+        <button
+          onClick={scrollRight}
+          className="absolute z-10 items-center justify-center hidden p-2 transition -translate-y-1/2 bg-white rounded-full shadow-lg right-2 top-1/2 md:flex hover:bg-gray-100"
+        >
+          <FaChevronRight />
+        </button>
+
+        {/* Slider */}
+        <div
+          ref={sliderRef}
+          className="flex gap-6 pb-4 overflow-x-auto snap-x snap-mandatory scroll-smooth scrollbar-hide"
+          tabIndex={-1}
+        >
+          {customers.map((customer, index) => (
+            <div
+              key={customer.id}
+              className="flex-shrink-0 w-64 overflow-hidden bg-white shadow-md md:w-72 lg:w-80 snap-start rounded-xl"
+            >
+              {/* Video container */}
+              <div className="relative w-full h-64 bg-gray-200 md:h-72 lg:h-80">
+                <video
+                  ref={(el) => (videoRefs.current[index] = el)}
+                  src={customer.video}
+                  className="object-cover w-full h-full"
+                  preload="metadata"
+                />
+
+                {playingIndex !== index && (
+                  <div
+                    onClick={() => handlePlay(index)}
+                    className="absolute inset-0 flex items-center justify-center cursor-pointer bg-black/30"
+                  >
+                    <FaPlay className="text-2xl text-white md:text-3xl" />
                   </div>
                 )}
               </div>
@@ -573,7 +643,8 @@ const Gallery = () => {
           ))}
         </div>
       </section>
-      <Footer/>
+
+      <Footer />
     </>
   );
 };

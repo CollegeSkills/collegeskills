@@ -25,32 +25,32 @@ import OurTraining from "../Components/OurTraining/OurTraining";
 // import training from "../assets/service/s2.png";
 import training from "../assets/service/s4.png";
 import certificate from "../assets/certificate.png";
-import faculty1 from '../assets/faculty1.png';
-import faculty2 from '../assets/faculty2.png';
-import faculty3 from '../assets/faculty3.png';
+import faculty1 from "../assets/faculty1.png";
+import faculty2 from "../assets/faculty2.png";
+import faculty3 from "../assets/faculty3.png";
 import faculty4 from "../assets/faculty4.png";
 const testimonials = [
   {
-    name: 'Nilesh Rao',
+    name: "Nilesh Rao",
     // role: 'Content Writer',
     image: faculty1,
-    company: 'T.P.O. Govt.ITI, Orai',
+    company: "T.P.O. Govt.ITI, Orai",
     review:
       '"The soft skills training conducted was not only informative but truly transformative.Students showed noticeable improvement in their communication, body language, and confidence. A valuable addition to our academic ecosystem."',
   },
   {
-    name: 'Rahul Kumar',
+    name: "Rahul Kumar",
     // role: 'Matoshree Institute of Technology',
     image: faculty2,
-    company: 'Professor CRRIT, Delhi',
+    company: "Professor CRRIT, Delhi",
     review:
       '"We truly appreciate the energy, clarity, and commitment shown by the College Skills team. Their approach connected well with our students, and the impact was visible in their communication and overall mindset. We look forward to more collaborations."',
   },
   {
-     name: 'Gujar Nitin',
+    name: "Gujar Nitin",
     // role: 'UX Designer',
     image: faculty3,
-    company: 'T.P.O. MIT,Yeola',
+    company: "T.P.O. MIT,Yeola",
     review:
       '"The training conducted by College Skills was highly engaging and result-oriented. Our students became more confident, expressive, and interview-ready. The sessions were practical, interactive, and perfectly aligned with today\'s industry needs."',
   },
@@ -78,29 +78,6 @@ function SkillCollege() {
     const interval = setInterval(nextSlide, 5000);
     return () => clearInterval(interval);
   }, []);
-
-  // const featureData = [
-  //   { icon: <School size={24} />, text: "Industry-Oriented Curriculum" },
-  //   {
-  //     icon: <Radio size={24} />,
-  //     text: "Weekend Live Sessions",
-  //   },
-  //   { icon: <Radio size={24} />, text: "Practice Exercises" },
-  //   { icon: <Radio size={24} />, text: "Certification of Completion" },
-  //   { icon: <Radio size={24} />, text: "Email Support" },
-  //   { icon: <Radio size={24} />, text: "SME Support Session" },
-  //   { icon: <Radio size={24} />, text: "Comprehensive Learning Content" },
-  //   { icon: <Radio size={24} />, text: "Capstone Project" },
-  //   {
-  //     icon: <Radio size={24} />,
-  //     text: "Assignments and Projects",
-  //   },
-  //   {
-  //     icon: <Radio size={24} />,
-  //     text: "Career Guidance & Interview Preparation",
-  //   },
-  //   { icon: <Radio size={24} />, text: "Peer to Peer Networking" },
-  // ];
 
   const orgBenefits = [
     " Benefits to Colleges/Institutions",
@@ -260,7 +237,7 @@ function SkillCollege() {
         </div>
 
         <div className="relative lg:w-1/2">
-          <AnimatePresence mode="wait">
+          {/* <AnimatePresence mode="wait">
             <motion.div
               key={current}
               initial={{ opacity: 0, x: 100 }}
@@ -287,7 +264,32 @@ function SkillCollege() {
                 <p className="text-sm">{testimonials[current].role}</p>
               </div>
             </motion.div>
-          </AnimatePresence>
+          </AnimatePresence> */}
+          <motion.div
+            key={current}
+            initial={{ opacity: 0 }}
+            animate={{ opacity: 1 }}
+            transition={{ duration: 0.5 }}
+            className="flex flex-col gap-6 text-white bg-gradient-to-r to-brand-primary from-orange-300 p-9 md:p-10 rounded-2xl md:flex-row"
+          >
+            <img
+              src={testimonials[current].image}
+              alt={testimonials[current].name}
+              className="object-cover object-top w-full md:w-80 h-80 rounded-xl"
+            />
+            <div>
+              <h3 className="text-2xl font-semibold font-oswald">
+                {testimonials[current].company}
+              </h3>
+              <p className="mt-2 text-sm md:text-base">
+                {testimonials[current].review}
+              </p>
+              <p className="mt-4 text-3xl font-semibold font-oswald">
+                {testimonials[current].name}
+              </p>
+              <p className="text-sm">{testimonials[current].role}</p>
+            </div>
+          </motion.div>
 
           {/* Arrows */}
           <div className="absolute flex gap-4 -bottom-6 right-4">

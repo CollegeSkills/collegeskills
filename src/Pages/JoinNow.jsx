@@ -54,8 +54,8 @@ const JoinNow = () => {
       <Navbar />
       <div className="flex justify-center px-4 py-1 lg:pt-16 pb-9">
         <div className="w-full max-w-xl p-8 space-y-6 bg-white shadow-lg rounded-xl">
-          <h2 className="text-3xl font-bold text-center text-brand-primary">
-            Join Now
+          <h2 className="text-2xl font-semibold text-center text-brand-primary">
+        Unlock Skills – No Cost, Just Curiosity
           </h2>
 
           {message && (

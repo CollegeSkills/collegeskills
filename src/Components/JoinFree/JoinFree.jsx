@@ -53,10 +53,10 @@ const JoinFree = () => {
 
       {/* Modal */}
       {showModal && (
-        <div className="fixed inset-0 z-50 flex items-center justify-center bg-black bg-opacity-50">
+        <div className="fixed inset-0 z-50 flex items-center justify-center px-2 bg-black bg-opacity-50">
           <div className="w-full max-w-md p-6 bg-white rounded-lg shadow-lg">
             <div className="flex items-center justify-between mb-4">
-              <h2 className="text-xl font-bold text-gray-800">Join For Free</h2>
+              <h2 className="text-xl font-bold text-brand-primary">Zero Fees, Infinite Knowledge</h2>
               <button
                 onClick={() => setShowModal(false)}
                 className="text-xl font-bold text-gray-500"

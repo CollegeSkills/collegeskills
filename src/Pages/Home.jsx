@@ -108,7 +108,7 @@ function Home() {
       <title>Welcom College Skill</title>
       <Navbar />
       {/* Hero section  */}
-      <section className="grid items-center px-10 py-10 bg-brand-background lg:px-16 md:grid-cols-2">
+      <section className="grid items-center px-5 py-5 bg-brand-background lg:px-16 md:grid-cols-2">
         <div className="space-y-6">
           <h1 className="text-4xl font-semibold lg:leading-[4.2rem] md:text-6xl text-brand-text font-oswald">
             <span className="pb-10 text-brand-primary">
@@ -122,11 +122,7 @@ function Home() {
             readiness for real-world success.
           </p>
           <div className="flex items-center gap-4">
-            {/* <button className="bg-[#FF9E0D] text-white px-6 py-3 rounded-full font-semibold">
-              Join For Free
-            </button> */}
             <JoinFree />
-            {/* <Play size={50} className='flex p-2 bg-white rounded-full text-brand-primary' /> */}
             <VideoPopup />
           </div>
         </div>
@@ -134,7 +130,7 @@ function Home() {
         <div className="relative mt-12 mb-20 md:mt-0">
           <img src={hero} alt="student" className="w-full" />
 
-          <div className="absolute top-0 gap-2 px-4 py-3 shadow-lg lg:top-24 lg:left-24 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
+          <div className="absolute top-0 gap-2 px-2 py-3 shadow-lg lg:top-24 lg:left-24 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
             <CalendarRange
               size={30}
               className="p-1 text-white bg-blue-400 rounded-lg"
@@ -145,7 +141,7 @@ function Home() {
             </div>
           </div>
 
-          <div className="absolute items-center gap-2 p-3 py-4 mt-10 mb- shadow-lg w-[200px] lg:w-[350px] -bottom-32 lg:px-4 left-40 lg:-left-10 lg:bottom-32 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
+          <div className="absolute items-center gap-2 p-3 py-4 mt-10 shadow-lg w-[200px] lg:w-[350px] -bottom-32 lg:px-4 left-32 lg:-left-10 lg:bottom-32 bg-gradient-to-tr to-white/10 from-white rounded-xl lg:flex">
             <img src={student} alt="" className="w-8 h-8 rounded-full" />
             <div>
               <p className="text-sm font-medium">Don’t Just Watch, Grow </p>

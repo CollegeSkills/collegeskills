@@ -4,7 +4,7 @@ import { motion } from "framer-motion";
 const stats = [
     { value: "10+", label: "Courses on the Platform" },
     { value: "20+", label: "Mentors from the Industry" },
-    { value: "5k+", label: "Youth Transformed" },
+    { value: "5000+", label: "Youth Transformed" },
     { value: "55%", label: "Average Salary Hike" },
 ];
 

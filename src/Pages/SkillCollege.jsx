@@ -25,10 +25,10 @@ import OurTraining from "../Components/OurTraining/OurTraining";
 // import training from "../assets/service/s2.png";
 import training from "../assets/service/s4.png";
 import certificate from "../assets/certificate.png";
-import faculty1 from '../assets/faculty1.jpg';
-import faculty2 from '../assets/faculty2.jpg';
-import faculty3 from '../assets/faculty3.jpg';
-import faculty4 from "../assets/faculty4.jpg";
+import faculty1 from '../assets/faculty1.png';
+import faculty2 from '../assets/faculty2.png';
+import faculty3 from '../assets/faculty3.png';
+import faculty4 from "../assets/faculty4.png";
 const testimonials = [
   {
     name: 'Nilesh Rao',

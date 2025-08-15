@@ -1,10 +1,13 @@
 import React, { useState, useEffect } from 'react';
 import { motion, AnimatePresence } from 'framer-motion';
 import { ArrowRight, ArrowLeft } from 'lucide-react';
-import image from '../../assets/atul.jpeg';
+import image from '../../assets/atul.png';
 import image2 from '../../assets/indr.jpeg';
-import image3 from '../../assets/ditya.jpeg';
-import image4 from '../../assets/kartik.jpeg';
+import image3 from '../../assets/ditya.png';
+import image4 from '../../assets/kartik.png';
+// import image5 from '../../assets/t1.png';
+// import image6 from '../../assets/t2.png';
+// import image7 from '../../assets/t3.png';
 // import image5 from '../../assets/test.jpeg';
 
 

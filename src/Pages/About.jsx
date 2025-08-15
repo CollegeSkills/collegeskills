@@ -4,10 +4,13 @@ import Footer from "../Components/Footer/Footer";
 // // import 10 from '../assets/10.png'
 import founder from "../assets/founder.png";
 import coFounder from "../assets/co-founder.png";
-import client1 from "../assets/ditya.jpeg";
+import client1 from "../assets/ditya.png";
 import client2 from "../assets/indr.jpeg";
-import client3 from "../assets/kartik.jpeg";
-import client4 from "../assets/atul.jpeg";
+import client3 from "../assets/kartik.png";
+import client4 from "../assets/atul.png";
+import client5 from "../assets/t2.png";
+import client6 from "../assets/t3.png";
+import client7 from "../assets/t1.png";
 // import client5 from "../assets/student.webp";
 import { CheckCircle, ArrowUpRight, PartyPopper } from "lucide-react";
 import ApproachSection from "../Components/ApproachSection/ApproachSection";
@@ -117,9 +120,9 @@ const AboutUsSection = () => {
               </div>
 
               {/* Experience Box */}
-              <div className="absolute px-5 py-3 mt-20 text-white shadow-lg top-4 left-10 bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl">
-                <PartyPopper />
-                <p className="text-2xl font-semibold">
+              <div className="absolute flex gap-2 px-3 py-3 mt-20 text-white shadow-lg -top-5 lg:top-4 lg:left-10 bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl">
+                {/* <PartyPopper /> */}
+                <p className="font-semibold lg:text-2xl textlg">
                   30 + years of <br />
                   experience
                 </p>
@@ -171,7 +174,7 @@ const AboutUsSection = () => {
               {/* Testimonials + Award */}
               <div className="flex flex-wrap items-center gap-6">
                 <div className="flex -space-x-3">
-                  {[client1, client2, client3, client4].map(
+                  {[client1, client2, client3,client6,client7].map(
                     (avatar, i) => (
                       <img
                         key={i}
@@ -261,22 +264,20 @@ const AboutUsSection = () => {
 
               {/* Testimonials + Award */}
               <div className="flex flex-wrap items-center gap-6">
+               <div className="flex flex-wrap items-center gap-6">
                 <div className="flex -space-x-3">
-                  {[
-                    "https://randomuser.me/api/portraits/women/44.jpg",
-                    "https://randomuser.me/api/portraits/men/32.jpg",
-                    "https://randomuser.me/api/portraits/women/65.jpg",
-                    "https://randomuser.me/api/portraits/men/15.jpg",
-                    "https://randomuser.me/api/portraits/women/21.jpg",
-                  ].map((avatar, i) => (
-                    <img
-                      key={i}
-                      src={avatar}
-                      alt={`client-${i}`}
-                      className="w-10 h-10 border-2 border-white rounded-full"
-                    />
-                  ))}
+                  {[client3, client4,client5,client6,client7].map(
+                    (avatar, i) => (
+                      <img
+                        key={i}
+                        src={avatar}
+                        alt={`client-${i}`}
+                        className="w-10 h-10 border-2 border-white rounded-full"
+                      />
+                    )
+                  )}
                 </div>
+
                 <p className="text-sm text-gray-700">
                   Join our <span className="font-bold">5000+</span> satisfied
                   client
@@ -301,6 +302,7 @@ const AboutUsSection = () => {
                   </div>
                 </div>
               </div>
+              </div>
 
               {/* CTA Button */}
               <div>
@@ -320,9 +322,10 @@ const AboutUsSection = () => {
               </div>
 
               {/* Experience Box */}
-              <div className="absolute right-0 px-5 py-3 mt-20 text-white shadow-lg top-4 bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl">
-                <PartyPopper />
-                <p className="text-2xl font-semibold">
+
+                  <div className="absolute right-0 flex gap-2 px-3 py-3 mt-20 text-white shadow-lg -top-5 lg:top-4 bg-gradient-to-r from-orange-400 to-orange-500 rounded-xl">
+                {/* <PartyPopper /> */}
+                <p className="font-semibold lg:text-2xl textlg">
                   30 + years of <br />
                   experience
                 </p>

@@ -1,4 +1,8 @@
 import React, { useState } from "react";
+import client1 from "../../assets/ditya.png";
+import client2 from "../../assets/indr.jpeg";
+import client3 from "../../assets/kartik.png";
+import client4 from "../../assets/atul.png";
 
 const FAQSection = ({ faqs }) => {
   const [openIndex, setOpenIndex] = useState(null);
@@ -12,7 +16,7 @@ const FAQSection = ({ faqs }) => {
       <div className="grid items-start gap-12 mx-auto max-w-7xl md:grid-cols-2">
         {/* Left Column (Fixed) */}
         <div className="space-y-6">
-          <p className="text-lg font-medium text-brand-primary">// FAQ</p>
+          <p className="text-lg font-medium text-brand-primary">FAQ</p>
           <h2 className="text-4xl font-medium leading-tight md:text-6xl font-oswald">
             Your coaching questions <br />
             <span className="text-transparent bg-clip-text bg-gradient-to-r from-brand-primary to-orange-300">
@@ -23,16 +27,16 @@ const FAQSection = ({ faqs }) => {
           {/* Contact Box */}
           <div className="flex flex-col max-w-md gap-4 p-6 bg-white shadow-sm rounded-2xl">
             <div className="flex -space-x-3">
-              {[...Array(5)].map((_, i) => (
-                <img
-                  key={i}
-                  className="object-cover w-10 h-10 border-2 border-white rounded-full"
-                  src={`https://randomuser.me/api/portraits/${
-                    i % 2 === 0 ? "women" : "men"
-                  }/${i + 10}.jpg`}
-                  alt="team"
-                />
-              ))}
+              {[client3, client4, client1, client2].map(
+                (avatar, i) => (
+                  <img
+                    key={i}
+                    src={avatar}
+                    alt={`client-${i}`}
+                    className="w-10 h-10 border-2 border-white rounded-full"
+                  />
+                )
+              )}
             </div>
             <div>
               <p className="mt-2 text-lg font-semibold">
@@ -49,7 +53,7 @@ const FAQSection = ({ faqs }) => {
         </div>
 
         {/* Right Column (Dynamic) */}
-        <div className="w-full mt-16 space-y-4">
+        <div className="w-full mt-2 space-y-4 lg:mt-16">
           {faqs?.map((item, index) => (
             <div
               key={index}

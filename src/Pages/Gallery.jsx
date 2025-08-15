@@ -509,6 +509,7 @@ const Gallery = () => {
           ))}
         </div>
       </section>
+      <Footer/>
     </>
   );
 };

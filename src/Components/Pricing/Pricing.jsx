@@ -60,12 +60,12 @@ const packages = [
 
 const Pricing = () => {
   return (
-    <section className="px-4 py-16 bg-white md:px-10">
+    <section className="px-0 py-16 bg-white md:px-10">
       <div className="w-full px-8 mx-auto">
         {/* Left Section */}
         <div className="space-y-6 lg:font-semibold font-oswald">
           <p className="text-sm lg:font-semibold text-brand-primary">
-            // PRICING
+           PRICING
           </p>
           <h2 className="text-3xl font-semibold text-gray-900 lg:text-5xl">
             Coaching Packages That{" "}
@@ -82,55 +82,6 @@ const Pricing = () => {
           <Link to='/contact'>Get All Touch → </Link>
           </button>
         </div>
-
-        {/* Right Section - Pricing Cards */}
-        {/* <div className="grid items-start gap-10 mt-6 md:grid-cols-3">
-          {packages.map((pkg, i) => (
-            <div
-              key={i}
-              className={`rounded-xl p-6 border shadow-sm ${
-                pkg.highlight
-                  ? "bg-gradient-to-r from-brand-primary to-orange-400 text-white"
-                  : "bg-white"
-              }`}
-            >
-              <h3 className="mb-2 text-xl font-semibold">{pkg.title}</h3>
-              <p className="mb-4 text-4xl font-bold">
-                {pkg.price}
-                <span className="text-base font-medium">
-                  <span
-                    className={pkg.highlight ? "text-white" : "text-gray-500"}
-                  >
-                    /month
-                  </span>
-                </span>
-              </p>
-              <ul
-                className={`grid grid-cols-1 gap-2 mb-6 text-sm ${
-                  pkg.highlight ? "text-white" : "text-gray-700"
-                }`}
-              >
-                {pkg.features.map((item, index) => (
-                  <li key={index} className="flex items-center gap-2">
-                    <span>
-                      <CircleCheckBig size={20}/>
-                    </span>
-                    <span>{item}</span>
-                  </li>
-                ))}
-              </ul>
-              <button
-                className={`px-4 py-2 rounded-full font-semibold text-sm transition ${
-                  pkg.highlight
-                    ? "bg-white text-brand-primary"
-                    : "bg-gradient-to-r from-brand-primary to-brand-primary text-white"
-                }`}
-              >
-                Purchase Now →
-              </button>
-            </div>
-          ))}
-        </div> */}
         <div className="grid items-start gap-10 mt-6 md:grid-cols-3">
           {packages.map((pkg, i) => (
             <div

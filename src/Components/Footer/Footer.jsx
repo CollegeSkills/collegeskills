@@ -6,7 +6,6 @@ import WhatsAppIcon from "../Whatsapp";
 const Footer = () => {
   return (
     <>
- 
       <footer className="px-4 pt-12 pb-6 text-white bg-black md:px-10">
         {/* Top content */}
         <div className="mx-auto max-w-7xl">
@@ -14,8 +13,11 @@ const Footer = () => {
             {/* Left Section */}
             <div className="space-y-5">
               <div className="text-lg font-bold">
-                 <Link to='/'> <span className="text-brand-primary">COLLEGE</span>
-                <span className="ml-2 font-semibold">SKILLS</span></Link>
+                <Link to="/">
+                  {" "}
+                  <span className="text-brand-primary">COLLEGE</span>
+                  <span className="ml-2 font-semibold">SKILLS</span>
+                </Link>
               </div>
               <p className="text-sm leading-relaxed">
                 Welcome to CollegeSkills
@@ -48,7 +50,7 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link to="/gallery" className="hover:text-[#FF9E0D] py-1">
-               Gallery
+                    Gallery
                   </Link>
                 </li>
                 <li>
@@ -57,17 +59,26 @@ const Footer = () => {
                   </Link>
                 </li>
                 <li>
-                  <Link to="/privacy-policy" className="hover:text-[#FF9E0D] lg:hidden block">
+                  <Link
+                    to="/privacy-policy"
+                    className="hover:text-[#FF9E0D] lg:hidden block"
+                  >
                     Privacy policy
                   </Link>
                 </li>
-                 <li>
-                  <Link to="/return-policy" className="hover:text-[#FF9E0D] lg:hidden block">
-                   Return Policy
+                <li>
+                  <Link
+                    to="/return-policy"
+                    className="hover:text-[#FF9E0D] lg:hidden block"
+                  >
+                    Return Policy
                   </Link>
                 </li>
                 <li>
-                  <Link to="/terms-conditions" className="hover:text-[#FF9E0D] lg:hidden block">
+                  <Link
+                    to="/terms-conditions"
+                    className="hover:text-[#FF9E0D] lg:hidden block"
+                  >
                     Terms and Conditions
                   </Link>
                 </li>
@@ -90,6 +101,22 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
+                    to="/services/skill-for-colleges"
+                    className="block py-1 text-white hover:text-[#FF9E0D]"
+                  >
+                    Soft Skills For Colleges
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/services/skill-for-schools"
+                    className="block py-1 text-white hover:text-[#FF9E0D]"
+                  >
+                    Soft Skills For Schools
+                  </Link>
+                </li>
+                <li>
+                  <Link
                     to="/services/corporate-training"
                     className="block py-1 text-white hover:text-[#FF9E0D]"
                   >
@@ -98,7 +125,32 @@ const Footer = () => {
                 </li>
                 <li>
                   <Link
-                    to="/services/b2b"
+                    to="/services/b2b-outsourcing"
+                    className="block py-1 text-white hover:text-[#FF9E0D]"
+                  >
+                    B2B Outsourcing
+                  </Link>
+                </li>
+
+                {/* <li>
+                  <Link
+                    to="/course/soft-skills"
+                    className="block py-1 text-white hover:text-[#FF9E0D]"
+                  >
+                    Soft Skills for Students
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/services/corporate-training"
+                    className="block py-1 text-white hover:text-[#FF9E0D]"
+                  >
+                    Corporate Training
+                  </Link>
+                </li>
+                <li>
+                  <Link
+                    to="/services/b2b-outsourcing"
                     className="block py-1 text-white hover:text-[#FF9E0D]"
                   >
                     B2B Outsourcing
@@ -119,7 +171,7 @@ const Footer = () => {
                   >
                     For Corporates/B2B
                   </Link>
-                </li>
+                </li> */}
               </ul>
             </div>
 
@@ -161,9 +213,7 @@ const Footer = () => {
 
           {/* Bottom Strip */}
           <div className="flex flex-col items-center justify-between w-full text-sm text-gray-300 md:flex-row">
-            <p className="">
-              © 2025 CollegeSkills. All rights reserved.
-            </p>
+            <p className="">© 2025 CollegeSkills. All rights reserved.</p>
             {/* <div className="flex gap-6 mt-2 md:mt-0"> */}
             <div className="hidden lg:block">
               <ul className="flex gap-6 mt-2 text-sm md:mt-0 lg:order-2">
@@ -172,9 +222,9 @@ const Footer = () => {
                     Privacy policy
                   </Link>
                 </li>
-                 <li>
+                <li>
                   <Link to="/return-policy" className="hover:text-[#FF9E0D]">
-                   Return Policy
+                    Return Policy
                   </Link>
                 </li>
                 <li>
@@ -182,7 +232,6 @@ const Footer = () => {
                     Terms and Conditions
                   </Link>
                 </li>
-                
               </ul>
             </div>
 
@@ -190,7 +239,7 @@ const Footer = () => {
           </div>
         </div>
       </footer>
-      <WhatsAppIcon/>
+      <WhatsAppIcon />
     </>
   );
 };

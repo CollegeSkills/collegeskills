@@ -19,29 +19,6 @@ import training from "../assets/ourtraining.png";
 import certificate from "../assets/certificate.png";
 
 function CorporateTraining() {
-  // const featureData = [
-  //   { icon: <School size={24} />, text: "Industry-Oriented Curriculum" },
-  //   {
-  //     icon: <Radio size={24} />,
-  //     text: "Weekend Live Sessions",
-  //   },
-  //   { icon: <Radio size={24} />, text: "Practice Exercises" },
-  //   { icon: <Radio size={24} />, text: "Certification of Completion" },
-  //   { icon: <Radio size={24} />, text: "Email Support" },
-  //   { icon: <Radio size={24} />, text: "SME Support Session" },
-  //   { icon: <Radio size={24} />, text: "Comprehensive Learning Content" },
-  //   { icon: <Radio size={24} />, text: "Capstone Project" },
-  //   {
-  //     icon: <Radio size={24} />,
-  //     text: "Assignments and Projects",
-  //   },
-  //   {
-  //     icon: <Radio size={24} />,
-  //     text: "Career Guidance & Interview Preparation",
-  //   },
-  //   { icon: <Radio size={24} />, text: "Peer to Peer Networking" },
-  // ];
-
   const page1Faqs = [
     {
       question: "What soft skills are most important for employees?",
@@ -168,8 +145,8 @@ function CorporateTraining() {
 
       <div className="flex flex-col-reverse items-center gap-10 px-4 md:px-8 lg:px-12 md:flex-row">
         {/* Text */}
-        <div className="w-full md:w-1/2 md:pr-6">
-          <h2 className="text-3xl font-bold text-center text-gray-800 sm:text-3xl md:text-left md:text-5xl font-oswald">
+        <div className="relative w-full md:w-1/2 md:pr-6 lg:-top-0 -top-20">
+          <h2 className="px-2 text-3xl font-bold text-gray-800 lg:px-0 sm:text-3xl md:text-left md:text-5xl font-oswald">
             Our Training Approach
           </h2>
 
@@ -197,7 +174,7 @@ function CorporateTraining() {
         </div>
 
         {/* Image */}
-        <div className="flex justify-center w-full md:w-1/2">
+        <div className="relative flex justify-center w-full md:w-1/2 -top-20">
           <img
             src={training}
             alt="training-approach"

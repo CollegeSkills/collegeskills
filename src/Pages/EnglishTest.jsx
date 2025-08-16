@@ -56,12 +56,12 @@ export default function PersonalityTest() {
       <div className="relative min-h-[70vh] w-full flex items-center justify-center px-4 py-10 sm:py-14 overflow-hidden ">
         {/* Background Circles */}
         <div
-          className="absolute -top-28 right-28 w-[400px] h-[300px] rounded-full bg-gradient-to-br from-pink-300 via-orange-400 to-orange-100 opacity-40 "
+          className="absolute hidden -top-28 right-28 w-[400px] h-[300px] lg:block rounded-full bg-gradient-to-br from-pink-300 via-orange-400 to-orange-100 opacity-40 "
           style={{ borderRadius: "30% 70% 39% 61% / 46% 20% 80% 54%" }}
         ></div>
 
         <div
-          className="absolute -bottom-28 left-28 w-[350px] h-[350px] rounded-full bg-gradient-to-tr from-pink-300 via-orange-400 to-orange-100 opacity-40 "
+          className="absolute hidden -bottom-28 left-28 w-[350px] h-[350px] lg:block rounded-full bg-gradient-to-tr from-pink-300 via-orange-400 to-orange-100 opacity-40 "
           style={{ borderRadius: "30% 70% 74% 26% / 46% 20% 80% 54% " }}
         ></div>
 
@@ -75,12 +75,6 @@ export default function PersonalityTest() {
                 PERSONALITY TEST
               </p>
             </div>
-               {/* <div className="px-5 text-center bg-black py-7 sm:px-8">
-              <p className="text-white lg:text-2xl text-sm tracking-[.2em] font-bold">
-                <span className="text-brand-primary">COLLEGE</span> SKILLS –
-                PERSONALITY TEST
-              </p>
-            </div> */}
 
             {/* Body */}
             <div className="px-4 py-8 bg-gradient-to-tr from-orange-100 to-orange-50 sm:px-6 md:px-8">

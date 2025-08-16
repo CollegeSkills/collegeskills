@@ -46,7 +46,7 @@ const Contact = () => {
           <p className="text-sm font-semibold tracking-wide text-brand-primary">
             GET IN TOUCH
           </p>
-          <h1 className="mt-2 text-3xl font-semibold leading-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl font-oswald">
+          <h1 className="mt-2 text-2xl font-semibold leading-tight text-gray-900 sm:text-4xl md:text-5xl lg:text-6xl font-oswald">
             Let&apos;s work together to create <br />
             <span className="text-brand-primary">the life and business</span>
           </h1>

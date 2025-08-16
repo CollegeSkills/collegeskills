@@ -146,7 +146,7 @@ function CorporateTraining() {
       <div className="flex flex-col-reverse items-center gap-10 px-4 md:px-8 lg:px-12 md:flex-row">
         {/* Text */}
         <div className="relative w-full md:w-1/2 md:pr-6 lg:-top-0 -top-20">
-          <h2 className="px-2 text-3xl font-bold text-gray-800 lg:px-0 sm:text-3xl md:text-left md:text-5xl font-oswald">
+          <h2 className="px-2 text-2xl font-bold text-gray-800 lg:px-0 sm:text-3xl md:text-left md:text-5xl font-oswald">
             Our Training Approach
           </h2>
 

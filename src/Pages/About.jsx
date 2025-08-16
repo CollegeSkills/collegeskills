@@ -54,7 +54,7 @@ const AboutUsSection = () => {
     <>
       <Navbar />
       {/* About us */}
-      <div className="px-5 lg:px-0">
+      <div className="px-5 lg:px-7">
         <section className="py-2 mx-auto max-w-7xl">
           <div className="flex flex-col items-center gap-10 md:flex-row md:items-start">
             {/* Left side text */}

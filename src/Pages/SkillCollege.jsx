@@ -149,7 +149,7 @@ function SkillCollege() {
         </div>
         {/* Text Section */}
         <div className="w-full px-3 md:w-1/2">
-          <h2 className="mb-6 text-5xl font-bold text-gray-900 font-oswald">
+          <h2 className="mb-4 text-3xl font-bold md:text-5xl font-oswald">
             Why It Matters
           </h2>
           <p className="mb-3 text-slate-800">
@@ -177,7 +177,7 @@ function SkillCollege() {
       <Partners />
       {/* Benefits */}
       <div className="px-4 py-7 md:px-1">
-        <h2 className="text-6xl font-bold text-center pb-9 font-oswald text-brand-text">
+        <h2 className="mb-4 text-4xl font-bold text-center md:text-5xl font-oswald">
           Your Benefits
         </h2>
         <div className="grid grid-cols-1 gap-2 mx-auto max-w-[95%] md:grid-cols-2">
@@ -202,7 +202,7 @@ function SkillCollege() {
           />
         </div>
       </div>
-      <div className="p-8">
+      <div className="p-4">
         <OurTraining
           heading="Our Training Approach"
           paragraphs={[
@@ -237,34 +237,6 @@ function SkillCollege() {
         </div>
 
         <div className="relative lg:w-1/2">
-          {/* <AnimatePresence mode="wait">
-            <motion.div
-              key={current}
-              initial={{ opacity: 0, x: 100 }}
-              animate={{ opacity: 1, x: 0 }}
-              exit={{ opacity: 0, x: -100 }}
-              transition={{ duration: 0.5 }}
-              className="flex flex-col gap-6 text-white bg-gradient-to-r to-brand-primary from-orange-300 p-9 md:p-10 rounded-2xl md:flex-row"
-            >
-              <img
-                src={testimonials[current].image}
-                alt={testimonials[current].name}
-                className="object-cover w-full md:w-80 h-80 rounded-xl"
-              />
-              <div>
-                <h3 className="text-2xl font-semibold font-oswald">
-                  {testimonials[current].company}
-                </h3>
-                <p className="mt-2 text-sm md:text-base">
-                  {testimonials[current].review}
-                </p>
-                <p className="mt-4 text-3xl font-semibold font-oswald">
-                  {testimonials[current].name}
-                </p>
-                <p className="text-sm">{testimonials[current].role}</p>
-              </div>
-            </motion.div>
-          </AnimatePresence> */}
           <motion.div
             key={current}
             initial={{ opacity: 0 }}

@@ -560,12 +560,13 @@ const Gallery = () => {
       </div>
       {/* // video Section */}
 
-      <section className="relative px-4 py-2 mx-auto max-w-7xl">
-        <h2 className="mb-1 text-3xl font-medium text-center text-brand-primary md:text-left">
-          Curious how people are using ApertureUI?
+      <section className="relative px-2 py-2 mx-auto max-w-7xl">
+        <h2 className="mb-1 text-5xl font-semibold text-center text-brand-primary md:text-left">
+      From First Step to Success Story.
+
         </h2>
-        <h1 className="mb-8 text-lg font-bold text-center md:text-left">
-          Hear what our customers are saying
+        <h1 className="mb-8 text-lg font-medium text-center md:text-left text-slate-600">
+    Real people, real success, see how College Skills is changing lives and careers.
         </h1>
 
         {/* Arrows */}

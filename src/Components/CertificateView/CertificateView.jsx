@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { X } from "lucide-react";
+import { Check, CheckCheck, X } from "lucide-react";
 import certificate from "../../assets/certificate.png"
 const CertificateSection = ({
   title = "Validating Your Success: About Your Certificate",
@@ -35,7 +35,7 @@ const CertificateSection = ({
 
             <p className="font-semibold text-gray-700">{description}</p>
 
-            <ul className="space-y-2 text-gray-600 list-disc list-inside">
+            <ul className="space-y-2 text-gray-600 list-inside">
               {criteria.map((item, i) => (
                 <li key={i}>{item}</li>
               ))}
